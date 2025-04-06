@@ -1,0 +1,6 @@
+{
+    "title": "Debounce Function",
+    "author": "sampathvenur",
+    "description": "Delays a function execution until after a specified time.",
+    "code": "const debounce = (func, delay) => {\n  let timeout;\n\n  return (...args) => {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => func(...args), delay);\n  };\n};\n\n// Usage:\nwindow.addEventListener(\n  'resize',\n  debounce(() => console.log('Resized!'), 500), // Will only output after resizing has stopped for 500ms\n);"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Start of the Day",
+    "author": "sampathvenur",
+    "description": "Returns the start of the day (midnight) for a given date.",
+    "code": "const startOfDay = (date) => new Date(date.setHours(0, 0, 0, 0));\n\n// Usage:\nconst today = new Date();\nstartOfDay(today); // Returns: Date object for midnight"
+}

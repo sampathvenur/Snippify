@@ -1,0 +1,6 @@
+{
+    "title": "Change Element Style",
+    "author": "sampathvenur",
+    "description": "Changes the inline style of an element.",
+    "code": "const changeElementStyle = (element, styleObj) => {\n  Object.entries(styleObj).forEach(([property, value]) => {\n    element.style[property] = value;\n  });\n};\n\n// Usage:\nconst element = document.querySelector('.my-element');\nchangeElementStyle(element, { color: 'red', backgroundColor: 'yellow' });"
+}

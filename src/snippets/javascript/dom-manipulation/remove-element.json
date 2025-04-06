@@ -1,0 +1,6 @@
+{
+    "title": "Remove Element",
+    "author": "sampathvenur",
+    "description": "Removes a specified element from the DOM.",
+    "code": "const removeElement = (element) => {\n  if (element && element.parentNode) {\n    element.parentNode.removeChild(element);\n  }\n};\n\n// Usage:\nconst element = document.querySelector('.my-element');\nremoveElement(element);"
+}

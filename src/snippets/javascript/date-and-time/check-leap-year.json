@@ -1,0 +1,6 @@
+{
+    "title": "Check Leap Year",
+    "author": "sampathvenur",
+    "description": "Determines if a given year is a leap year.",
+    "code": "const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;\n\n// Usage:\nisLeapYear(2024); // Returns: true\nisLeapYear(2023); // Returns: false"
+}

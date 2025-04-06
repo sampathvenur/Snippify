@@ -1,7 +1,6 @@
-
 {
   "title": "Compare Arrays",
   "author": "sampathvenur",
-  "description": "Compare two arrays for equality regardless of order",
-  "code": "function compareArrays(arr1, arr2) {\n  if (arr1.length !== arr2.length) return false;\n  \n  const sortedArr1 = [...arr1].sort();\n  const sortedArr2 = [...arr2].sort();\n  \n  return sortedArr1.every((value, index) => value === sortedArr2[index]);\n}\n\n// Example usage\nconst array1 = [1, 2, 3, 4];\nconst array2 = [4, 3, 2, 1];\nconsole.log(compareArrays(array1, array2)); // true"
+  "description": "Deeply compares two arrays to check if they are equal to each other (supports nested arrays and objects).",
+  "code": "const compareArrays = (a, b) => {\n  if (!Array.isArray(a) || !Array.isArray(b) || a.length !== b.length) return false;\n  return a.every((v, i) => \n    Array.isArray(v) && Array.isArray(b[i]) ? compareArrays(v, b[i]) :\n    typeof v === \"object\" && typeof b[i] === \"object\" ? compareObjects(v, b[i]) :\n    v === b[i]\n  );\n};\n\nconst compareObjects = (a, b) => {\n  if (typeof a !== \"object\" || typeof b !== \"object\" || Object.keys(a).length !== Object.keys(b).length) return false;\n  return Object.keys(a).every(k => \n    Array.isArray(a[k]) && Array.isArray(b[k]) ? compareArrays(a[k], b[k]) :\n    typeof a[k] === \"object\" && typeof b[k] === \"object\" ? compareObjects(a[k], b[k]) :\n    a[k] === b[k]\n  );\n};\n\n// Usage:\ncompareArrays([1, 2, 3], [1, 2, 3]); // Returns: true\ncompareArrays([1, 2, 3], [3, 2, 1]); // Returns: false\ncompareArrays([{a:1}], [{a:1}]);     // Returns: true\ncompareArrays([{a:1}], null);        // Returns: false"
 }

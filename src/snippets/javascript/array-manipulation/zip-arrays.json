@@ -1,0 +1,6 @@
+{
+    "title": "Zip Arrays",
+    "author": "sampathvenur",
+    "description": "Combines two arrays by pairing corresponding elements from each array.",
+    "code": "const zip = (arr1, arr2) => arr1.map((value, index) => [value, arr2[index]]);\n\n// Usage:\nconst arr1 = ['a', 'b', 'c'];\nconst arr2 = [1, 2, 3];\nconsole.log(zip(arr1, arr2)); // Output: [['a', 1], ['b', 2], ['c', 3]]"
+}

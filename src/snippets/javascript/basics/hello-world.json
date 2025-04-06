@@ -1,0 +1,6 @@
+{
+    "title": "Hello, World!",
+    "author": "sampathvenur",
+    "description": "Prints Hello, World! to the terminal.",
+    "code": "console.log(\"Hello, World!\"); // Prints Hello, World! to the console"
+}

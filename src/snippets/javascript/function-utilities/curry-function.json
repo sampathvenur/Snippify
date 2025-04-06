@@ -1,0 +1,6 @@
+{
+    "title": "Curry Function",
+    "author": "sampathvenur",
+    "description": "Transforms a function into its curried form.",
+    "code": "const curry = (func) => {\n  const curried = (...args) => {\n    if (args.length >= func.length) {\n      return func(...args);\n    }\n    return (...nextArgs) => curried(...args, ...nextArgs);\n  };\n  return curried;\n};\n\n// Usage:\nconst add = (a, b, c) => a + b + c;\nconst curriedAdd = curry(add);\ncurriedAdd(1)(2)(3); // Returns: 6\ncurriedAdd(1, 2)(3); // Returns: 6"
+}

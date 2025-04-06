@@ -1,0 +1,6 @@
+{
+    "title": "Remove Falsy Values",
+    "author": "sampathvenur",
+    "description": "Removes falsy values from an array.",
+    "code": "const removeFalsy = (arr) => arr.filter(Boolean);\n\n// Usage:\nconst array = [0, 1, false, 2, \"\", 3, null];\nremoveFalsy(array); // Returns: [1, 2, 3]"
+}

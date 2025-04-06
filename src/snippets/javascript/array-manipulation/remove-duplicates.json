@@ -1,0 +1,6 @@
+{
+    "title": "Remove Duplicates",
+    "author": "sampathvenur",
+    "description": "Removes duplicate values from an array.",
+    "code": "const removeDuplicates = (arr) => [...new Set(arr)];\n\n// Usage:\nconst numbers = [1, 2, 2, 3, 4, 4, 5];\nremoveDuplicates(numbers); // Returns: [1, 2, 3, 4, 5]"
+}

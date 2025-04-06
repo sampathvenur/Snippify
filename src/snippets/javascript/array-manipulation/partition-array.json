@@ -1,7 +1,6 @@
-
 {
   "title": "Partition Array",
   "author": "sampathvenur",
-  "description": "Split an array into two parts based on a predicate function",
-  "code": "function partitionArray(array, predicate) {\n  return array.reduce(\n    ([pass, fail], elem) => {\n      return predicate(elem) \n        ? [[...pass, elem], fail] \n        : [pass, [...fail, elem]];\n    },\n    [[], []]\n  );\n}\n\n// Example usage\nconst numbers = [1, 2, 3, 4, 5, 6, 7, 8];\nconst [evens, odds] = partitionArray(numbers, n => n % 2 === 0);\nconsole.log(evens); // [2, 4, 6, 8]\nconsole.log(odds);  // [1, 3, 5, 7]"
+  "description": "Splits an array into two arrays based on a callback function.",
+  "code": "const partition = (arr, callback) =>\n  arr.reduce(\n    ([pass, fail], elem) => (callback(elem) ? [[...pass, elem], fail] : [pass, [...fail, elem]]),\n    [[], []]\n  );\n\n// Usage:\nconst numbers = [1, 2, 3, 4, 5, 6];\nconst isEven = (n) => n % 2 === 0;\npartition(numbers, isEven); // Returns: [[2, 4, 6], [1, 3, 5]]"
 }

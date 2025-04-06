@@ -8,6 +8,7 @@ import { Snippet } from '@/lib/types';
 import { useSnippets, useSnippetsByCategory, useSearchSnippets } from '@/hooks/useSnippets';
 
 export default function Index() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<string | null>(null);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
   const [selectedSnippet, setSelectedSnippet] = useState<Snippet | null>(null);
@@ -71,9 +72,11 @@ export default function Index() {
           currentLanguage={currentLanguage}
           currentCategory={currentCategory}
           isLoading={isLoading}
+          isOpen={isSidebarOpen}
+          onToggle={() => setIsSidebarOpen(!isSidebarOpen)}
         />
         
-        <main className="flex-1 overflow-y-auto">
+        <main className={`flex-1 overflow-y-auto ${isSidebarOpen ? 'hidden md:block' : 'block'}`}>
           <SnippetGrid
             snippets={displayedSnippets}
             onSelectSnippet={handleSelectSnippet}

@@ -1,0 +1,6 @@
+{
+    "title": "Get Time Difference",
+    "author": "sampathvenur",
+    "description": "Calculates the time difference in days between two dates.",
+    "code": "const getTimeDifference = (date1, date2) => {\n  const diff = Math.abs(date2 - date1);\n  return Math.ceil(diff / (1000 * 60 * 60 * 24));\n};\n\n// Usage:\nconst date1 = new Date('2024-01-01');\nconst date2 = new Date('2024-12-31');\ngetTimeDifference(date1, date2); // Returns: 365"
+}

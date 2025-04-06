@@ -1,0 +1,6 @@
+{
+    "title": "Format Date",
+    "author": "sampathvenur",
+    "description": "Formats a date in 'YYYY-MM-DD' format.",
+    "code": "const formatDate = (date) => date.toISOString().split('T')[0];\n\n// Usage:\nformatDate(new Date(2024, 11, 10)); // Returns: '2024-12-10'"
+}

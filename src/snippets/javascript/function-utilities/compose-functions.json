@@ -1,0 +1,6 @@
+{
+    "title": "Compose Functions",
+    "author": "sampathvenur",
+    "description": "Composes multiple functions into a single function, where the output of one function becomes the input of the next.",
+    "code": "const compose = (...funcs) => (initialValue) => {\n  return funcs.reduce((acc, func) => func(acc), initialValue);\n};\n\n// Usage:\nconst add2 = (x) => x + 2;\nconst multiply3 = (x) => x * 3;\nconst composed = compose(multiply3, add2);\ncomposed(5); // Returns: 17 ((5 * 3) + 2)"
+}

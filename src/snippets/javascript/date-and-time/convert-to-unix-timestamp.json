@@ -1,0 +1,6 @@
+{
+    "title": "Convert to Unix Timestamp",
+    "author": "sampathvenur",
+    "description": "Converts a date to a Unix timestamp in seconds.",
+    "code": "function convertToUnixSeconds(input) {\n  if (typeof input === 'string') {\n    if (!input.trim()) {\n      throw new Error('Date string cannot be empty or whitespace');\n    }\n  } else if (!input) {\n    throw new Error('Input is required');\n  }\n\n  let date;\n\n  if (typeof input === 'string') {\n    date = new Date(input);\n  } else if (input instanceof Date) {\n    date = input;\n  } else {\n    throw new Error('Input must be a valid date string or Date object');\n  }\n\n  if (isNaN(date.getTime())) {\n    throw new Error('Invalid date provided');\n  }\n\n  return Math.floor(date.getTime() / 1000);\n}\n\n// Usage:\nconvertToUnixSeconds('2025-01-01T12:00:00Z'); // Returns: 1735732800\nconvertToUnixSeconds(new Date('2025-01-01T12:00:00Z')); // Returns: 1735732800\nconvertToUnixSeconds(new Date()); // Returns: Current Unix timestamp in seconds"
+}

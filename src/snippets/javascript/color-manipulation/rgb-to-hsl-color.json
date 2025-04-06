@@ -1,0 +1,6 @@
+{
+    "title": "RGB to HSL Color",
+    "author": "sampathvenur",
+    "description": "Converts RGB color values to HSL color values.",
+    "code": "function rgbToHsl(r, g, b) {\n  [r, g, b] = [r, g, b].map((v) => v / 255);\n\n  const max = Math.max(r, g, b);\n  const min = Math.min(r, g, b);\n  const delta = max - min;\n\n  const l = (max + min) / 2;\n\n  if (delta === 0) return { h: 0, s: 0, l: Math.round(l * 100) };\n\n  const s = l > 0.5 ? delta / (2 - max - min) : delta / (max + min);\n\n  const h = \n    max === r ? ((g - b) / delta + (g < b ? 6 : 0)) :\n    max === g ? (b - r) / delta + 2 :\n                (r - g) / delta + 4;\n\n  return {\n    h: Math.round(h * 60), \n    s: Math.round(s * 100),\n    l: Math.round(l * 100), \n  };\n}\n\n// Usage:\nconsole.log(rgbToHsl(255, 87, 51)); // { h: 14, s: 100, l: 60 }\nconsole.log(rgbToHsl(255, 255, 255)); // { h: 0, s: 0, l: 100 }"
+}
