@@ -1,0 +1,6 @@
+{
+    "title": "RGB Border Color Animation",
+    "description": "changes border of an Element to rgb onhover (Can be changed)",
+    "author": "sampathvenur",
+    "code": ".yourElement {\n    /* Your Elements styles go here*/\n    border-style: solid;\n    border-radius: 10px;\n    color: rgb(0, 0, 0);\n}\n\n.yourElement:hover {\n\n    animation: change-color;\n    animation-duration: 0.5s;         /* you can alter the duration of the animation here. */\n    animation-iteration-count: infinite;         /* Choose to play animation infinitely or once on hover. */\n}\n\n@keyframes change-color {\n    0% {\n        border-color: red;\n    }\n\n    50% {\n        border-color: green;\n    }\n\n    100% {\n        border-color: blue;\n    }\n}"
+}

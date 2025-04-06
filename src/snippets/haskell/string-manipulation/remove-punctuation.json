@@ -1,0 +1,6 @@
+{
+    "title": "Remove Punctuation",
+    "description": "Removes all punctuation from a given string.",
+    "author": "sampathvenur",
+    "code": "import Data.Char (isPunctuation)\n\nremovePunctuation :: String -> String\nremovePunctuation = filter (not . isPunctuation)\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let text = \"Hello, Haskell! How's it going?\"\n    print $ removePunctuation text -- Output: \"Hello Haskell Hows it going\""
+}

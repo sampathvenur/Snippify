@@ -1,0 +1,6 @@
+{
+    "title": "Button Hover Effect",
+    "description": "Creates a hover effect with a color transition.",
+    "author": "sampathvenur",
+    "code": ".button {\n  background-color: #007bff;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.button:hover {\n  background-color: #0056b3;\n}"
+}

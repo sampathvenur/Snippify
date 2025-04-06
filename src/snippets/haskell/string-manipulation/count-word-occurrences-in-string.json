@@ -1,0 +1,6 @@
+{
+    "title": "Count Word Occurrences in String",
+    "description": "Counts the occurrences of each word in a given string.",
+    "author": "sampathvenur",
+    "code": "import Data.List (group, sort)\n\ncountWordOccurrences :: String -> [(String, Int)]\ncountWordOccurrences = map (\\(w:ws) -> (w, length (w:ws))) . group . sort . words\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let text = \"haskell is awesome and haskell is fun\"\n    print $ countWordOccurrences text -- Output: [(\"and\",1),(\"awesome\",1),(\"fun\",1),(\"haskell\",2),(\"is\",2)]"
+}

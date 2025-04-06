@@ -1,0 +1,6 @@
+{
+    "title": "Writer Monad",
+    "description": "Using the Writer monad to accumulate logs or other outputs alongside a computation.",
+    "author": "sampathvenur",
+    "code": "import Control.Monad.Writer\n\naddAndLog :: Int -> Int -> Writer [String] Int\naddAndLog x y = do\n    tell [\"Adding \" ++ show x ++ \" and \" ++ show y]\n    return (x + y)\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let (result, logs) = runWriter $ do\n            res1 <- addAndLog 3 5\n            addAndLog res1 1\n    print result  -- Output: 9\n    print logs  -- Output: [\"Adding 3 and 5\", \"Adding 8 and 1\"]"
+}

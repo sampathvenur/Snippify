@@ -1,0 +1,6 @@
+{
+    "title": "Equal-Width Columns",
+    "description": "Creates columns with equal widths using flexbox.",
+    "author": "sampathvenur",
+    "code": ".columns {\n  display: flex;\n  justify-content: space-between;\n}\n\n.column {\n  flex: 1;\n  margin: 0 10px;\n}"
+}

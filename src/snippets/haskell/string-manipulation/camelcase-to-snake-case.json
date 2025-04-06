@@ -1,0 +1,6 @@
+{
+    "title": "CamelCase to snake_case",
+    "description": "Converts a Camel Case string to Snake case.",
+    "author": "sampathvenur",
+    "code": "import Data.Char (isUpper, toLower)\n\ncamelToSnake :: String -> String\ncamelToSnake [] = []\ncamelToSnake (x:xs)\n    | isUpper x = '_' : toLower x : camelToSnake xs\n    | otherwise = x : camelToSnake xs\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let camelCase = \"camelCaseToSnakeCase\"\n    print $ camelToSnake camelCase -- Output: \"camel_case_to_snake_case\""
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Blur Background",
+    "description": "Applies a blur effect to the background of an element.",
+    "author": "sampathvenur",
+    "code": ".blur-background {\n  backdrop-filter: blur(10px);\n  background: rgba(255, 255, 255, 0.5);\n}"
+}

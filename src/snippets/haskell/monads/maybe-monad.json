@@ -1,0 +1,6 @@
+{
+    "title": "Maybe Monad",
+    "description": "Using the Maybe monad to handle computations that might fail.",
+    "author": "sampathvenur",
+    "code": "safeDiv :: Int -> Int -> Maybe Int\nsafeDiv _ 0 = Nothing\nsafeDiv x y = Just (x `div` y)\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let result = do\n            a <- safeDiv 10 2\n            b <- safeDiv a 2\n            return b\n    print result  -- Output: Just 2"
+}

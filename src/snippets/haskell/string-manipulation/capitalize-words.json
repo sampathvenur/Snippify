@@ -1,0 +1,6 @@
+{
+    "title": "Capitalize Words",
+    "description": "Capitalizes the first letter of each word in a string.",
+    "author": "sampathvenur",
+    "code": "import Data.Char (toUpper)\n\ncapitalizeWords :: String -> String\ncapitalizeWords = unwords . map capitalize . words\n  where\n    capitalize []     = []\n    capitalize (x:xs) = toUpper x : xs\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let sentence = \"haskell is awesome\"\n    print $ capitalizeWords sentence -- Output: \"Haskell Is Awesome\""
+}

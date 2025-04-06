@@ -1,0 +1,6 @@
+{
+    "title": "Chunk Array",
+    "description": "Splits an array into chunks of a specified size.",
+    "author": "sampathvenur",
+    "code": "chunkArray :: Int -> [a] -> [[a]]\nchunkArray _ [] = []\nchunkArray n xs = take n xs : chunkArray n (drop n xs)\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let array = [1, 2, 3, 4, 5, 6]\n    print $ chunkArray 2 array -- Output: [[1, 2], [3, 4], [5, 6]]"
+}

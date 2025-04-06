@@ -1,0 +1,6 @@
+{
+    "title": "Shake Animation",
+    "description": "Adds a shake animation ( commonly used to mark invalid fields )",
+    "author": "sampathvenur",
+    "code": ".shake {\n    animation: shake .5s ease-in-out;\n}\n\n@keyframes shake {\n  0%, 100% {\n    transform: translateX(0);\n  }\n  25% {\n    transform: translateX(-10px);\n  }\n  50% {\n    transform: translateX(10px);\n  }\n  75% {\n    transform: translateX(-10px);\n  }\n}"
+}

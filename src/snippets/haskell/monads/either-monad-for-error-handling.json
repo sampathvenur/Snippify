@@ -1,0 +1,6 @@
+{
+    "title": "Either Monad for Error Handling",
+    "description": "Using the Either monad to handle errors in a computation.",
+    "author": "sampathvenur",
+    "code": "safeDiv :: Int -> Int -> Either String Int\nsafeDiv _ 0 = Left \"Division by zero error\"\nsafeDiv x y = Right (x `div` y)\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let result = do\n            a <- safeDiv 10 2\n            b <- safeDiv a 0  -- This will trigger an error\n            return b\n    print result  -- Output: Left \"Division by zero error\""
+}

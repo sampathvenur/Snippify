@@ -1,0 +1,6 @@
+{
+    "title": "Blink Animation",
+    "description": "Adds an infinite blinking animation to an element",
+    "author": "sampathvenur",
+    "code": ".blink {\n    animation: blink 1s linear infinite;\n}\n\n@keyframes blink{\n    0%{\n        opacity: 0;\n    }\n    50%{\n        opacity: 1;\n    }\n    100%{\n        opacity: 0;\n    }\n}"
+}

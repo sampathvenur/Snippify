@@ -1,0 +1,6 @@
+{
+    "title": "Binary Search",
+    "description": "Searches for an element in a sorted array using binary search.",
+    "author": "sampathvenur",
+    "code": "binarySearch :: Ord a => a -> [a] -> Maybe Int\nbinarySearch _ [] = Nothing\nbinarySearch target xs = go 0 (length xs - 1)\n  where\n    go low high\n        | low > high = Nothing\n        | midElem < target = go (mid + 1) high\n        | midElem > target = go low (mid - 1)\n        | otherwise = Just mid\n      where\n        mid = (low + high) `div` 2\n        midElem = xs !! mid\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let array = [1, 2, 3, 4, 5]\n    print $ binarySearch 3 array -- Output: Just 2\n    print $ binarySearch 6 array -- Output: Nothing"
+}

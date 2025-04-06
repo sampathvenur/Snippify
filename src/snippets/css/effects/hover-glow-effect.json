@@ -1,0 +1,6 @@
+{
+    "title": "Hover Glow Effect",
+    "description": "Adds a glowing effect on hover.",
+    "author": "sampathvenur",
+    "code": ".glow {\n  background-color: #f39c12;\n  padding: 10px 20px;\n  border-radius: 5px;\n  transition: box-shadow 0.3s ease;\n}\n\n.glow:hover {\n  box-shadow: 0 0 15px rgba(243, 156, 18, 0.8);\n}"
+}

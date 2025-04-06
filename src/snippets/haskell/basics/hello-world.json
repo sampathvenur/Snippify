@@ -1,0 +1,6 @@
+{
+    "title": "Hello, World!",
+    "description": "Prints Hello, World! to the terminal.",
+    "author": "sampathvenur",
+    "code": "putStrLn \"Hello, World!\""
+}

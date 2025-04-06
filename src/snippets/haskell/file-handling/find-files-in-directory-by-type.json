@@ -1,0 +1,6 @@
+{
+    "title": "Find Files in Directory by Type",
+    "description": "Finds all files in a directory with a specific extension.",
+    "author": "sampathvenur",
+    "code": "import System.Directory (listDirectory)\nimport System.FilePath (takeExtension)\n\nfindFilesByExtension :: FilePath -> String -> IO [FilePath]\nfindFilesByExtension dir ext = do\n    files <- listDirectory dir\n    return $ filter (\f -> takeExtension f == ext) files\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let directory = \".\"\n    let ext = \".txt\"\n    files <- findFilesByExtension directory ext\n    mapM_ putStrLn files -- Output: list of txt files on the current directory"
+}

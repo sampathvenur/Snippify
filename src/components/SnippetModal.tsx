@@ -31,8 +31,9 @@ import 'prismjs/components/prism-regex';
 import 'prismjs/components/prism-sql';
 import 'prismjs/components/prism-yaml';
 import 'prismjs/components/prism-rust';
-import 'prismjs/components/prism-c'; // Import C language component
-import 'prismjs/components/prism-cpp'; // Import C++ language component
+import 'prismjs/components/prism-c';
+import 'prismjs/components/prism-cpp';
+import 'prismjs/components/prism-haskell';
 
 interface SnippetModalProps {
   snippet: Snippet | null;
@@ -84,6 +85,7 @@ export default function SnippetModal({ snippet, isOpen, onClose }: SnippetModalP
       markdown: 'language-markdown',
       c: 'language-c', // Ensure C language is mapped correctly
       cpp: 'language-cpp', // Ensure C++ language is mapped correctly
+      haskell: 'language-haskell', // Ensure Haskell language is mapped correctly
     };
     
     return languageMap[language.toLowerCase()] || 'language-markup';

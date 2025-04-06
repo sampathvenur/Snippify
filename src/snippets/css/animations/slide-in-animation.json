@@ -1,0 +1,6 @@
+{
+    "title": "Slide-in Animation",
+    "description": "Adds a slide-in from the right side of the screen",
+    "author": "sampathvenur",
+    "code": ".slide-in {\n    animation: slide-in 1s ease-in-out;\n}\n\n@keyframes slide-in {\n    from {\n        scale: 300% 1;\n        translate: 150vw 0;\n    }\n\n    to {\n        scale: 100% 1;\n        translate: 0 0;\n    }\n}"
+}

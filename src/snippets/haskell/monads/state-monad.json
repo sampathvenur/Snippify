@@ -1,0 +1,6 @@
+{
+    "title": "State Monad",
+    "description": "Managing mutable state using the State monad.",
+    "author": "sampathvenur",
+    "code": "import Control.Monad.State\n\nincrement :: State Int Int\nincrement = do\n    count <- get\n    put (count + 1)\n    return count\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let (res1, intermediateState) = runState increment 0\n    print res1      -- Output: 0\n    let (result, finalState) = runState increment intermediateState\n    print result    -- Output: 1\n    print finalState  -- Output: 2"
+}

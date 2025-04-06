@@ -1,0 +1,6 @@
+{
+    "title": "Responsive Font Sizing",
+    "description": "Adjusts font size based on viewport width.",
+    "author": "sampathvenur",
+    "code": "h1 {\n  font-size: calc(1.5rem + 2vw);\n}"
+}

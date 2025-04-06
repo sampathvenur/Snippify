@@ -1,0 +1,6 @@
+{
+    "title": "CSS Reset",
+    "description": "Resets some default browser styles, ensuring consistency across browsers.",
+    "author": "sampathvenur",
+    "code": "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box\n}"
+}

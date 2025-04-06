@@ -1,0 +1,6 @@
+{
+    "title": "Responsive Design",
+    "description": "The different responsive breakpoints.",
+    "author": "sampathvenur",
+    "code": "/* Phone */\n.element {\n  margin: 0 10%\n}\n\n/* Tablet */\n@media (min-width: 640px) {\n  .element {\n    margin: 0 20%\n  }\n}\n\n/* Desktop base */\n@media (min-width: 768px) {\n  .element {\n    margin: 0 30%\n  }\n}\n\n/* Desktop large */\n@media (min-width: 1024px) {\n  .element {\n    margin: 0 40%\n  }\n}\n\n/* Desktop extra large */\n@media (min-width: 1280px) {\n  .element {\n    margin: 0 60%\n  }\n}\n\n/* Desktop bige */\n@media (min-width: 1536px) {\n  .element {\n    margin: 0 80%\n  }\n}"
+}

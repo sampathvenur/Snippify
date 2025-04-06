@@ -1,0 +1,6 @@
+{
+    "title": "Typewriter Animation",
+    "description": "Adds a typewriter animation + blinking cursor",
+    "author": "sampathvenur",
+    "code": "<div class=\"typewriter\">\n  <div>\n      <p>Typerwriter Animation</p>\n  </div>\n</div>\n\n.typewriter{\n    display: flex;\n    justify-content: center;\n}\n\n.typewriter p {\n    overflow: hidden;\n    font-size: 1.5rem;\n    font-family: monospace;\n    border-right: 1px solid;\n    margin-inline: auto;\n    white-space: nowrap;\n    /* The cursor will inherit the text's color by default */\n    /* border-color: red */                \n    /* Steps: number of chars (better to set directly in js)*/\n    animation: typing 3s steps(21) forwards,\n    blink 1s step-end infinite;\n}\n\n@keyframes typing{\n    from{\n        width: 0%\n    }\n    to{\n        width: 100%\n    }\n}\n\n@keyframes blink{\n    50%{\n        border-color: transparent;\n    }\n}"
+}

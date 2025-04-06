@@ -1,0 +1,6 @@
+{
+    "title": "Read File in Chunks",
+    "description": "Reads a file in chunks grouped by lines.",
+    "author": "sampathvenur",
+    "code": "import System.IO (openFile, IOMode(ReadMode), hGetContents)\nimport Data.List (unfoldr)\n\nreadFileInChunks :: FilePath -> Int -> IO [[String]]\nreadFileInChunks filePath chunkSize = do\n    handle <- openFile filePath ReadMode\n    contents <- hGetContents handle\n    let linesList = lines contents\n    return $ go linesList\n  where\n    go [] = []\n    go xs = take chunkSize xs : go (drop chunkSize xs)\n\n-- Usage:\nmain :: IO ()\nmain = do\n    let file = \"example.txt\"\n    let chunkSize = 3 -- Number of lines per chunk\n    chunks <- readFileInChunks file chunkSize\n    mapM_ (putStrLn . unlines) chunks"
+}
