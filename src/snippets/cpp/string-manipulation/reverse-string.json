@@ -1,0 +1,6 @@
+{
+    "title": "Reverse String",
+    "description": "Reverses the characters in a string.",
+    "author": "sampathvenur",
+    "code": "#include <string>\n#include <algorithm>\n\nstd::string reverseString(const std::string& input) {\n    std::string reversed = input;\n    std::reverse(reversed.begin(), reversed.end());\n    return reversed;\n}\n\nreverseString(\"quicksnip\"); // Returns: \"pinskciuq\""
+}

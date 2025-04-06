@@ -1,0 +1,6 @@
+{
+    "title": "Vector to Queue",
+    "description": "Convert vector into queue quickly",
+    "author": "sampathvenur",
+    "code": "#include<queue>\n#include<vector>\n#include<deque>\n\ntemplate <typename T>\nstd::queue<T> vectorToQueue(const std::vector<T>& v) {\n    return std::queue<T>(std::deque<T>(v.begin(), v.end()));\n}\n\n\n\n// Usage:\nstd::vector<int> vec = { 1, 2, 3, 4, 5 };\nvectorToQueue(vec); // Returns: std::queue<int> { 1, 2, 3, 4, 5 }"
+}

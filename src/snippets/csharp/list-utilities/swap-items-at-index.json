@@ -1,0 +1,6 @@
+{
+    "title": "Swap items at index",
+    "description": "Swaps two items at determined indexes",
+    "author": "sampathvenur",
+    "code": "public static IList<T> Swap<T>(this IList<T> list, int indexA, int indexB)\n{\n    (list[indexA], list[indexB]) = (list[indexB], list[indexA]);\n    return list;\n}\n\nvar list = new List<string>() {\"Test\", \"Test2\"};\n\nlist.Swap(0, 1); // Swaps \"Test\" and \"Test2\" in place"
+}

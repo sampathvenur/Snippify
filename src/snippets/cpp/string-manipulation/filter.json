@@ -1,0 +1,6 @@
+{
+    "title": "Filter",
+    "description": "Filter a string with a predicate function",
+    "author": "sampathvenur",
+    "code": "#include <ranges>\n#include <string>\n\ntemplate <typename P>\nstd::string filter(const std::string& str, P&& predicate) {\n    return str\n        | std::ranges::views::filter(std::forward<P>(predicate))\n        | std::ranges::to<std::string>();\n}\n\n\n\n// Usage:\nstd::string str = \"Hello, World!\";\nstd::string filtered = filter(str, [](char c){ return std::isalpha(c); });\nstd::cout << filtered << std::endl; // HelloWorld"
+}

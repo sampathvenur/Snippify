@@ -1,0 +1,6 @@
+{
+    "title": "Remove n Occurences",
+    "description": "Removes duplicates from an vector of ints",
+    "author": "sampathvenur",
+    "code": "#include <algorithm>\n#include <unordered_map>\n#include <vector>\n\nbool removeOccurrences(std::vector<int>& vec, const unsigned int n) noexcept {\n    if (vec.empty() || n == 0) return false;\n\n    const auto size = vec.size();\n    std::unordered_map<int, int> frequency; // count frequencies\n    for (int num : vec) {\n        frequency[num]++;\n    }\n\n    vec.erase( // remove elements with n number of occurrences\n        std::remove_if(vec.begin(), vec.end(), [&frequency, n](const int x) {\n            return frequency[x] == n;\n        }),\n        vec.end()\n    );\n    return size != vec.size();\n}\n\n\n\n// Usage:\nstd::vector<int> vec = {4, 2, 4, 8, 5, 6, 8, 8, 4, 3 };\n\nint n = 3; // Remove elements that occur exactly 3 times\nremoveOccurrences(vec, n); // returns {2, 5, 6, 3}"
+}

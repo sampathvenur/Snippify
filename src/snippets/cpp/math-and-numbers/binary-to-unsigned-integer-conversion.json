@@ -1,0 +1,6 @@
+{
+    "title": "Binary to Unsigned Integer Conversion",
+    "description": "Converts a binary number represented as a string to its decimal equivalent.",
+    "author": "sampathvenur",
+    "code": "#include <string>\n#include <bitset>\n#include <stdexcept>\n\ntemplate <std::unsigned_integral T>\nT binary_to_uintegral(const std::string& binary) {\n    if (binary.size() > sizeof(T) * 8)\n        throw std::invalid_argument(\"binary string is too long\");\n    return static_cast<T>(std::bitset<sizeof(T) * 8>(binary).to_ullong());\n}\n\n// Usage:\nstd::string binary(64, '1'); // Binary 8 bytes long with all bits set to 1\nbinary_to_uintegral<unsigned long long>(binary); // Returns: 18446744073709551615\nbinary_to_uintegral<long long>(binary); // Compiles error: signed/unsigned mismatch\nbinary_to_uintegral<unsigned long long>(std::string(65, '1')); // Throws: std::invalid_argument"
+}

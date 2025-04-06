@@ -1,0 +1,6 @@
+{
+    "title": "Palindrome",
+    "description": "Check if a string is a palindrome or not.",
+    "author": "sampathvenur",
+    "code": "#include <string>\n#include <ranges>\n#include <algorithm>\n\nbool is_palindrome(const std::string& str) {\n    std::string sanitized_string = str\n        | std::ranges::views::filter([](char c){ return std::isalnum(c); })\n        | std::ranges::views::transform([](char c){ return std::tolower(c); })\n        | std::ranges::to<std::string>();\n    \n    return std::ranges::equal(sanitized_string, sanitized_string | std::views::reverse);\n}\n\n\n\n// Usage:\nbool pal = is_palindrome(\"A man, a plan, a canal, Panama\"); // true"
+}

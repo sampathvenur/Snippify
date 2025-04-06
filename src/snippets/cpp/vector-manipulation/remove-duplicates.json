@@ -1,0 +1,6 @@
+{
+    "title": "Remove duplicates",
+    "description": "Removes duplicates from an vector of ints",
+    "author": "sampathvenur",
+    "code": "#include <algorithm>\n#include <vector>\n\nbool removeDuplicates(std::vector<int> &input) noexcept {\n    if (input.empty()) return false;\n    const auto size = input.size();\n    std::sort(input.begin(), input.end());\n\n    auto last = std::unique(input.begin(), input.end()); // remove duplicates\n    input.erase(last, input.end()); // resize vector and delete the undefined elements\n\n    return size != input.size();\n}\n\n\n\n// Usage:\nstd::vector<int> vec = {4, 2, 2, 8, 5, 6, 9, 9, 9, 8, 8, 4};\nremoveDuplicates(vec); // returns {2, 4, 5, 6, 8, 9}"
+}

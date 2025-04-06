@@ -1,0 +1,6 @@
+{
+    "title": "List Directories",
+    "description": "Lists all the directories in a path.",
+    "author": "sampathvenur",
+    "code": "#include <filesystem>\n#include <vector>\n#include <string>\n\nstd::vector<std::filesystem::path> list_directories(const std::string& path) {\n    std::vector<std::filesystem::path> files;\n    std::error_code ec;\n\n    if (!std::filesystem::exists(path, ec) || ec)\n        return files;\n    if (!std::filesystem::is_directory(path, ec) || ec)\n        return files;\n\n    auto it = std::filesystem::directory_iterator(path, ec);\n    if (ec)\n        return files;\n\n    for (const auto& entry : it)\n        if (std::filesystem::is_directory(entry))\n            files.push_back(entry.path());\n\n    return files;\n}\n\n\n\n// Usage:\nauto directories = list_directories(\"Path\");"
+}

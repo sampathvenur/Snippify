@@ -1,0 +1,6 @@
+{
+    "title": "Validate JWT",
+    "description": "Validates a JWT.",
+    "author": "sampathvenur",
+    "code": "public static bool ValidateJwt(string token, string secret) {\n  var tokenHandler = new JwtSecurityTokenHandler();\n  var validationParameters = new TokenValidationParameters {\n    ValidateIssuerSigningKey = true,\n    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret)),\n    ValidateIssuer = false,\n    ValidateAudience = false\n  };\n  try {\n    tokenHandler.ValidateToken(token, validationParameters, out _);\n    return true;\n  }\n  catch {\n    return false\n  }\n}\n\n// Usage:\nstring JWT = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\";\nstring correctSecret = \"your-256-bit-secret\";\nstring wrongSecret = \"this-is-not-the-right-secret\";\n\nValidateJwt(JWT, correctSecret); // Returns: true\nValidateJwt(JWT, wrongSecret); // Returns: false"
+}

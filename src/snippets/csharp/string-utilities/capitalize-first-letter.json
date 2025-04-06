@@ -1,0 +1,6 @@
+{
+    "title": "Capitalize first letter",
+    "description": "Makes the first letter of a string uppercase.",
+    "author": "sampathvenur",
+    "code": "public static string Capitalize(this string str) {\n  return str.Substring(0, 1).ToUpper() + str.Substring(1);\n}\n\n// Usage:\n\"quicksnip\".Capitalize(); // Returns: \"Quicksnip\""
+}

@@ -10,6 +10,8 @@ import pythonIcon from '../snippets/python/icon.svg';
 import htmlIcon from '../snippets/html/icon.svg';
 import bashIcon from '../snippets/bash/icon.svg';
 import cIcon from '../snippets/c/icon.svg';
+import cppIcon from '../snippets/cpp/icon.svg';
+import csharpIcon from '../snippets/csharp/icon.svg'; // Ensure this import is correct
 // Import other language icons similarly...
 
 // Type for Lucide icon components
@@ -54,6 +56,8 @@ export default function Sidebar({
     html: htmlIcon,
     bash: bashIcon,
     c: cIcon,
+    cpp: cppIcon,
+    csharp: csharpIcon, // Ensure C# is mapped to the correct icon
     // Add other languages and their icons here...
   };
 

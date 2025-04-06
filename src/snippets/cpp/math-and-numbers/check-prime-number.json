@@ -1,0 +1,6 @@
+{
+    "title": "Check Prime Number",
+    "description": "Check if an integer is a prime number",
+    "author": "sampathvenur",
+    "code": "bool is_prime(int n) {\n    if (n < 2) return false;\n    if (n == 2 || n == 3) return true;\n    if (n % 2 == 0) return false;\n    for (int i = 3; i * i <= n; i += 2) {\n        if (n % i == 0) return false;\n    }\n    return true;\n}\n\n// Usage:\nis_prime(29); // Returns: true"
+}

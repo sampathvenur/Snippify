@@ -1,0 +1,6 @@
+{
+    "title": "Generate GUID",
+    "description": "Generates a new GUID",
+    "author": "sampathvenur",
+    "code": "public static string GenerateGuid() {\n  return Guid.NewGuid().ToString();\n}\n\n// Usage:\nGenerateGuid(); // Returns: 1c4c38d8-64e4-431b-884a-c6eec2ab02cd (Uuid is random)"
+}

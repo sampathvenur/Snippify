@@ -1,0 +1,6 @@
+{
+    "title": "Transform",
+    "description": "Transforms a vector using a function.",
+    "author": "sampathvenur",
+    "code": "#include <ranges>\n#include <vector>\n\ntemplate <typename T, typename F>\nauto transform(const std::vector<T>& vec, F&& transformer) {\n    using U = std::invoke_result_t<F, T>;\n    return vec\n        | std::views::transform(std::forward<F>(transformer))\n        | std::ranges::to<std::vector<U>>();\n}\n\n\n\n// Usage:\nstd::vector<int> vec = {1, 2, 3, 4, 5};\nstd::vector<int> transformed = transform(vec, [](int i){ return i * 2; });\n// transformed contains 2, 4, 6, 8, 10"
+}

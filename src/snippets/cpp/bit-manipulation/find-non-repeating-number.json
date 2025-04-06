@@ -1,0 +1,6 @@
+{
+    "title": "Find Non-Repeating Number",
+    "description": "Finds the number that appears only once in an array where every other number appears twice.",
+    "author": "sampathvenur",
+    "code": "#include <vector>\n\nint find_non_repeating(const std::vector<int> nums) {\n    int result = 0;\n    for (const int num : nums) {\n        result ^= num;\n    }\n    return result;\n}\n\n// Usage:\nstd::vector<int> nums = {4, 1, 2, 1, 2};\nfind_non_repeating(nums); // Returns: 4"
+}

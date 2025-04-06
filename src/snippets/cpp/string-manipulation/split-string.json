@@ -1,0 +1,6 @@
+{
+    "title": "Split String",
+    "description": "Splits a string by a delimiter",
+    "author": "sampathvenur",
+    "code": "#include <string>\n#include <vector>\n\nstd::vector<std::string> split_string(std::string str, std::string delim) {\n    std::vector<std::string> splits;\n    int i = 0, j;\n    int inc = delim.length();\n    while (j != std::string::npos) {\n        j = str.find(delim, i);\n        splits.push_back(str.substr(i, j - i));\n        i = j + inc;\n    }\n    return splits;\n}\n\n// Usage:\nsplit_string(\"quick_-snip\", \"_-\", ); // Returns: std::vector<std::string> { \"quick\", \"snip\" }"
+}

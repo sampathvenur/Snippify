@@ -1,0 +1,6 @@
+{
+    "title": "Validate GUID",
+    "description": "Checks if a string is a valid GUID.",
+    "author": "sampathvenur",
+    "code": "public static bool IsGuid(string str) {\n  return Guid.TryParse(str, out _);\n}\n\n// Usage:\nIsGuid(\"1c4c38d8-64e4-431b-884a-c6eec2ab02cd\"); // Returns: true\nIsGuid(\"quicksnip\"); // Returns: false"
+}
