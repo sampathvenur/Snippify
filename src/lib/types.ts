@@ -1,4 +1,3 @@
-
 export interface Snippet {
   id: string;
   title: string;
@@ -18,4 +17,9 @@ export interface LanguageSection {
   language: string;
   icon: string;
   categories: SnippetCategory[];
+}
+
+// Add this interface for development mode file watching
+export interface ImportGlobModule {
+  [key: string]: unknown;
 }

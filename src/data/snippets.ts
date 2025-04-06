@@ -1,14 +1,14 @@
 
 import { Snippet, LanguageSection } from '@/lib/types';
 
-// This file simulates what would be loaded from the snippets folder
+// This file simulates what would be loaded from the JSON snippets folder
 // In a real implementation with a server, this would be dynamically generated
 
 export const snippets: Snippet[] = [
   {
     id: 'compare-arrays',
     title: 'Compare Arrays',
-    author: 'CodeSparkStash Team',
+    author: 'sampathvenur',
     description: 'Compare two arrays for equality regardless of order',
     code: `function compareArrays(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
@@ -29,7 +29,7 @@ console.log(compareArrays(array1, array2)); // true`,
   {
     id: 'partition-array',
     title: 'Partition Array',
-    author: 'CodeSparkStash Team',
+    author: 'sampathvenur',
     description: 'Split an array into two parts based on a predicate function',
     code: `function partitionArray(array, predicate) {
   return array.reduce(
@@ -53,7 +53,7 @@ console.log(odds);  // [1, 3, 5, 7]`,
   {
     id: 'query-selector',
     title: 'Query Selector',
-    author: 'CodeSparkStash Team',
+    author: 'sampathvenur',
     description: 'Select DOM elements with different methods',
     code: `// Select a single element by ID
 const element = document.getElementById('myElement');
@@ -74,7 +74,7 @@ const elementsArray = [...document.querySelectorAll('.my-class')];`,
   {
     id: 'list-comprehension',
     title: 'List Comprehension',
-    author: 'CodeSparkStash Team',
+    author: 'sampathvenur',
     description: 'Create lists using a concise syntax',
     code: `# Basic list comprehension
 numbers = [1, 2, 3, 4, 5]
@@ -97,7 +97,7 @@ print(flattened)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]`,
 export const languageSections: LanguageSection[] = [
   {
     language: 'javascript',
-    icon: 'file-js',
+    icon: 'FileCode',
     categories: [
       {
         name: 'array-manipulation',
@@ -111,7 +111,7 @@ export const languageSections: LanguageSection[] = [
   },
   {
     language: 'python',
-    icon: 'file-code',
+    icon: 'FileCode',
     categories: [
       {
         name: 'array-manipulation',

@@ -1,0 +1,7 @@
+
+{
+  "title": "Query Selector",
+  "author": "sampathvenur",
+  "description": "Select DOM elements with different methods",
+  "code": "// Select a single element by ID\nconst element = document.getElementById('myElement');\n\n// Select a single element using a CSS selector\nconst element = document.querySelector('.my-class');\n\n// Select all elements matching a CSS selector\nconst elements = document.querySelectorAll('.my-class');\n\n// Convert NodeList to Array for easier manipulation\nconst elementsArray = Array.from(document.querySelectorAll('.my-class'));\n// OR\nconst elementsArray = [...document.querySelectorAll('.my-class')];"
+}

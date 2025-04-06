@@ -74,6 +74,8 @@ export default {
 					number: '#b5cea8',
 					tag: '#569cd6',
 					attribute: '#9cdcfe',
+					operator: '#d4d4d4',
+					punctuation: '#d4d4d4',
 				}
 			},
 			borderRadius: {

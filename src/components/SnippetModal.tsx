@@ -44,6 +44,7 @@ export default function SnippetModal({ snippet, isOpen, onClose }: SnippetModalP
   // Apply syntax highlighting when the component mounts or snippet changes
   useEffect(() => {
     if (snippet && isOpen) {
+      // Add a small delay to ensure the DOM is ready for Prism
       setTimeout(() => {
         Prism.highlightAll();
       }, 100);
@@ -112,7 +113,7 @@ export default function SnippetModal({ snippet, isOpen, onClose }: SnippetModalP
         </AlertDialogHeader>
         
         <div className="relative rounded-md overflow-hidden">
-          <pre className="bg-[#2d2d2d] p-4 rounded-md overflow-x-auto border border-border transition-colors duration-300 shadow-md">
+          <pre className="bg-code p-4 rounded-md overflow-x-auto border border-border transition-colors duration-300 shadow-md">
             <code className={`${getPrismLanguageClass(snippet.language)} text-sm font-mono`}>
               {snippet.code}
             </code>

@@ -36,11 +36,11 @@ export default function Header({ onSearch }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center">
+      <div className="container flex h-14 items-center">
         <div className="flex items-center mr-4 space-x-2" onClick={() => navigate('/')}>
-          <div className="flex items-center gap-2">
-            <img src="/favicon.ico" alt="Snippify Logo" className="h-20 w-20" />
-            <span className="font-bold text-3xl cursor-pointer bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Snippify</span>
+          <div className="flex items-center">
+            <img src="/favicon.ico" alt="Snippify Logo" className="h-16 w-20 mr-2" />
+            <span className="font-bold text-2xl cursor-pointer bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Snippify</span>
           </div>
         </div>
         

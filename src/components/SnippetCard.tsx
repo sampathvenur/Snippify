@@ -66,7 +66,7 @@ export default function SnippetCard({ snippet, onClick }: SnippetCardProps) {
   return (
     <div 
       onClick={onClick}
-      className="border rounded-lg p-4 hover:border-primary hover:shadow-md transition-all cursor-pointer hover:scale-[1.02] duration-200 bg-card"
+      className="group border rounded-lg p-4 hover:border-primary hover:shadow-md transition-all cursor-pointer duration-200 bg-card transform hover:scale-[1.02]"
     >
       <div className="flex items-center gap-2 mb-3">
         <div className={`p-2 rounded-md bg-gradient-to-br ${gradientColors} text-white`}>

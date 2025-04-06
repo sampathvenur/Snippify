@@ -1,0 +1,7 @@
+
+{
+  "title": "Compare Arrays",
+  "author": "sampathvenur",
+  "description": "Compare two arrays for equality regardless of order",
+  "code": "function compareArrays(arr1, arr2) {\n  if (arr1.length !== arr2.length) return false;\n  \n  const sortedArr1 = [...arr1].sort();\n  const sortedArr2 = [...arr2].sort();\n  \n  return sortedArr1.every((value, index) => value === sortedArr2[index]);\n}\n\n// Example usage\nconst array1 = [1, 2, 3, 4];\nconst array2 = [4, 3, 2, 1];\nconsole.log(compareArrays(array1, array2)); // true"
+}

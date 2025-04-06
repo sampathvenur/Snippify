@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, Loader2 } from 'lucide-react';
 import { LanguageSection } from '@/lib/types';
 import * as Icons from 'lucide-react';
 
@@ -12,13 +12,15 @@ interface SidebarProps {
   onSelectCategory: (language: string, category: string) => void;
   currentLanguage: string | null;
   currentCategory: string | null;
+  isLoading?: boolean;
 }
 
 export default function Sidebar({ 
   languageSections, 
   onSelectCategory,
   currentLanguage,
-  currentCategory 
+  currentCategory,
+  isLoading = false
 }: SidebarProps) {
   const [expandedLanguages, setExpandedLanguages] = useState<Record<string, boolean>>(
     languageSections.reduce((acc, section) => {
@@ -45,6 +47,17 @@ export default function Sidebar({
       [language]: !prev[language]
     }));
   };
+
+  if (isLoading) {
+    return (
+      <div className="pb-12 w-64 border-r h-[calc(100vh-3.5rem)] overflow-auto flex items-center justify-center">
+        <div className="flex flex-col items-center space-y-2">
+          <Loader2 className="h-5 w-5 animate-spin text-primary" />
+          <p className="text-sm text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pb-12 w-64 border-r h-[calc(100vh-3.5rem)] overflow-auto">
