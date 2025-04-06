@@ -1,14 +1,15 @@
 
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Search, Github } from 'lucide-react';
+import { Moon, Sun, Search, Github, ChevronRight } from 'lucide-react'; // Added ChevronRight to the imports
 import { Input } from "@/components/ui/input";
 import { useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
   onSearch: (query: string) => void;
+  onToggleSidebar: () => void;
 }
 
-export default function Header({ onSearch }: HeaderProps) {
+export default function Header({ onSearch, onToggleSidebar }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>(
     localStorage.getItem('theme') as 'light' | 'dark' || 'dark'
   );
@@ -37,7 +38,14 @@ export default function Header({ onSearch }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="flex items-center mr-4 space-x-2" onClick={() => navigate('/')}>
+        <button
+          onClick={onToggleSidebar}
+          className="flex h-9 w-9 items-center justify-center rounded-md border hover:bg-accent transition-colors duration-200 md:hidden"
+        >
+          <ChevronRight className="h-5 w-5" />
+          <span className="sr-only">Toggle Sidebar</span>
+        </button>
+        <div className="flex items-center ml-4 space-x-2" onClick={() => navigate('/')}>
           <div className="flex items-center">
             <img src="/favicon.ico" alt="Snippify Logo" className="h-16 w-20 mr-2" />
             <span className="font-bold text-2xl cursor-pointer bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Snippify</span>

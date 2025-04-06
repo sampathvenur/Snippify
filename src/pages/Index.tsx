@@ -46,6 +46,7 @@ export default function Index() {
     setCurrentLanguage(language);
     setCurrentCategory(category);
     setSearchQuery('');
+    setIsSidebarOpen(false); // Close the sidebar after selecting a category
   };
 
   const handleSearch = (query: string) => {
@@ -61,9 +62,13 @@ export default function Index() {
     setIsModalOpen(true);
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="min-h-screen flex flex-col transition-colors duration-300">
-      <Header onSearch={handleSearch} />
+      <Header onSearch={handleSearch} onToggleSidebar={toggleSidebar} />
       
       <div className="flex flex-1 overflow-hidden">
         <Sidebar
@@ -73,7 +78,7 @@ export default function Index() {
           currentCategory={currentCategory}
           isLoading={isLoading}
           isOpen={isSidebarOpen}
-          onToggle={() => setIsSidebarOpen(!isSidebarOpen)}
+          onToggle={toggleSidebar}
         />
         
         <main className={`flex-1 overflow-y-auto ${isSidebarOpen ? 'hidden md:block' : 'block'}`}>
