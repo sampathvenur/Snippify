@@ -105,10 +105,10 @@ export default function SnippetModal({ snippet, isOpen, onClose }: SnippetModalP
             </div>
           </AlertDialogTitle>
           <AlertDialogDescription>
-            <div className="text-sm text-muted-foreground mb-2">
+            <span className="text-sm text-muted-foreground mb-2">
               By <span className="font-medium">{snippet.author}</span>
-            </div>
-            <p className="mb-4">{snippet.description}</p>
+            </span>
+            <span className="block mb-4">{snippet.description}</span> {/* Changed from <p> to <span> */}
           </AlertDialogDescription>
         </AlertDialogHeader>
         
