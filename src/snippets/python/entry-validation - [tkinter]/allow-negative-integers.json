@@ -1,0 +1,6 @@
+{
+    "title": "Allow Negative Integers",
+    "description": "A validation function to allow only negative integers.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_negative_integers(value):\n    return (\n        value in (\"\", \"-\") or value.startswith(\"-\") and value[1:].isdigit()\n        if value\n        else True\n    )\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_negative_integers)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\")).pack()\n\nroot.mainloop()"
+}

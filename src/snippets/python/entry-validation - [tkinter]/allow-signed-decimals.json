@@ -1,0 +1,6 @@
+{
+    "title": "Allow signed Decimals",
+    "description": "A validation function to allow only signed decimal numbers.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_signed_decimals(action, value):\n    if action == \"1\":\n        try:\n            if value in (\"\", \"-\"):\n                return True\n            float(value)\n            return True\n        except ValueError:\n            return False\n    return True\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_signed_decimals)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%d\", \"%P\")).pack()\n\nroot.mainloop()"
+}

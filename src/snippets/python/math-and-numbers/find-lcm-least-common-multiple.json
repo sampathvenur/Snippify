@@ -1,0 +1,6 @@
+{
+    "title": "Find LCM (Least Common Multiple)",
+    "description": "Calculates the least common multiple (LCM) of two numbers.",
+    "author": "sampathvenur",
+    "code": "def lcm(a, b):\n    return abs(a * b) // gcd(a, b)\n\n# Usage:\nlcm(12, 15) # Returns: 60\nlcm(7, 5) # Returns: 35"
+}

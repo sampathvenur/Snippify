@@ -1,0 +1,6 @@
+{
+    "title": "Convert Bytes to Human-Readable Format",
+    "description": "Converts a size in bytes to a human-readable format.",
+    "author": "sampathvenur",
+    "code": "def bytes_to_human_readable(num):\n    for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB']:\n        if num < 1024:\n            return f\"{num:.2f} {unit}\"\n        num /= 1024\n\n# Usage:\nbytes_to_human_readable(123456789) # Returns: '117.74 MB'"
+}

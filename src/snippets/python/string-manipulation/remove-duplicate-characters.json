@@ -1,0 +1,6 @@
+{
+    "title": "Remove Duplicate Characters",
+    "description": "Removes duplicate characters from a string while maintaining the order.",
+    "author": "sampathvenur",
+    "code": "def remove_duplicate_chars(s):\n    seen = set()\n    return ''.join(char for char in s if not (char in seen or seen.add(char)))\n\n# Usage:\nremove_duplicate_chars('programming') # Returns: 'progamin'"
+}

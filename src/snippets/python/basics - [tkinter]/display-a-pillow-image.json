@@ -1,0 +1,6 @@
+{
+    "title": "Display a Pillow Image",
+    "description": "Use Pillow to show an image in a Tkinter window.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Label\nfrom PIL import Image, ImageDraw, ImageTk\n\n\nclass App(Tk):\n    def __init__(self):\n        Tk.__init__(self)\n        self.geometry(\"200x200\")\n\n        # PhotoImage must be global or be assigned to a class or it will be garbage collected.\n        self.photo = ImageTk.PhotoImage(self.make_image())\n        lbl = Label(self, image=self.photo)\n        lbl.pack(expand=1)\n\n    def make_image(self):\n        width, height = 200, 200\n        image = Image.new(\"RGB\", (width, height), \"white\")\n\n        # Create a drawing context\n        draw = ImageDraw.Draw(image)\n\n        # Draw a circle\n        radius = 80\n        center = (width // 2, height // 2)\n        draw.ellipse(\n            [\n                (center[0] - radius, center[1] - radius),\n                (center[0] + radius, center[1] + radius),\n            ],\n            fill=\"red\",\n            outline=\"black\",\n            width=3,\n        )\n        return image\n\n\n# Usage:\nroot = App()\nroot.mainloop()"
+}

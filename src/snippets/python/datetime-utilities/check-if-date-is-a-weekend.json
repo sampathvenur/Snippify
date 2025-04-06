@@ -1,0 +1,6 @@
+{
+    "title": "Check if Date is a Weekend",
+    "description": "Checks whether a given date falls on a weekend.",
+    "author": "sampathvenur",
+    "code": "from datetime import datetime\n\ndef is_weekend(date):\n    try:\n        return date.weekday() >= 5  # Saturday = 5, Sunday = 6\n    except AttributeError:\n        raise TypeError(\"Input must be a datetime object\")\n\n# Usage:\ndate = datetime(2023, 1, 1)\nis_weekend(date) # Returns: True (Sunday)"
+}

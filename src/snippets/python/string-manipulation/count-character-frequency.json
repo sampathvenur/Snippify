@@ -1,0 +1,6 @@
+{
+    "title": "Count Character Frequency",
+    "description": "Counts the frequency of each character in a string.",
+    "author": "sampathvenur",
+    "code": "from collections import Counter\n\ndef char_frequency(s):\n    return dict(Counter(s))\n\n# Usage:\nchar_frequency('hello') # Returns: {'h': 1, 'e': 1, 'l': 2, 'o': 1}"
+}

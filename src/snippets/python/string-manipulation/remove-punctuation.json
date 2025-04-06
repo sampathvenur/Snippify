@@ -1,0 +1,6 @@
+{
+    "title": "Remove Punctuation",
+    "description": "Removes punctuation from a string.",
+    "author": "sampathvenur",
+    "code": "import string\n\ndef remove_punctuation(s):\n    return s.translate(str.maketrans('', '', string.punctuation))\n\n# Usage:\nremove_punctuation('Hello, World!') # Returns: 'Hello World'"
+}

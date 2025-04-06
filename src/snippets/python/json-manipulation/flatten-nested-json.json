@@ -1,0 +1,6 @@
+{
+    "title": "Flatten Nested JSON",
+    "description": "Flattens a nested JSON object into a flat dictionary.",
+    "author": "sampathvenur",
+    "code": "def flatten_json(nested_json, prefix=''):\n    flat_dict = {}\n    for key, value in nested_json.items():\n        if isinstance(value, dict):\n            flat_dict.update(flatten_json(value, prefix + key + '.'))\n        else:\n            flat_dict[prefix + key] = value\n    return flat_dict\n\n# Usage:\nnested_json = {'name': 'John', 'address': {'city': 'New York', 'zip': '10001'}}\nflatten_json(nested_json) # Returns: {'name': 'John', 'address.city': 'New York', 'address.zip': '10001'}"
+}

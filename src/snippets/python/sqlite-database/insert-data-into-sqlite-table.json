@@ -1,0 +1,6 @@
+{
+    "title": "Insert Data into Sqlite Table",
+    "description": "Inserts a row into a specified SQLite table using a dictionary of fields and values.",
+    "author": "sampathvenur",
+    "code": "import sqlite3\n\ndef insert_into_table(db_path, table_name, data):\n    with sqlite3.connect(db_path) as conn:\n        columns = ', '.join(data.keys())\n        placeholders = ', '.join(['?'] * len(data))\n        sql = f\"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})\"\n        conn.execute(sql, tuple(data.values()))\n        conn.commit()\n\n# Usage:\ndb_path = 'example.db'\ntable_name = 'users'\ndata = {\n    'name': 'John Doe',\n    'email': 'john@example.com',\n    'age': 30\n}\ninsert_into_table(db_path, table_name, data)"
+}

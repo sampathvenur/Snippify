@@ -1,0 +1,6 @@
+{
+    "title": "Find Intersection of Two Lists",
+    "description": "Finds the common elements between two lists.",
+    "author": "sampathvenur",
+    "code": "def list_intersection(lst1, lst2):\n    return [item for item in lst1 if item in lst2]\n\n# Usage:\nlist_a = [1, 2, 3, 4]\nlist_b = [3, 4, 5, 6]\nlist_intersection(list_a, list_b) # Returns: [3, 4]"
+}

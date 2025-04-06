@@ -1,0 +1,6 @@
+{
+    "title": "Convert Snake Case to Camel Case",
+    "description": "Converts a snake_case string to camelCase.",
+    "author": "sampathvenur",
+    "code": "def snake_to_camel(s):\n    parts = s.split('_')\n    return parts[0] + ''.join(word.capitalize() for word in parts[1:])\n\n# Usage:\nsnake_to_camel('hello_world') # Returns: 'helloWorld'"
+}

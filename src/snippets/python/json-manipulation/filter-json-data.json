@@ -1,0 +1,6 @@
+{
+    "title": "Filter JSON Data",
+    "description": "Filters a JSON object based on a condition and returns the filtered data.",
+    "author": "sampathvenur",
+    "code": "import json\n\ndef filter_json_data(filepath, condition):\n    with open(filepath, 'r') as file:\n        data = json.load(file)\n\n    # Filter data based on the provided condition\n    filtered_data = [item for item in data if condition(item)]\n\n    return filtered_data\n\n# Usage:\ncondition = lambda x: x['age'] > 25\nfilter_json_data('data.json', condition) # Returns: `data.json` filtered with `condition`"
+}

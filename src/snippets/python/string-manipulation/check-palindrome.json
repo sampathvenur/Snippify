@@ -1,0 +1,6 @@
+{
+    "title": "Check Palindrome",
+    "description": "Checks if a string is a palindrome.",
+    "author": "sampathvenur",
+    "code": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == s[::-1]\n\n# Usage:\nis_palindrome('A man a plan a canal Panama') # Returns: True"
+}

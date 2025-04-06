@@ -1,0 +1,6 @@
+{
+    "title": "Merge Multiple JSON Files",
+    "description": "Merges multiple JSON files into one and writes the merged data into a new file.",
+    "author": "sampathvenur",
+    "code": "import json\n\ndef merge_json_files(filepaths, output_filepath):\n    merged_data = []\n\n    # Read each JSON file and merge their data\n    for filepath in filepaths:\n        with open(filepath, 'r') as file:\n            data = json.load(file)\n            merged_data.extend(data)\n\n    # Write the merged data into a new file\n    with open(output_filepath, 'w') as file:\n        json.dump(merged_data, file, indent=4)\n\n# Usage:\nfiles_to_merge = ['file1.json', 'file2.json']\nmerge_json_files(files_to_merge, 'merged.json')"
+}

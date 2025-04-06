@@ -1,0 +1,6 @@
+{
+    "title": "Find Duplicates in a List",
+    "description": "Identifies duplicate elements in a list.",
+    "author": "sampathvenur",
+    "code": "def find_duplicates(lst):\n    seen = set()\n    duplicates = set()\n    for item in lst:\n        if item in seen:\n            duplicates.add(item)\n        else:\n            seen.add(item)\n    return list(duplicates)\n\n# Usage:\ndata = [1, 2, 3, 2, 4, 5, 1]\nfind_duplicates(data) # Returns: [1, 2]"
+}

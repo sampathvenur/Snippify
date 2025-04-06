@@ -1,0 +1,6 @@
+{
+    "title": "Generate Random String",
+    "description": "Generates a random alphanumeric string.",
+    "author": "sampathvenur",
+    "code": "import random\nimport string\n\ndef random_string(length):\n    letters_and_digits = string.ascii_letters + string.digits\n    return ''.join(random.choice(letters_and_digits) for _ in range(length))\n\n# Usage:\nrandom_string(10) # Results: Random 10-character string"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Remove Whitespace",
+    "description": "Removes all whitespace from a string.",
+    "author": "sampathvenur",
+    "code": "def remove_whitespace(s):\n    return ''.join(s.split())\n\n# Usage:\nremove_whitespace('hello world') # Returns: 'helloworld'"
+}

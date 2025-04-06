@@ -1,0 +1,6 @@
+{
+    "title": "Create SQLite Database Table",
+    "description": "Creates a table in an SQLite database with a dynamic schema.",
+    "author": "sampathvenur",
+    "code": "import sqlite3\n\ndef create_table(db_name, table_name, schema):\n    conn = sqlite3.connect(db_name)\n    cursor = conn.cursor()\n    schema_string = ', '.join([f'{col} {dtype}' for col, dtype in schema.items()])\n    cursor.execute(f'''\n        CREATE TABLE IF NOT EXISTS {table_name} (\n            {schema_string}\n        )'')\n    conn.commit()\n    conn.close()\n\n# Usage:\ndb_name = 'example.db'\ntable_name = 'users'\nschema = {\n    'id': 'INTEGER PRIMARY KEY',\n    'name': 'TEXT',\n    'age': 'INTEGER',\n    'email': 'TEXT'\n}\ncreate_table(db_name, table_name, schema)"
+}

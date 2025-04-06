@@ -1,0 +1,6 @@
+{
+    "title": "Convert String to Unicode",
+    "description": "Converts a string into its Unicode representation.",
+    "author": "sampathvenur",
+    "code": "def string_to_unicode(s):\n    return [ord(char) for char in s]\n\n# Usage:\nstring_to_unicode('hello') # Returns: [104, 101, 108, 108, 111]"
+}

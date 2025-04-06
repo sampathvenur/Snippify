@@ -1,0 +1,6 @@
+{
+    "title": "Update JSON File",
+    "description": "Updates an existing JSON file with new data or modifies the existing values.",
+    "author": "sampathvenur",
+    "code": "import json\n\ndef update_json(filepath, new_data):\n    # Read the existing JSON data\n    with open(filepath, 'r') as file:\n        data = json.load(file)\n\n    # Update the data with the new content\n    data.update(new_data)\n\n    # Write the updated data back to the JSON file\n    with open(filepath, 'w') as file:\n        json.dump(data, file, indent=4)\n\n# Usage:\nnew_data = {'age': 31}\nupdate_json('data.json', new_data) # Updates `age` in `data.json` without modifying other keys"
+}

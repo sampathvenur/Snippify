@@ -1,0 +1,6 @@
+{
+    "title": "Solve Quadratic Equation",
+    "description": "Solves a quadratic equation ax^2 + bx + c = 0 and returns the roots.",
+    "author": "sampathvenur",
+    "code": "import cmath\n\ndef solve_quadratic(a, b, c):\n    discriminant = cmath.sqrt(b**2 - 4 * a * c)\n    root1 = (-b + discriminant) / (2 * a)\n    root2 = (-b - discriminant) / (2 * a)\n    return root1, root2\n\n# Usage:\nsolve_quadratic(1, -3, 2) # Returns: ((2+0j), (1+0j))\nsolve_quadratic(1, 2, 5) # Returns: ((-1+2j), (-1-2j))"
+}

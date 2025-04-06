@@ -1,0 +1,6 @@
+{
+    "title": "Custom Regular Expression",
+    "description": "A validation function to match a regular expression pattern.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\nimport re\n\n\ndef custom_regular_expression(action, value, pattern):\n    if action == \"1\":\n        return re.fullmatch(pattern, value) is not None\n    return True\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(custom_regular_expression)\npattern = r\"^\\d{0,4}$\"  # Allow up to 4 digits\nEntry(root, validate=\"key\", validatecommand=(reg, \"%d\", \"%P\", pattern)).pack()\n\nroot.mainloop()"
+}

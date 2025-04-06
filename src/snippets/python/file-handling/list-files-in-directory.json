@@ -1,0 +1,6 @@
+{
+    "title": "List Files in Directory",
+    "description": "Lists all files in a specified directory.",
+    "author": "sampathvenur",
+    "code": "import os\n\ndef list_files(directory):\n    return [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]\n\n# Usage:\nlist_files('/path/to/directory') # Returns: List of file in the directory"
+}

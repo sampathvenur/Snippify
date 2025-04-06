@@ -1,0 +1,6 @@
+{
+    "title": "Find Longest Word",
+    "description": "Finds the longest word in a string.",
+    "author": "sampathvenur",
+    "code": "def find_longest_word(s):\n    words = s.split()\n    return max(words, key=len) if words else ''\n\n# Usage:\nfind_longest_word('The quick brown fox') # Returns: 'quick'"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Allow Positive Integers",
+    "description": "A validation function to allow only positive integers.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_positive_integers(value):\n    return value.isdigit() and (value == \"\" or int(value) > 0)\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_positive_integers)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\")).pack()\n\nroot.mainloop()"
+}

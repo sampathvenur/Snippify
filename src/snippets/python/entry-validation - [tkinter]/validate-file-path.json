@@ -1,0 +1,6 @@
+{
+    "title": "Validate File Path",
+    "description": "A validation function to ensure the file path exists.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\nimport os\n\n\ndef validate_file_path(action, value):\n    if action == \"1\":\n        return value == \"\" or os.path.exists(os.path.expandvars(value))\n    return True\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(validate_file_path)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%d\", \"%P\")).pack()\n\nroot.mainloop()"
+}

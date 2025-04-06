@@ -1,0 +1,6 @@
+{
+    "title": "Allow Lowercase",
+    "description": "A validation function to allow only lowercase alphabetic characters.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_lowercase(value):\n    return value.islower() or value == \"\"\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_lowercase)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\")).pack()\n\nroot.mainloop()"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Count Words",
+    "description": "Counts the number of words in a string.",
+    "author": "sampathvenur",
+    "code": "def count_words(s):\n    return len(s.split())\n\n# Usage:\ncount_words('The quick brown fox') # Returns: 4"
+}

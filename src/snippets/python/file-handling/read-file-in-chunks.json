@@ -1,0 +1,6 @@
+{
+    "title": "Read File in Chunks",
+    "description": "Reads a file in chunks of a specified size.",
+    "author": "sampathvenur",
+    "code": "def read_file_in_chunks(filepath, chunk_size):\n    with open(filepath, 'r') as file:\n        while chunk := file.read(chunk_size):\n            yield chunk\n\n# Usage:\nfor chunk in read_file_in_chunks('example.txt', 1024):\n    print(chunk) # Outputs: Chucks of 1024 bytes"
+}

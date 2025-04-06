@@ -1,0 +1,6 @@
+{
+    "title": "Get Number of Days in a Month",
+    "description": "Determines the number of days in a specific month and year.",
+    "author": "sampathvenur",
+    "code": "from calendar import monthrange\nfrom datetime import datetime\n\ndef get_days_in_month(year, month):\n    try:\n        return monthrange(year, month)[1]\n    except ValueError as e:\n        raise ValueError(f\"Invalid month or year: {e}\")\n\n# Usage:\nget_days_in_month(2023, 2) # Returns: 28 (for non-leap year February)"
+}

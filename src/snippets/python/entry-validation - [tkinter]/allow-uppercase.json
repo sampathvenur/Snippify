@@ -1,0 +1,6 @@
+{
+    "title": "Allow Uppercase",
+    "description": "A validation function to allow uppercase letters.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_uppercase(value):\n    return value.isupper() or value == \"\"\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_uppercase)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\")).pack()\n\nroot.mainloop()"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Get File Extension",
+    "description": "Gets the extension of a file.",
+    "author": "sampathvenur",
+    "code": "import os\n\ndef get_file_extension(filepath):\n    return os.path.splitext(filepath)[1]\n\n# Usage:\nget_file_extension('example.txt') # Returns: '.txt'"
+}

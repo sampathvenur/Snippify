@@ -1,0 +1,6 @@
+{
+    "title": "Allow Only Alphabets",
+    "description": "A validation function to allow only alphabetic characters.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_only_alphabets(value):\n    return value.isalpha() or value == \"\"\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_only_alphabets)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\")).pack()\n\nroot.mainloop()"
+}

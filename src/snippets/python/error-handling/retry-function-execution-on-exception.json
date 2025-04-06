@@ -1,0 +1,6 @@
+{
+    "title": "Retry Function Execution on Exception",
+    "description": "Retries a function execution a specified number of times if it raises an exception.",
+    "author": "sampathvenur",
+    "code": "import time\n\ndef retry(func, retries=3, delay=1):\n    for attempt in range(retries):\n        try:\n            return func()\n        except Exception as e:\n            print(f\"Attempt {attempt + 1} failed: {e}\")\n            time.sleep(delay)\n    raise Exception(\"All retry attempts failed\")\n\n# Usage:\ndef unstable_function():\n    raise ValueError(\"Simulated failure\")\n\n# Retry 3 times with 2 seconds delay:\ntry:\n    retry(unstable_function, retries=3, delay=2)\nexcept Exception as e:\n    print(e)  # Output: All retry attempts failed"
+}

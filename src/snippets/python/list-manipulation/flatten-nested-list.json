@@ -1,0 +1,6 @@
+{
+    "title": "Flatten Nested List",
+    "description": "Flattens a multi-dimensional list into a single list.",
+    "author": "sampathvenur",
+    "code": "def flatten_list(lst):\n    return [item for sublist in lst for item in sublist]\n\n# Usage:\nnested_list = [[1, 2], [3, 4], [5]]\nflatten_list(nested_list)  # Returns: [1, 2, 3, 4, 5]"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Flatten Unevenly Nested Lists",
+    "description": "Converts unevenly nested lists of any depth into a single flat list.",
+    "author": "sampathvenur",
+    "code": "def flatten(nested_list):\n    for item in nested_list:\n        if isinstance(item, list):\n            yield from flatten(item)\n        else:\n            yield item\n\n# Usage:\nnested_list = [1, [2, [3, 4]], 5]\nlist(flatten(nested_list))  # Returns: [1, 2, 3, 4, 5]"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Create Custom Exception Type",
+    "description": "Create a Custom Exception Type that can be called with raise.",
+    "author": "sampathvenur",
+    "code": "class ExceptionName(BaseException):\n    def __init__(self, message: str):\n        super().__init__(message)\n\n# Usage\na: int = 1\n\nif a > 0:\n  raise ExceptionName('Error Message')"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Count Vowels",
+    "description": "Counts the number of vowels in a string.",
+    "author": "sampathvenur",
+    "code": "def count_vowels(s):\n    vowels = 'aeiou'\n    return len([char for char in s.lower() if char in vowels])\n\n# Usage:\ncount_vowels('hello') # Returns: 2"
+}

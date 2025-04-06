@@ -1,0 +1,6 @@
+{
+    "title": "Allow Numbers in Range",
+    "description": "A validation function to allow only numbers within a specified range.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_numbers_in_range(action, value, min_value, max_value):\n    if action == \"1\":  \n        try:\n            num = float(value)\n            return float(min_value) <= num <= float(max_value)\n        except ValueError:\n            return False\n    return True\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_numbers_in_range)\n# 0 is the minimum value\n# 10 is the maximum value\nEntry(root, validate=\"key\", validatecommand=(reg, \"%d\", \"%P\", 0, 10)).pack()\n\nroot.mainloop()"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Generate Date Range List",
+    "description": "Generates a list of dates between two given dates.",
+    "author": "sampathvenur",
+    "code": "from datetime import datetime, timedelta\n\ndef generate_date_range(start_date, end_date):\n    if start_date > end_date:\n        raise ValueError(\"start_date must be before end_date\")\n\n    current_date = start_date\n    date_list = []\n    while current_date <= end_date:\n        date_list.append(current_date)\n        current_date += timedelta(days=1)\n\n    return date_list\n\n# Usage:\nstart = datetime(2023, 1, 1)\nend = datetime(2023, 1, 5)\ndates = generate_date_range(start, end)\nfor d in dates:\n    print(d.strftime('%Y-%m-%d'))\n# Outputs: '2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'"
+}

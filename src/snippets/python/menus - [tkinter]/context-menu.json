@@ -1,0 +1,6 @@
+{
+    "title": "Context Menu",
+    "description": "Opens a menu when you right click a widget.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Label, Menu\n\n\nclass App(Tk):\n    def __init__(self):\n        Tk.__init__(self)\n        self.geometry(\"200x200\")\n\n        lbl = Label(self, text=\"Right-click me!\")\n        lbl.bind(\"<Button-3>\", self.do_popup)\n        lbl.pack(expand=1, ipadx=10, ipady=10)\n\n    def do_popup(self, event):\n        menu = Menu(self, tearoff=0)\n        menu.add_command(label=\"Option 1\", command=lambda: print(\"Option 1\"))\n        menu.add_command(label=\"Option 2\", command=lambda: print(\"Option 2\"))\n        menu.post(event.x_root, event.y_root)\n\n\n# Usage:\nroot = App()\nroot.mainloop()"
+}

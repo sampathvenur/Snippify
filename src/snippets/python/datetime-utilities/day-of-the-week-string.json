@@ -1,0 +1,6 @@
+{
+    "title": "Day of the Week String",
+    "description": "Gets the string of the day of the week for a given date.",
+    "author": "sampathvenur",
+    "code": "from datetime import datetime\n\ndef get_day_of_week(date):\n    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']\n    try:\n        return days[date.weekday()]\n    except IndexError:\n        raise ValueError(\"Invalid date\")\n\n# Usage:\ndate = datetime(2023, 1, 1)\nget_day_of_week(date) # Returns: 'Sunday'"
+}

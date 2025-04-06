@@ -1,0 +1,6 @@
+{
+    "title": "Allow Specific Characters",
+    "description": "A validation function to allow specific characters.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_specific_characters(value, allowed_chars):\n    return all(char in allowed_chars for char in value)\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_specific_characters)\nallowed_chars = \"0123456789ABCDEFabcdef\"  # Hexadecimal characters\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\", allowed_chars)).pack()\n\nroot.mainloop()"
+}

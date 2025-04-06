@@ -1,0 +1,6 @@
+{
+    "title": "Query Data from Sqlite Table",
+    "description": "Fetches data from a specified SQLite table, with options for selecting specific columns and applying a WHERE clause.",
+    "author": "sampathvenur",
+    "code": "import sqlite3\n\ndef query_table(db_path, table_name, columns='*', where_clause=None):\n    with sqlite3.connect(db_path) as conn:\n        cursor = conn.cursor()\n        sql = f\"SELECT {columns} FROM {table_name}\"\n        if where_clause:\n            sql += f\" WHERE {where_clause}\"\n        cursor.execute(sql)\n        return cursor.fetchall()\n\n# Usage:\ndb_path = 'example.db'\ntable_name = 'users'\ncolumns = 'id, name, email'\nwhere_clause = 'age > 25'\nresult = query_table(db_path, table_name, columns, where_clause)\nfor row in result:\n    print(row)"
+}

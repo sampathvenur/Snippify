@@ -1,0 +1,6 @@
+{
+    "title": "Restrict Length",
+    "description": "A validation function to limit the length.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef restrict_length(value, max_length):\n    return len(value) <= int(max_length)\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(restrict_length)\n# 10 is the maximum length allowed\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\", 10)).pack()\n\nroot.mainloop()"
+}

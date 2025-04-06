@@ -1,0 +1,6 @@
+{
+    "title": "Write JSON File",
+    "description": "Writes a dictionary to a JSON file.",
+    "author": "sampathvenur",
+    "code": "import json\n\ndef write_json(filepath, data):\n    with open(filepath, 'w') as file:\n        json.dump(data, file, indent=4)\n\n# Usage:\ndata = {'name': 'John', 'age': 30}\nwrite_json('data.json', data)"
+}

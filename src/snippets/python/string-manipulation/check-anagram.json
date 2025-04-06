@@ -1,0 +1,6 @@
+{
+    "title": "Check Anagram",
+    "description": "Checks if two strings are anagrams of each other.",
+    "author": "sampathvenur",
+    "code": "def is_anagram(s1, s2):\n    return sorted(s1) == sorted(s2)\n\n# Usage:\nis_anagram('listen', 'silent') # Returns: True"
+}

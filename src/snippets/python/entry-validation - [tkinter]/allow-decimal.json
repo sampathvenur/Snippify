@@ -1,0 +1,6 @@
+{
+    "title": "Allow Decimal",
+    "description": "A validation function to allow only decimal numbers.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_decimal(action, value):\n    if action == \"1\":\n        if value == \"\":\n            return True\n        try:\n            float(value)\n            return True\n        except ValueError:\n            return False\n    return True\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_decimal)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%d\", \"%P\")).pack()\n\nroot.mainloop()"
+}

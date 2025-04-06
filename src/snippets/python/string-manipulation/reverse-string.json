@@ -1,0 +1,6 @@
+{
+    "title": "Reverse String",
+    "description": "Reverses the characters in a string.",
+    "author": "sampathvenur",
+    "code": "def reverse_string(s:str) -> str:\n    return s[::-1]\n\n# Usage:\nreverse_string('hello') # Returns: 'olleh'"
+}

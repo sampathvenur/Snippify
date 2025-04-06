@@ -1,0 +1,6 @@
+{
+    "title": "Capitalize Words",
+    "description": "Capitalizes the first letter of each word in a string.",
+    "author": "sampathvenur",
+    "code": "def capitalize_words(s):\n    return ' '.join(word.capitalize() for word in s.split())\n\n# Usage:\ncapitalize_words('hello world') # Returns: 'Hello World'"
+}

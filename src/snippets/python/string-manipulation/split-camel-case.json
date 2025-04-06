@@ -1,0 +1,6 @@
+{
+    "title": "Split Camel Case",
+    "description": "Splits a camel case string into separate words.",
+    "author": "sampathvenur",
+    "code": "import re\n\ndef split_camel_case(s):\n    return ' '.join(re.findall(r'[A-Z][a-z]*|[a-z]+', s))\n\n# Usage:\nsplit_camel_case('camelCaseString') # Returns: 'camel Case String'"
+}

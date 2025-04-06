@@ -6,6 +6,8 @@ import * as Icons from 'lucide-react';
 
 // Import SVG icons
 import javascriptIcon from '../snippets/javascript/icon.svg';
+import pythonIcon from '../snippets/python/icon.svg';
+import htmlIcon from '../snippets/html/icon.svg';
 // Import other language icons similarly...
 
 // Type for Lucide icon components
@@ -46,6 +48,8 @@ export default function Sidebar({
 
   const iconMap: Record<string, string> = {
     javascript: javascriptIcon,
+    python: pythonIcon,
+    html: htmlIcon,
     // Add other languages and their icons here...
   };
 

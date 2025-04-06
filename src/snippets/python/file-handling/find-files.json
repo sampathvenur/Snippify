@@ -1,0 +1,6 @@
+{
+    "title": "Find Files",
+    "description": "Finds all files of the specified type within a given directory.",
+    "author": "sampathvenur",
+    "code": "import os\n\ndef find_files(directory, file_type):\n  file_type = file_type.lower()  # Convert file_type to lowercase\n  found_files = []\n\n  for root, _, files in os.walk(directory):\n    for file in files:\n      file_ext = os.path.splitext(file)[1].lower()\n      if file_ext == file_type:\n        full_path = os.path.join(root, file)\n        found_files.append(full_path)\n\n  return found_files\n\n# Example Usage:\nfind_files('/path/to/your/directory', '.pdf') # Returns all .pdf in directory"
+}

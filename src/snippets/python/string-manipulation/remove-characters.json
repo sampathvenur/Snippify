@@ -1,0 +1,6 @@
+{
+    "title": "Remove Characters",
+    "description": "Removes specific characters from a string.",
+    "author": "sampathvenur",
+    "code": "def remove_chars(s, chars):\n    return ''.join(c for c in s if c not in chars)\n\n# Usage:\nremove_chars('hello world', 'eo') # Returns: 'hll wrld'"
+}

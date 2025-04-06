@@ -1,0 +1,6 @@
+{
+    "title": "Find Maximum Difference in List",
+    "description": "Finds the maximum difference between any two elements in a list.",
+    "author": "sampathvenur",
+    "code": "def max_difference(lst):\n    if not lst or len(lst) < 2:\n        return 0\n    return max(lst) - min(lst)\n\n# Usage:\ndata = [10, 3, 5, 20, 7]\nmax_difference(data) # Returns: 17"
+}

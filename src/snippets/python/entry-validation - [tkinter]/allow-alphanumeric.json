@@ -1,0 +1,6 @@
+{
+    "title": "Allow Alphanumeric",
+    "description": "A validation function to allow alphanumeric characters.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_alphanumeric(value):\n    return value.isalnum() or value == \"\"\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_alphanumeric)\nEntry(root, validate=\"key\", validatecommand=(reg, \"%P\")).pack()\n\nroot.mainloop()"
+}

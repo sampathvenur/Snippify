@@ -1,0 +1,6 @@
+{
+    "title": "Allow Digits with A Max Length",
+    "description": "A validation function to allow only digits with a specified maximum length.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Entry\n\n\ndef allow_digits_with_max_length(action, value, max_length):\n    if action == \"1\":\n        return value == \"\" or (value.isdigit() and len(value) <= int(max_length))\n    return True\n\n\n# Usage:\nroot = Tk()\nroot.geometry(\"200x200\")\n\nreg = root.register(allow_digits_with_max_length)\n# 4 is the max length\nEntry(root, validate=\"key\", validatecommand=(reg, \"%d\", \"%P\", 4)).pack()\n\nroot.mainloop()"
+}

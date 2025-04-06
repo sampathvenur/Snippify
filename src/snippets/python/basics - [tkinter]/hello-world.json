@@ -1,0 +1,6 @@
+{
+    "title": "Hello, World!",
+    "description": "Creates a basic Tkinter window with a \"Hello, World!\" label.",
+    "author": "sampathvenur",
+    "code": "from tkinter import Tk, Label\n\nclass App(Tk):\n    def __init__(self):\n        Tk.__init__(self)\n        self.geometry(\"200x200\")\n\n        self.lbl = Label(self, text='Hello, World!')\n        self.lbl.pack(expand=1)\n\n# Usage:\nroot = App()\nroot.mainloop()"
+}

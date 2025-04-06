@@ -1,0 +1,6 @@
+{
+    "title": "Grid Layout with Navigation",
+    "description": "Full-height grid layout with header navigation using nesting syntax.",
+    "author": "sampathvenur",
+    "code": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        margin: 0;\n        min-height: 100vh;\n        display: grid;\n        grid-template-rows: auto 1fr auto;\n        background: red; /* Shouldn't be visible */\n      }\n\n      .header {\n        background: #3b82f6;\n        padding: 1rem;\n        display: flex;\n        & .menu {\n          margin-left: auto;\n        }\n        & .menu ul {\n          margin-left: auto;\n          display: flex;\n          gap: 1rem;\n        }\n      }\n\n      .main {\n        background: #f3f4f6;\n        padding: 1rem;\n      }\n\n      .footer {\n        background: #1f2937;\n        padding: 1rem;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"header\">\n      Header\n      <nav class=\"menu\">\n        <ul>\n          <li><a href=\"#\">Home</a></li>\n          <li><a href=\"#\">About</a></li>\n          <li><a href=\"#\">Contact</a></li>\n        </ul>\n      </nav>\n    </div>\n    <div class=\"main\">Main Content</div>\n    <div class=\"footer\">Footer</div>\n  </body>\n</html>"
+}

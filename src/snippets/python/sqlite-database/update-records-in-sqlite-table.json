@@ -1,0 +1,6 @@
+{
+    "title": "Update Records in Sqlite Table",
+    "description": "Updates records in a specified SQLite table, allowing dynamic column updates and an optional WHERE clause.",
+    "author": "sampathvenur",
+    "code": "import sqlite3\n\ndef update_table(db_path, table_name, updates, where_clause=None):\n    with sqlite3.connect(db_path) as conn:\n        set_clause = ', '.join([f\"{col} = ?\" for col in updates.keys()])\n        sql = f\"UPDATE {table_name} SET {set_clause}\"\n        if where_clause:\n            sql += f\" WHERE {where_clause}\"\n        conn.execute(sql, tuple(updates.values()))\n        conn.commit()\n\n# Usage:\ndb_path = 'example.db'\ntable_name = 'users'\nupdates = {'name': 'Jane Doe', 'age': 28}\nwhere_clause = \"id = 1\"\nupdate_table(db_path, table_name, updates, where_clause)"
+}

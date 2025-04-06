@@ -1,0 +1,6 @@
+{
+    "title": "Measure Execution Time",
+    "description": "Measures the execution time of a code block.",
+    "author": "sampathvenur",
+    "code": "import time\n\ndef measure_time(func, *args):\n    start = time.time()\n    result = func(*args)\n    end = time.time()\n    print(f'Execution time: {end - start:.6f} seconds')\n    return result\n\n# Usage:\ndef slow_function():\n    time.sleep(2)\n\nmeasure_time(slow_function) # Outputs an execution time of ~2s"
+}

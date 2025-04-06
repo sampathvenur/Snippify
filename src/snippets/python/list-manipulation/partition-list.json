@@ -1,0 +1,6 @@
+{
+    "title": "Partition List",
+    "description": "Partitions a list into sublists of a given size.",
+    "author": "sampathvenur",
+    "code": "def partition_list(lst, size):\n    for i in range(0, len(lst), size):\n        yield lst[i:i + size]\n\n# Usage:\ndata = [1, 2, 3, 4, 5, 6, 7]\nlist(partition_list(data, 3)) # Returns: [[1, 2, 3], [4, 5, 6], [7]]"
+}

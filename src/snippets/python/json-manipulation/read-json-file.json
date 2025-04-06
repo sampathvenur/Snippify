@@ -1,0 +1,6 @@
+{
+    "title": "Read JSON File",
+    "description": "Reads a JSON file and parses its content.",
+    "author": "sampathvenur",
+    "code": "import json\n\ndef read_json(filepath):\n    with open(filepath, 'r') as file:\n        return json.load(file)\n\n# Usage:\nread_json('data.json') # Returns: Content of file as dict"
+}
