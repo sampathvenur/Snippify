@@ -1,0 +1,6 @@
+{
+    "title": "Toggle ith bit",
+    "description": "Toggle the i-th bit of a number and returns the resulting number",
+    "author": "sampathvenur",
+    "code": "int toggle_ith_bit(int n, int i) {\n    return n ^ (1 << i);\n}\n\n\n// Usage:\ntoggle_ith_bit(10, 0); // Returns: 11\ntoggle_ith_bit(10, 1); // Returns: 8\ntoggle_ith_bit(8, 1);  // Returns: 10"
+}

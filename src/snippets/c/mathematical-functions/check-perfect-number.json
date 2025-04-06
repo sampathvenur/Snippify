@@ -1,0 +1,6 @@
+{
+    "title": "Check Perfect Number",
+    "description": "Checks if a number is a perfect number. A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding itself).",
+    "author": "sampathvenur",
+    "code": "#include <stdbool.h>\n\n// Function to check if a number is a perfect number\nbool is_perfect(int n) {\n    if (n <= 1) return false;\n\n    int sum = 1; // 1 is a divisor for all n > 1\n    for (int i = 2; i * i <= n; ++i) {\n        if (n % i == 0) {\n            sum += i;\n            if (i != n / i) sum += n / i;\n        }\n    }\n    return sum == n;\n}\n\n// Usage\nis_perfect(28); // Returns: true\nis_perfect(12); // Returns: false"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Binary Search",
+    "description": "Searches for an element in a sorted array using the Binary Search algorithm.",
+    "author": "sampathvenur",
+    "code": "int binarySearch(int arr[], int low, int high, int x) {\n  while (low <= high) {\n    int mid = low + (high - low) / 2;\n\n    // Check if x is present at mid\n    if (arr[mid] == x) {\n      return mid;\n    }\n\n    // If x is smaller, search the left half\n    if (arr[mid] > x) {\n      high = mid - 1;\n    } else { // If x is larger, search the right half\n      low = mid + 1;\n    }\n  }\n  return -1; // Element not found\n}\n\n// Usage:\nint arr[] = {2, 3, 4, 10, 40};\nint n = sizeof(arr) / sizeof(arr[0]);\nint x = 10;\nint result = binarySearch(arr, 0, n - 1, x);\n// result = 3 (index of the element 10)"
+}

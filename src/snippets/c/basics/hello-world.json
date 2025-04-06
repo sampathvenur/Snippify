@@ -1,0 +1,6 @@
+{
+    "title": "Hello, World!",
+    "description": "Prints Hello, World! to the terminal.",
+    "author": "sampathvenur",
+    "code": "#include <stdio.h> // Includes the input/output library\n\nint main() { // Defines the main function\n  printf(\"Hello, World!\\n\") // Outputs Hello, World! and a newline\n\n  return 0; // indicate the program executed successfully\n}"
+}

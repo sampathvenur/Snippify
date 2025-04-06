@@ -1,0 +1,6 @@
+{
+    "title": "System Resource Monitor",
+    "description": "Monitors system resources (CPU, RAM, disk, users)",
+    "author": "sampathvenur",
+    "code": "system_resources () {\n      echo \"CPU Load: $(top -bn1 | grep \"Cpu(s)\" | awk '{print $2}')%\"\n      echo \"Memory Used: $(free -m | awk 'NR==2{printf \"%.2f%%\", $3*100/$2}')\"\n      echo \"Disk Used: $(df -h / | awk 'NR==2{print $5}')\"\n      echo \"Active Users: $(who | wc -l)\"\n}\n\nsystem_resources \"$@\"\n\n# Usage:\nchmod a+x system-resource-monitor.sh # First make it executable for all the users\n\n./system-resource-monitor.sh  # It will print the following system resources (CPU, RAM, disk, and active users)"
+}

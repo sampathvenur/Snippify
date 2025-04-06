@@ -1,0 +1,6 @@
+{
+    "title": "Sum of Digits",
+    "description": "Calculates the sum of the digits of an integer.",
+    "author": "sampathvenur",
+    "code": "// Function to calculate the sum of the digits of an integer\nint sum_of_digits(int n) {\n    int sum = 0;\n    while (n != 0) {\n        sum += n % 10;\n        n /= 10;\n    }\n    return sum;\n}\n\n// Usage:\nsum_of_digits(123); // Returns: 6"
+}

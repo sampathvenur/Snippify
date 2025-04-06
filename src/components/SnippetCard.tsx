@@ -31,6 +31,7 @@ export default function SnippetCard({ snippet, onClick }: SnippetCardProps) {
       jsx: Icons.FileCode,
       tsx: Icons.FileJson,
       markdown: Icons.FileText,
+      c: Icons.CircuitBoard, // Change the icon for C language
     };
     
     return iconMap[language.toLowerCase()] || Icons.File;
@@ -55,6 +56,7 @@ export default function SnippetCard({ snippet, onClick }: SnippetCardProps) {
       jsx: 'from-blue-400 to-indigo-500',
       tsx: 'from-blue-400 to-violet-600',
       markdown: 'from-gray-400 to-gray-600',
+      c: 'from-blue-400 to-blue-500', // Add theme for C language
     };
     
     return colorMap[language.toLowerCase()] || 'from-primary to-primary/70';

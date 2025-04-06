@@ -1,0 +1,6 @@
+{
+    "title": "Bubble Sort",
+    "description": "Sorts an array of integers using the Bubble Sort algorithm.",
+    "author": "sampathvenur",
+    "code": "void bubbleSort(int arr[], int n) {\n  for (int i = 0; i < n - 1; i++) {\n    for (int j = 0; j < n - i - 1; j++) {\n      if (arr[j] > arr[j + 1]) {\n        // Swap arr[j] and arr[j + 1]\n        int temp = arr[j];\n        arr[j] = arr[j + 1];\n        arr[j + 1] = temp;\n      }\n    }\n  }\n}\n\n// Usage:\nint arr[] = {64, 34, 25, 12, 22, 11, 90};\nint n = sizeof(arr) / sizeof(arr[0]);\nbubbleSort(arr, n);\n// Now arr[] is sorted: {11, 12, 22, 25, 34, 64, 90}"
+}

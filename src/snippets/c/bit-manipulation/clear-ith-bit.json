@@ -1,0 +1,6 @@
+{
+    "title": "Clear ith bit",
+    "description": "Clear the ith bit of a number and returns the resulting number",
+    "author": "sampathvenur",
+    "code": "int clear_ith_bit(int n, int i) {\n    return n & ~(1 << i);\n}\n\n\n// Usage:\nclear_ith_bit(10, 1); // Returns: 8\nclear_ith_bit(10, 3); // Returns: 2"
+}

@@ -8,6 +8,8 @@ import * as Icons from 'lucide-react';
 import javascriptIcon from '../snippets/javascript/icon.svg';
 import pythonIcon from '../snippets/python/icon.svg';
 import htmlIcon from '../snippets/html/icon.svg';
+import bashIcon from '../snippets/bash/icon.svg';
+import cIcon from '../snippets/c/icon.svg';
 // Import other language icons similarly...
 
 // Type for Lucide icon components
@@ -50,6 +52,8 @@ export default function Sidebar({
     javascript: javascriptIcon,
     python: pythonIcon,
     html: htmlIcon,
+    bash: bashIcon,
+    c: cIcon,
     // Add other languages and their icons here...
   };
 

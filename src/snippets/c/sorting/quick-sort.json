@@ -1,0 +1,6 @@
+{
+    "title": "Quick Sort",
+    "description": "Sorts an array of integers using the Quick Sort algorithm.",
+    "author": "sampathvenur",
+    "code": "int partition(int arr[], int low, int high) {\n  int pivot = arr[high]; // Pivot element\n  int i = low - 1;\n\n  for (int j = low; j < high; j++) {\n    if (arr[j] < pivot) {\n      i++;\n      // Swap arr[i] and arr[j]\n      int temp = arr[i];\n      arr[i] = arr[j];\n      arr[j] = temp;\n    }\n  }\n\n  // Swap arr[i + 1] and arr[high] (pivot)\n  int temp = arr[i + 1];\n  arr[i + 1] = arr[high];\n  arr[high] = temp;\n\n  return i + 1;\n}\n\nvoid quickSort(int arr[], int low, int high) {\n  if (low < high) {\n    int pi = partition(arr, low, high);\n\n    // Recursively sort elements before and after partition\n    quickSort(arr, low, pi - 1);\n    quickSort(arr, pi + 1, high);\n  }\n}\n\n// Usage:\nint arr[] = {10, 7, 8, 9, 1, 5};\nint n = sizeof(arr) / sizeof(arr[0]);\nquickSort(arr, 0, n - 1);\n// Now arr[] is sorted: {1, 5, 7, 8, 9, 10}"
+}

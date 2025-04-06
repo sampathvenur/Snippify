@@ -1,0 +1,6 @@
+{
+    "title": "Compound Interest",
+    "description": "Calculates the compound interest for a given principal, rate, time, and number of times interest applied per time period.",
+    "author": "sampathvenur",
+    "code": "#include <math.h>\n\n// Function to calculate compound interest\ndouble compound_interest(double principal, double rate, double time, int n) {\n    return principal * pow(1 + rate / n, n * time);\n}\n\n// Usage:\ndouble principal = 1000.0;  // Initial amount\ndouble rate = 0.05;         // Annual interest rate (5%)\ndouble time = 2;            // Time in years\nint n = 4;                  // Compounded quarterly\n\ncompound_interest(principal, rate, time, n); // Returns: 1104.081632653061"
+}

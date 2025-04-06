@@ -1,0 +1,6 @@
+{
+    "title": "Kill Previous Instances",
+    "description": "Kill all previous instances of a script",
+    "author": "sampathvenur",
+    "code": "function kill_prev() {\n    # $$ contains current pid (grep ignore so it doesn't suicide)\n    local processes\n    readarray -t processes < <(pgrep -f \"$0\" | grep -v \"$$\")\n    kill \"${processes[@]}\" >/dev/null 2>&1\n}\n\n# Usage:\n# Add this function to your background running script\n# It will make sure that only one instance of your script is running at a time\nkill_prev"
+}

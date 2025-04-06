@@ -1,0 +1,6 @@
+{
+    "title": "Selection Sort",
+    "description": "Sorts an array of integers using the Selection Sort algorithm.",
+    "author": "sampathvenur",
+    "code": "void selectionSort(int arr[], int n) {\n  for (int i = 0; i < n - 1; i++) {\n    int minIdx = i;\n\n    // Find the minimum element in the unsorted part of the array\n    for (int j = i + 1; j < n; j++) {\n      if (arr[j] < arr[minIdx]) {\n        minIdx = j;\n      }\n    }\n\n    // Swap the found minimum element with the first element of the unsorted part\n    int temp = arr[minIdx];\n    arr[minIdx] = arr[i];\n    arr[i] = temp;\n  }\n}\n\n// Usage:\nint arr[] = {64, 25, 12, 22, 11};\nint n = sizeof(arr) / sizeof(arr[0]);\nselectionSort(arr, n);\n// Now arr[] is sorted: {11, 12, 22, 25, 64}"
+}

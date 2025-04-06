@@ -1,0 +1,6 @@
+{
+    "title": "Fibonacci Number",
+    "description": "Calculates the nth Fibonacci number using recursion.",
+    "author": "sampathvenur",
+    "code": "// Function to calculate the nth Fibonacci number\nint fibonacci(int n) {\n    if (n <= 1) return n;\n    return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// Usage:\nfibonacci(6); // Returns: 8"
+}

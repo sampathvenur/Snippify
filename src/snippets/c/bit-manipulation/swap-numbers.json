@@ -1,0 +1,6 @@
+{
+    "title": "Swap Numbers",
+    "description": "Swap two numbers without a temporary variable",
+    "author": "sampathvenur",
+    "code": "void swap(int *a, int *b) {\n    *a ^= *b;\n    *b ^= *a;\n    *a ^= *b;\n}\n\n\n// Usage:\nint x = 5, y = 10;\nswap(&x, &y);\nprintf(\"x = %d, y = %d\\n\", x, y); // x = 10, y = 5"
+}
