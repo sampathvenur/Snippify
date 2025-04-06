@@ -1,0 +1,6 @@
+{
+    "title": "Count Properties in Object",
+    "description": "Counts the number of own properties in an object.",
+    "author": "sampathvenur",
+    "code": "function countProperties(obj) {\n  return Object.keys(obj).length;\n}\n\n// Usage:\nconst obj = { a: 1, b: 2, c: 3 };\ncountProperties(obj); // Returns: 3"
+}

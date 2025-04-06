@@ -1,0 +1,6 @@
+{
+    "title": "Merge Objects Deeply",
+    "description": "Deeply merges two or more objects, including nested properties.",
+    "author": "sampathvenur",
+    "code": "function deepMerge(...objects) {\n  return objects.reduce((acc, obj) => {\n    Object.keys(obj).forEach(key => {\n      if (typeof obj[key] === 'object' && obj[key] !== null) {\n        acc[key] = deepMerge(acc[key] || {}, obj[key]);\n      } else {\n        acc[key] = obj[key];\n      }\n    });\n    return acc;\n  }, {});\n}\n\n// Usage:\nconst obj1 = { a: 1, b: { c: 2 } };\nconst obj2 = { b: { d: 3 }, e: 4 };\ndeepMerge(obj1, obj2); // Returns: { a: 1, b: { c: 2, d: 3 }, e: 4 }"
+}

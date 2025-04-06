@@ -1,0 +1,6 @@
+{
+    "title": "Unique By Key",
+    "description": "Filters an array of objects to only include unique objects by a specified key.",
+    "author": "sampathvenur",
+    "code": "const uniqueByKey = (key, arr) =>\n  arr.filter((obj, index, self) => index === self.findIndex((t) => t?.[key] === obj?.[key]));\n\n// Usage:\nconst arr = [\n  { id: 1, name: 'John' },\n  { id: 2, name: 'Jane' },\n  { id: 1, name: 'John' }\n];\nuniqueByKey('id', arr); // Returns: [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }]"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Invert Object Keys and Values",
+    "description": "Creates a new object by swapping keys and values of the given object.",
+    "author": "sampathvenur",
+    "code": "function invertObject(obj) {\n  return Object.fromEntries(\n    Object.entries(obj).map(([key, value]) => [value, key])\n  );\n}\n\n// Usage:\nconst obj = { a: 1, b: 2, c: 3 };\ninvertObject(obj); // Returns: { '1': 'a', '2': 'b', '3': 'c' }"
+}

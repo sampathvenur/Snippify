@@ -1,0 +1,6 @@
+{
+    "title": "Greatest Common Divisor",
+    "description": "Calculates the largest positive integer that divides each of the integers without leaving a remainder. Useful for calculating aspect ratios.",
+    "author": "sampathvenur",
+    "code": "function gcd(a, b) {\n    while (b !== 0) {\n        let temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\n// Usage:\ngcd(1920, 1080); // Returns:    120\ngcd(1920, 1200); // Returns:    240\ngcd(5,12);       // Returns:      1"
+}

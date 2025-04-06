@@ -1,0 +1,6 @@
+{
+    "title": "Number to Words Converter",
+    "description": "Converts a number to its word representation in English.",
+    "author": "sampathvenur",
+    "code": "const numberToWords = (num) => {\n  const below20 = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];\n  const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];\n  const above1000 = ['Hundred', 'Thousand', 'Million', 'Billion'];\n  if (num < 20) return below20[num];\n  let words = '';\n  for (let i = 0; num > 0; i++) {\n    if (i > 0 && num % 1000 !== 0) words = above1000[i] + ' ' + words;\n    if (num % 100 >= 20) {\n      words = tens[Math.floor(num / 10)] + ' ' + words;\n      num %= 10;\n    }\n    if (num < 20) words = below20[num] + ' ' + words;\n    num = Math.floor(num / 100);\n  }\n  return words.trim();\n};\n\n// Usage:\nnumberToWords(123); // Returns: 'One Hundred Twenty Three'\nnumberToWords(2045); // Returns: 'Two Thousand Forty Five'"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Deep Clone Object",
+    "description": "Creates a deep copy of an object or array without reference.",
+    "author": "sampathvenur",
+    "code": "function deepClone(obj) {\n  if (obj === null || typeof obj !== 'object') return obj;\n  \n  const clone = Array.isArray(obj) ? [] : {};\n  \n  for (let key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      clone[key] = deepClone(obj[key]);\n    }\n  }\n  \n  return clone;\n}\n\n// Usage:\nconst original = { a: 1, b: { c: 2 }, d: [1, 2, 3] };\nconst cloned = deepClone(original);\nconsole.log(cloned); // Output: 'original' but cloned"
+}

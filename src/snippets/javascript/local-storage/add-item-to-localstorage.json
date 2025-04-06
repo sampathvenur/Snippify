@@ -1,0 +1,6 @@
+{
+    "title": "Add Item to localStorage",
+    "description": "Stores a value in localStorage under the given key.",
+    "author": "sampathvenur",
+    "code": "const addToLocalStorage = (key, value) => {\n  localStorage.setItem(key, JSON.stringify(value));\n};\n\n// Usage:\naddToLocalStorage('user', { name: 'John', age: 30 });"
+}

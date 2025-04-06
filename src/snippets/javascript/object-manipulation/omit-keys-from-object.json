@@ -1,0 +1,6 @@
+{
+    "title": "Omit Keys from Object",
+    "description": "Creates a new object with specific keys omitted.",
+    "author": "sampathvenur",
+    "code": "function omitKeys(obj, keys) {\n  return Object.fromEntries(\n    Object.entries(obj).filter(([key]) => !keys.includes(key))\n  );\n}\n\n// Usage:\nconst obj = { a: 1, b: 2, c: 3 };\nomitKeys(obj, ['b', 'c']); // Returns: { a: 1 }"
+}

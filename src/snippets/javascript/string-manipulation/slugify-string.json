@@ -1,0 +1,6 @@
+{
+    "title": "Slugify String",
+    "description": "Converts a string into a URL-friendly slug format.",
+    "author": "sampathvenur",
+    "code": "const slugify = (string, separator = \"-\") => {\n  return string\n    .toString() // Cast to string (optional)\n    .toLowerCase() // Convert the string to lowercase letters\n    .trim() // Remove whitespace from both sides of a string (optional)\n    .replace(/\\s+/g, separator) // Replace spaces with {separator}\n    .replace(/[^\\w\\-]+/g, \"\") // Remove all non-word chars\n    .replace(/\\_/g, separator) // Replace _ with {separator}\n    .replace(/\\-\\-+/g, separator) // Replace multiple - with single {separator}\n    .replace(/\\-$/g, \"\"); // Remove trailing -\n};\n\n// Usage:\nconst title = \"Hello, World! This is a Test.\";\nslugify(title); // Returns: 'hello-world-this-is-a-test'\nslugify(title, \"_\"); // Returns: 'hello_world_this_is_a_test'"
+}

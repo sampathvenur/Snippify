@@ -1,0 +1,6 @@
+{
+    "title": "Reverse String",
+    "description": "Reverses the characters in a string.",
+    "author": "sampathvenur",
+    "code": "const reverseString = (str) => str.split('').reverse().join('');\n\n// Usage:\nreverseString('hello'); // Returns: 'olleh'"
+}

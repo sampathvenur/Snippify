@@ -1,0 +1,6 @@
+{
+    "title": "Number Formatter",
+    "description": "Formats a number with suffixes (K, M, B, etc.).",
+    "author": "sampathvenur",
+    "code": "const nFormatter = (num) => {\n  if (!num) return;\n  num = parseFloat(num.toString().replace(/[^0-9.]/g, ''));\n  const suffixes = ['', 'K', 'M', 'B', 'T', 'P', 'E'];\n  let index = 0;\n  while (num >= 1000 && index < suffixes.length - 1) {\n    num /= 1000;\n    index++;\n  }\n  return num.toFixed(2).replace(/\\.0+$|(\\.[0-9]*[1-9])0+$/, '$1') + suffixes[index];\n};\n\n// Usage:\nnFormatter(1234567); // Returns: '1.23M'"
+}

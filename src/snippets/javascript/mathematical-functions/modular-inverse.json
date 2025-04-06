@@ -1,0 +1,6 @@
+{
+    "title": "Modular Inverse",
+    "description": "Computes the modular multiplicative inverse of a number a under modulo m, which is the integer x such that (a*x) mod m=1.",
+    "author": "sampathvenur",
+    "code": "function modInverse(a, m) {\n    function extendedGCD(a, b) {\n        if (b === 0) {\n            return { gcd: a, x: 1, y: 0 };\n        }\n        const { gcd, x: x1, y: y1 } = extendedGCD(b, a % b);\n        const x = y1;\n        const y = x1 - Math.floor(a / b) * y1;\n        return { gcd, x, y };\n    }\n\n    const { gcd, x } = extendedGCD(a, m);\n\n    if (gcd !== 1) {\n        return null;\n    }\n\n    return (x % m + m) % m;\n}\n\n// Usage:\nmodInverse(3, 26);  // Returns: 9\nmodInverse(10, 17); // Returns: 12\nmodInverse(6, 9);   // Returns: null"
+}

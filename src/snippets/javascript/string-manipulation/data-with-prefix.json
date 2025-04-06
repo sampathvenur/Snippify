@@ -1,0 +1,6 @@
+{
+    "title": "Data with Prefix",
+    "description": "Adds a prefix and postfix to data, with a fallback value.",
+    "author": "sampathvenur",
+    "code": "const dataWithPrefix = (data, fallback = '-', prefix = '', postfix = '') => {\n  return data ? `${prefix}${data}${postfix}` : fallback;\n};\n\n// Usage:\ndataWithPrefix('123', '-', '(', ')'); // Returns: '(123)'\ndataWithPrefix('', '-', '(', ')'); // Returns: '-'\ndataWithPrefix('Hello', 'N/A', 'Mr. ', ''); // Returns: 'Mr. Hello'\ndataWithPrefix(null, 'N/A', 'Mr. ', ''); // Returns: 'N/A'"
+}

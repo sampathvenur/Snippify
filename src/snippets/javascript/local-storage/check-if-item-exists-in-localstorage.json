@@ -1,0 +1,6 @@
+{
+    "title": "Check if Item Exists in localStorage",
+    "description": "Checks if a specific item exists in localStorage.",
+    "author": "sampathvenur",
+    "code": "const isItemInLocalStorage = (key) => {\n  return localStorage.getItem(key) !== null;\n};\n\n// Usage:\nconsole.log(isItemInLocalStorage('user')); // Output: true or false"
+}

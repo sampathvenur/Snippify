@@ -1,0 +1,6 @@
+{
+    "title": "Throttle Function",
+    "description": "Ensures a function is only called at most once in a specified time interval. Useful for optimizing events like scrolling or resizing.",
+    "author": "sampathvenur",
+    "code": "const throttle = (func, limit) => {\n  let inThrottle;\n  return (...args) => {\n    if (!inThrottle) {\n      func(...args);\n      inThrottle = true;\n      setTimeout(() => (inThrottle = false), limit);\n    }\n  };\n};\n\n// Usage:\n// Ensures the function can only be called once every 1000 milliseconds\nconst logScroll = throttle(() => console.log(\"Scroll event triggered\"), 1000);\n\n// Attach to scroll event\nwindow.addEventListener(\"scroll\", logScroll);"
+}

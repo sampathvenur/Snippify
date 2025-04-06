@@ -1,0 +1,6 @@
+{
+    "title": "Freeze Object",
+    "description": "Freezes an object to make it immutable.",
+    "author": "sampathvenur",
+    "code": "function freezeObject(obj) {\n  return Object.freeze(obj);\n}\n\n// Usage:\nconst obj = { a: 1, b: 2 };\nconst frozenObj = freezeObject(obj);\nfrozenObj.a = 42;         // This will fail silently in strict mode.\nfrozenObj.a; // Returns: 1"
+}

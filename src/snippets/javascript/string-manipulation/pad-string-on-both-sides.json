@@ -1,0 +1,6 @@
+{
+    "title": "Pad String on Both Sides",
+    "description": "Pads a string on both sides with a specified character until it reaches the desired length.",
+    "author": "sampathvenur",
+    "code": "function padString(str, length, char = ' ') {\n  const totalPad = length - str.length;\n  const padStart = Math.floor(totalPad / 2);\n  const padEnd = totalPad - padStart;\n  return char.repeat(padStart) + str + char.repeat(padEnd);\n}\n\n// Usage:\npadString('hello', 10, '*'); // Returns: '**hello***'"
+}

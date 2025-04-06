@@ -1,0 +1,6 @@
+{
+    "title": "Flatten Nested Object",
+    "description": "Flattens a nested object into a single-level object with dot notation for keys.",
+    "author": "sampathvenur",
+    "code": "function flattenObject(obj, prefix = '') {\n  return Object.keys(obj).reduce((acc, key) => {\n    const fullPath = prefix ? `${prefix}.${key}` : key;\n    if (typeof obj[key] === 'object' && obj[key] !== null) {\n      Object.assign(acc, flattenObject(obj[key], fullPath));\n    } else {\n      acc[fullPath] = obj[key];\n    }\n    return acc;\n  }, {});\n}\n\n// Usage:\nconst nestedObj = { a: { b: { c: 1 }, d: 2 }, e: 3 };\nflattenObject(nestedObj); // Returns: { 'a.b.c': 1, 'a.d': 2, e: 3 }"
+}

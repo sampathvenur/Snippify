@@ -1,0 +1,6 @@
+{
+    "title": "Once Function",
+    "description": "Ensures a function is only called once.",
+    "author": "sampathvenur",
+    "code": "const once = (func) => {\n  let called = false;\n  return (...args) => {\n    if (!called) {\n      called = true;\n      return func(...args);\n    }\n  };\n};\n\n// Usage:\nconst initialize = once(() => console.log('Initialized!'));\ninitialize(); // Output: Initialized!\ninitialize(); // No output"
+}

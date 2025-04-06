@@ -1,0 +1,6 @@
+{
+    "title": "Random string",
+    "description": "Generates a random string of characters of a certain length",
+    "author": "sampathvenur",
+    "code": "function makeid(length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {\n  return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');\n}\n\nmakeid(3); // Returns: gDs (Random)\nmakeid(5, \"1234\" /* (optional) */); // Returns: \"35453\" (Random)"
+}

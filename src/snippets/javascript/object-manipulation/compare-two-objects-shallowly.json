@@ -1,0 +1,6 @@
+{
+    "title": "Compare Two Objects Shallowly",
+    "description": "Compares two objects shallowly and returns whether they are equal.",
+    "author": "sampathvenur",
+    "code": "function shallowEqual(obj1, obj2) {\n  const keys1 = Object.keys(obj1);\n  const keys2 = Object.keys(obj2);\n  if (keys1.length !== keys2.length) return false;\n  return keys1.every(key => obj1[key] === obj2[key]);\n}\n\n// Usage:\nconst obj1 = { a: 1, b: 2 };\nconst obj2 = { a: 1, b: 2 };\nconst obj3 = { a: 1, b: 3 };\nshallowEqual(obj1, obj2); // Returns: true\nshallowEqual(obj1, obj3); // Returns: false"
+}

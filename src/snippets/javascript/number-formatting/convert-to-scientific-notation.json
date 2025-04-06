@@ -1,0 +1,6 @@
+{
+    "title": "Convert to Scientific Notation",
+    "description": "Converts a number to scientific notation.",
+    "author": "sampathvenur",
+    "code": "const toScientificNotation = (num) => {\n  if (isNaN(num)) {\n    throw new Error('Input must be a number');\n  }\n  if (num === 0) {\n    return '0e+0';\n  }\n  const exponent = Math.floor(Math.log10(Math.abs(num)));\n  const mantissa = num / Math.pow(10, exponent);\n  return `${mantissa.toFixed(2)}e${exponent >= 0 ? '+' : ''}${exponent}`;\n};\n\n// Usage:\ntoScientificNotation(12345); // Returns: '1.23e+4'\ntoScientificNotation(0.0005678); // Returns: '5.68e-4'\ntoScientificNotation(1000); // Returns: '1.00e+3'\ntoScientificNotation(0); // Returns: '0e+0'\ntoScientificNotation(-54321); // Returns: '-5.43e+4'"
+}

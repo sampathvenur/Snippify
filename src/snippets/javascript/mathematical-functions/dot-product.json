@@ -1,0 +1,6 @@
+{
+    "title": "Dot Product",
+    "description": "Computes the dot product of two vectors, which is the sum of the products of corresponding elements.",
+    "author": "sampathvenur",
+    "code": "function dotProduct(a, b) {\n    if (a.length !== b.length) {\n        throw new Error('Vectors must be of the same length');\n    }\n\n    return a.reduce((sum, value, index) => sum + value * b[index], 0);\n}\n\n// Usage:\ndotProduct([1, 2, 3], [4, 5, 6]); // Returns: 32"
+}

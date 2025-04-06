@@ -1,0 +1,6 @@
+{
+    "title": "Remove Vowels from a String",
+    "description": "Removes all vowels from a given string.",
+    "author": "sampathvenur",
+    "code": "function removeVowels(str) {\n  return str.replace(/[aeiouAEIOU]/g, '');\n}\n\n// Usage:\nremoveVowels('Hello World'); // Returns: 'Hll Wrld'"
+}

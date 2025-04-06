@@ -4,6 +4,10 @@ import { ChevronDown, ChevronRight, Loader2, X } from 'lucide-react'; // Added X
 import { LanguageSection } from '@/lib/types';
 import * as Icons from 'lucide-react';
 
+// Import SVG icons
+import javascriptIcon from '../snippets/javascript/icon.svg';
+// Import other language icons similarly...
+
 // Type for Lucide icon components
 type IconComponent = typeof Icons.File;
 
@@ -40,9 +44,17 @@ export default function Sidebar({
       .join(' ');
   };
 
-  const getIcon = (iconName: string): IconComponent => {
-    // Default to File icon if the specified icon doesn't exist
-    return (Icons as any)[iconName] || Icons.File;
+  const iconMap: Record<string, string> = {
+    javascript: javascriptIcon,
+    // Add other languages and their icons here...
+  };
+
+  const getIcon = (language: string): JSX.Element => {
+    const iconSrc = iconMap[language.toLowerCase()];
+    if (iconSrc) {
+      return <img src={iconSrc} alt={`${language} icon`} className="h-4 w-4" />;
+    }
+    return <Icons.File className="h-4 w-4" />;
   };
 
   const toggleLanguage = (language: string) => {
@@ -86,7 +98,7 @@ export default function Sidebar({
                   onClick={() => toggleLanguage(section.language)}
                 >
                   <div className="flex items-center gap-2">
-                    {React.createElement(getIcon(section.icon), { className: "h-4 w-4" })}
+                    {getIcon(section.language)}
                     <span>{formatName(section.language)}</span>
                   </div>
                   {expandedLanguages[section.language] ? (

@@ -1,0 +1,6 @@
+{
+    "title": "Format Number with Commas",
+    "description": "Formats a number with commas for better readability (e.g., 1000 -> 1,000).",
+    "author": "sampathvenur",
+    "code": "const formatNumberWithCommas = (num) => {\n  return num.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',');\n};\n\n// Usage:\nformatNumberWithCommas(1000); // Returns: '1,000'\nformatNumberWithCommas(1234567); // Returns: '1,234,567'\nformatNumberWithCommas(987654321); // Returns: '987,654,321'"
+}

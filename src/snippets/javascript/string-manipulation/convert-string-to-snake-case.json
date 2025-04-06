@@ -1,0 +1,6 @@
+{
+    "title": "Convert String to Snake Case",
+    "description": "Converts a given string into snake_case.",
+    "author": "sampathvenur",
+    "code": "function toSnakeCase(str) {\n  return str.replace(/([a-z])([A-Z])/g, '$1_$2')\n            .replace(/\\s+/g, '_')\n            .toLowerCase();\n}\n\n// Usage:\ntoSnakeCase('Hello World Test'); // Returns: 'hello_world_test'"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Generate UUID",
+    "description": "Generates a UUID (v4) string.",
+    "author": "sampathvenur",
+    "code": "function generateUUID() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    const r = Math.random() * 16 | 0;\n    const v = c === 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n\n// Usage:\nconsole.log(generateUUID()); // Output: \"a1b2c3d4-e5f6-4g7h-8i9j-k0l1m2n3o4p5\""
+}

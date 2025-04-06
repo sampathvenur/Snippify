@@ -1,0 +1,6 @@
+{
+    "title": "Mask Sensitive Information",
+    "description": "Masks parts of a sensitive string, like a credit card or email address.",
+    "author": "sampathvenur",
+    "code": "function maskSensitiveInfo(str, visibleCount = 4, maskChar = '*') {\n  return str.slice(0, visibleCount) + maskChar.repeat(Math.max(0, str.length - visibleCount));\n}\n\n// Usage:\nmaskSensitiveInfo('123456789', 4); // Returns: '1234*****'\nmaskSensitiveInfo('example@mail.com', 2, '#'); // Returns: 'ex#############'"
+}

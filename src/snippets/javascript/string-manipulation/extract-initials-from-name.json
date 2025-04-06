@@ -1,0 +1,6 @@
+{
+    "title": "Extract Initials from Name",
+    "description": "Extracts and returns the initials from a full name.",
+    "author": "sampathvenur",
+    "code": "function getInitials(name) {\n  return name.split(' ').map(part => part.charAt(0).toUpperCase()).join('');\n}\n\n// Usage:\ngetInitials('John Doe'); // Returns: 'JD'"
+}

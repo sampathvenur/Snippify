@@ -1,0 +1,6 @@
+{
+    "title": "Count Words in a String",
+    "description": "Counts the number of words in a string.",
+    "author": "sampathvenur",
+    "code": "function countWords(str) {\n  return str.trim().split(/\\s+/).length;\n}\n\n// Usage:\ncountWords('Hello world! This is a test.'); // Returns: 6"
+}

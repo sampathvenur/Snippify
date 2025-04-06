@@ -1,0 +1,6 @@
+{
+    "title": "Repeat Function Invocation",
+    "description": "Invokes a function a specified number of times.",
+    "author": "sampathvenur",
+    "code": "const times = (func, n) => {\n  Array.from(Array(n)).forEach(() => {\n    func();\n  });\n};\n\n// Usage:\nconst randomFunction = () => console.log('Function called!');\ntimes(randomFunction, 3); // Logs 'Function called!' three times"
+}

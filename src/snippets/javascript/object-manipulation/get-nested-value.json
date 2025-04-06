@@ -1,0 +1,6 @@
+{
+    "title": "Get Nested Value",
+    "description": "Retrieves the value at a given path in a nested object.",
+    "author": "sampathvenur",
+    "code": "const getNestedValue = (obj, path) => {\n  const keys = path.split('.');\n  return keys.reduce((currentObject, key) => {\n    return currentObject && typeof currentObject === 'object' ? currentObject[key] : undefined;\n  }, obj);\n};\n\n// Usage:\nconst obj = { a: { b: { c: 42 } } };\ngetNestedValue(obj, 'a.b.c'); // Returns: 42"
+}

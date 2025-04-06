@@ -1,0 +1,6 @@
+{
+    "title": "Convert Object to Query String",
+    "description": "Converts an object to a query string for use in URLs.",
+    "author": "sampathvenur",
+    "code": "function toQueryString(obj) {\n  return Object.entries(obj)\n    .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))\n    .join('&');\n}\n\n// Usage:\nconst params = { search: 'test', page: 1 };\ntoQueryString(params); // Returns: 'search=test&page=1'"
+}

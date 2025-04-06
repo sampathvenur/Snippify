@@ -1,0 +1,6 @@
+{
+    "title": "Rate Limit Function",
+    "description": "Limits how often a function can be executed within a given time window.",
+    "author": "sampathvenur",
+    "code": "const rateLimit = (func, limit, timeWindow) => {\n  let queue = [];\n  setInterval(() => {\n    if (queue.length) {\n      const next = queue.shift();\n      func(...next.args);\n    }\n  }, timeWindow);\n  return (...args) => {\n    if (queue.length < limit) {\n      queue.push({ args });\n    }\n  };\n};\n\n// Usage:\nconst fetchData = () => console.log('Fetching data...');\nconst rateLimitedFetch = rateLimit(fetchData, 2, 1000);\nsetInterval(() => rateLimitedFetch(), 200); // Limits fetchData calls to twice a seconds"
+}

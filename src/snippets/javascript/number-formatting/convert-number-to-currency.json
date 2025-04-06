@@ -1,0 +1,6 @@
+{
+    "title": "Convert Number to Currency",
+    "description": "Converts a number to a currency format with a specific locale.",
+    "author": "sampathvenur",
+    "code": "const convertToCurrency = (num, locale = 'en-US', currency = 'USD') => {\n  return new Intl.NumberFormat(locale, {\n    style: 'currency',\n    currency: currency\n  }).format(num);\n};\n\n// Usage:\nconvertToCurrency(1234567.89); // Returns: '$1,234,567.89'\nconvertToCurrency(987654.32, 'de-DE', 'EUR'); // Returns: '987.654,32 €'"
+}

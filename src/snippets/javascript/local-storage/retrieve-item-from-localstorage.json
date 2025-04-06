@@ -1,0 +1,6 @@
+{
+    "title": "Retrieve Item from localStorage",
+    "description": "Retrieves a value from localStorage by key and parses it.",
+    "author": "sampathvenur",
+    "code": "const getFromLocalStorage = (key) => {\n  const item = localStorage.getItem(key);\n  return item ? JSON.parse(item) : null;\n};\n\n// Usage:\ngetFromLocalStorage('user'); // Returns: { name: 'John', age: 30 }"
+}

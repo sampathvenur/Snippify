@@ -1,0 +1,6 @@
+{
+    "title": "Check if Object is Empty",
+    "description": "Checks whether an object has no own enumerable properties.",
+    "author": "sampathvenur",
+    "code": "function isEmptyObject(obj) {\n  return Object.keys(obj).length === 0;\n}\n\n// Usage:\nisEmptyObject({}); // Returns: true\nisEmptyObject({ a: 1 }); // Returns: false"
+}

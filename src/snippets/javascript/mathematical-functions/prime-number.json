@@ -1,0 +1,6 @@
+{
+    "title": "Prime Number",
+    "description": "Checks if a number is a prime number or not.",
+    "author": "sampathvenur",
+    "code": "function isPrime(num) {\n    if (num <= 1) return false; // 0 and 1 are not prime numbers\n    if (num <= 3) return true;  // 2 and 3 are prime numbers\n    if (num % 2 === 0 || num % 3 === 0) return false; // Exclude multiples of 2 and 3\n\n    // Check divisors from 5 to √num, skipping multiples of 2 and 3\n    for (let i = 5; i * i <= num; i += 6) {\n        if (num % i === 0 || num % (i + 2) === 0) return false;\n    }\n    return true;\n}\n\n// Usage:\nisPrime(69); // Returns:  false\nisPrime(17); // Returns:  true"
+}

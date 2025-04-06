@@ -1,0 +1,6 @@
+{
+    "title": "Remove All Whitespace",
+    "description": "Removes all whitespace from a string.",
+    "author": "sampathvenur",
+    "code": "function removeWhitespace(str) {\n  return str.replace(/\\s+/g, '');\n}\n\n// Usage:\nremoveWhitespace('Hello world!'); // Returns: 'Helloworld!'"
+}

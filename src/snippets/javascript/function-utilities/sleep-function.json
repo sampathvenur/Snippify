@@ -1,0 +1,6 @@
+{
+    "title": "Sleep Function",
+    "description": "Waits for a specified amount of milliseconds before resolving.",
+    "author": "sampathvenur",
+    "code": "const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));\n\n// Usage:\nconsole.log('Hello');\nawait sleep(2000); // Waits for 2 seconds\nconsole.log('World!');"
+}
