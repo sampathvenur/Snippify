@@ -1,0 +1,6 @@
+{
+    "title": "Whitespace Trimmer",
+    "description": "Matches leading and/or trailing whitespace.",
+    "author": "sampathvenur",
+    "code": "^\\s+|\\s+$"
+}

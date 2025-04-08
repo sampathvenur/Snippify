@@ -1,0 +1,6 @@
+{
+    "title": "Is Power Of Two",
+    "description": "Checks if a number is a power of two",
+    "author": "sampathvenur",
+    "code": "public static boolean isPowerOfTwo(int number) {\n    return (number > 0) && ((number & (number - 1)) == 0);\n}\n\n// Usage:\nint number = 16;\nSystem.out.println(isPowerOfTwo(number)); // true (2^4)"
+}

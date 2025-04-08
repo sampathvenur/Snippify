@@ -1,0 +1,6 @@
+{
+    "title": "Find Unique Characters",
+    "description": "Returns a set of unique characters from a string, with options to include spaces and control case sensitivity",
+    "author": "sampathvenur",
+    "code": "public static Set<Character> findUniqueCharacters(String text, boolean countSpaces, boolean caseSensitive) {\n    Set<Character> uniqueCharacters = new TreeSet<>();\n    \n    for (char character : text.toCharArray()) {\n        if (character == ' ' && !countSpaces)\n            continue;\n        if (!caseSensitive)\n            character = Character.toLowerCase(character);\n        uniqueCharacters.add(character);\n    }\n    \n    return uniqueCharacters;\n}\n\n// Usage:\nSystem.out.println(findUniqueCharacters(\"hello world\", false, true)); // Output: [d, e, h, l, o, r, w]"
+}

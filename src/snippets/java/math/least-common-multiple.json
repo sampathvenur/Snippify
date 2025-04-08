@@ -1,0 +1,6 @@
+{
+    "title": "Least Common Multiple",
+    "description": "Calculates the least common multiple (lcm) of two numbers",
+    "author": "sampathvenur",
+    "code": "public static int lcm(int number1, int number2) {\n    int gcdNumber1 = number1;\n    int gcdNumber2 = number2;\n    \n    while (gcdNumber2 != 0) {\n        int remainder = gcdNumber2;\n        gcdNumber2 = gcdNumber1 % gcdNumber2;\n        gcdNumber1 = remainder;\n    }\n    \n    return (number1 / gcdNumber1) * number2;\n}\n\n// Usage:\nint a = 16;\nint b = 12;\nSystem.out.println(lcm(a, b)); // 48"
+}

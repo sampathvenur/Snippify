@@ -1,0 +1,6 @@
+{
+    "title": "Count Words",
+    "description": "Counts the number of words in a string",
+    "author": "sampathvenur",
+    "code": "public static int countWords(String text) {\n    return text.split(\"\\\\s+\").length;\n}\n\n// Usage:\nSystem.out.println(countWords(\"hello world\")); // 2"
+}

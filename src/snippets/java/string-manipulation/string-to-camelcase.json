@@ -1,0 +1,6 @@
+{
+    "title": "String To camelCase",
+    "description": "Converts a string into camelCase",
+    "author": "sampathvenur",
+    "code": "public static String stringToCamelCase(String text) {\n    String[] words = text.split(\"\\\\s+\");\n    StringBuilder camelCase = new StringBuilder(\n        words[0].substring(0, 1).toLowerCase() + words[0].substring(1)\n    );\n\n    for (int i = 1; i < words.length; i++) {\n        camelCase.append(words[i].substring(0, 1).toUpperCase());\n        camelCase.append(words[i].substring(1));\n    }\n\n    return camelCase.toString();\n}\n\n// Usage:\nSystem.out.println(stringToCamelCase(\"Hello world test\")); // \"helloWorldTest\""
+}

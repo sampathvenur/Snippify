@@ -1,0 +1,6 @@
+{
+    "title": "Truncate String",
+    "description": "Truncates a string after a specified length (can also be used for hiding information)",
+    "author": "sampathvenur",
+    "code": "public static String truncate(String text, int length, String suffix) {\n    if (text.length() <= length)\n        return text;\n    \n    return text.substring(0, length).trim() + (suffix != null ? suffix : \"\");\n}\n\n// Usage:\nSystem.out.println(truncate(\"hello world\", 5, \"...\")); // \"hello...\""
+}

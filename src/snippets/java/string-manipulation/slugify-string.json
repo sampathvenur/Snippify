@@ -1,0 +1,6 @@
+{
+    "title": "Slugify String",
+    "description": "Converts a string into a URL-friendly slug format",
+    "author": "sampathvenur",
+    "code": "public static String slugify(String text, String separator) {\n    if (text == null)\n        return \"\";\n\n    // used to decompose accented characters to their base characters (e.g. \"é\" to \"e\")\n    String normalizedString = Normalizer.normalize(text, Normalizer.Form.NFD);\n    normalizedString = normalizedString.replaceAll(\"[\\\\p{InCombiningDiacriticalMarks}]\", \"\");\n\n    String slug = normalizedString.trim()\n            .toLowerCase()\n            .replaceAll(\"\\\\s+\", separator)\n            .replaceAll(\"[^a-z0-9\\\\-_\" + separator + \"]\", \"\")\n            .replaceAll(\"_\", separator)\n            .replaceAll(\"-\", separator)\n            .replaceAll(separator + \"+\", separator)\n            .replaceAll(separator + \"$\", \"\");\n\n    return slug;\n}\n\n// Usage:\nSystem.out.println(slugify(\"Hello World-#123-é\", \"-\")); // \"hello-world-123-e\""
+}

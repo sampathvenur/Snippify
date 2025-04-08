@@ -14,6 +14,8 @@ import cppIcon from '../snippets/cpp/icon.svg';
 import csharpIcon from '../snippets/csharp/icon.svg';
 import cssIcon from '../snippets/css/icon.svg';
 import haskellIcon from '../snippets/haskell/icon.svg';
+import javaIcon from '../snippets/java/icon.svg';
+import regexIcon from '../snippets/regex/icon.svg';
 // Import other language icons similarly...
 
 // Type for Lucide icon components
@@ -62,6 +64,8 @@ export default function Sidebar({
     csharp: csharpIcon,
     css: cssIcon,
     haskell: haskellIcon,
+    java: javaIcon,
+    regex: regexIcon
     // Add other languages and their icons here...
   };
 

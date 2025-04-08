@@ -1,0 +1,6 @@
+{
+    "title": "String To Titlecase",
+    "description": "Converts a string into Title Case, where the first letter of each word is capitalized and the remaining letters are lowercase",
+    "author": "sampathvenur",
+    "code": "public static String convertToTitleCase(String text) {\n    String[] words = text.split(\"(?<=\\\\S)(?=\\\\s+)|(?<=\\\\s+)(?=\\\\S)\"); // this is needed to preserve spaces (text.split(\" \") would remove multiple spaces)\n    StringBuilder capitalizedText = new StringBuilder();\n\n    for (String word : words) {\n        if (word.trim().isEmpty()) {\n            capitalizedText.append(word);\n            continue;\n        }\n\n        capitalizedText.append(Character.toUpperCase(word.charAt(0)))\n                .append(word.substring(1).toLowerCase());\n    }\n\n    return capitalizedText.toString().trim();\n}\n\n// Usage:\nSystem.out.println(convertToTitleCase(\"heLlo wOrld\")); // \"Hello World\""
+}

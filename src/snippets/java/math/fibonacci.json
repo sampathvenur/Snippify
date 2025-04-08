@@ -1,0 +1,6 @@
+{
+    "title": "Fibonacci",
+    "description": "Calculates the nth fibonacci number",
+    "author": "sampathvenur",
+    "code": "public static int fibonacci(int number) {\n    if (number <= 1) \n        return number;\n        \n    return fibonacci(number - 1) + fibonacci(number - 2);\n}\n\n// Usage:\nint number = 5;\nSystem.out.println(fibonacci(number)) // 3 (0, 1, 1, 2, 3)"
+}

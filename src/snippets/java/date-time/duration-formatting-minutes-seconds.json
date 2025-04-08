@@ -1,0 +1,6 @@
+{
+    "title": "Duration Formatting Minutes Seconds",
+    "description": "Converts a given time duration to a human-readable string in the format \"mm:ss\"",
+    "author": "sampathvenur",
+    "code": "import java.util.concurrent.TimeUnit;\n\npublic static String formatDurationToMinutesAndSeconds(int time, TimeUnit timeUnit) {\n    long totalSeconds = timeUnit.toSeconds(time);\n\n    if (totalSeconds < 0)\n        throw new IllegalArgumentException(\"Duration must be a non-negative value.\");\n\n    // These variables can be directly used in the return statement,\n    // but are kept here as separate variables for better readability.\n    long minutes = totalSeconds / 60;\n    long seconds = totalSeconds % 60;\n\n    return String.format(\"%02d:%02d\", minutes, seconds);\n}\n\n// Usage:\nSystem.out.println(formatDurationToMinutesAndSeconds(120, TimeUnit.SECONDS)); // \"02:00\"\nSystem.out.println(formatDurationToMinutesAndSeconds(75, TimeUnit.SECONDS)); // \"01:15\""
+}

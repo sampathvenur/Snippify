@@ -1,0 +1,6 @@
+{
+    "title": "Normalize Whitespace",
+    "description": "Replaces consecutive whitespaces with a single space",
+    "author": "sampathvenur",
+    "code": "public static String normalizeWhitespace(String text) {\n    return text.replaceAll(\" {2,}\", \" \");\n}\n\n// Usage:\nSystem.out.println(normalizeWhitespace(\"hello   world\")); // \"hello world\""
+}

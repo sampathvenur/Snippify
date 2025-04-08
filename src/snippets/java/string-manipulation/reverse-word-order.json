@@ -1,0 +1,6 @@
+{
+    "title": "Reverse Word Order",
+    "description": "Reverses the order of words in a sentence while preserving the content of each word",
+    "author": "sampathvenur",
+    "code": "public static String reverseWords(String text) {\n    String[] words = text.split(\"\\\\s+\");\n    StringBuilder reversedSentence = new StringBuilder();\n\n    for (int currentWord = words.length - 1; currentWord >= 0; currentWord--) {\n        reversedSentence.append(words[currentWord]).append(\" \");\n    }\n\n    return reversedSentence.toString().trim();\n}\n\n// Usage:\nSystem.out.println(reverseWords(\"hello world\")); // Output: world hello"
+}

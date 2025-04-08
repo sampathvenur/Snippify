@@ -34,6 +34,7 @@ export default function SnippetCard({ snippet, onClick }: SnippetCardProps) {
       c: Icons.CircuitBoard,
       cpp: Icons.CircuitBoard,
       haskell: Icons.Code,
+      regex: Icons.Search,
     };
     
     return iconMap[language.toLowerCase()] || Icons.File;
@@ -60,7 +61,8 @@ export default function SnippetCard({ snippet, onClick }: SnippetCardProps) {
       markdown: 'from-gray-400 to-gray-600',
       c: 'from-blue-400 to-blue-500',
       cpp: 'from-blue-500 to-purple-500',
-      haskell: 'from-purple-400 to-indigo-500', // Theme for Haskell language
+      haskell: 'from-purple-400 to-indigo-500',
+      regex: 'from-pink-400 to-rose-600',
     };
     
     return colorMap[language.toLowerCase()] || 'from-primary to-primary/70';

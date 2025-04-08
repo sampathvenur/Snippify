@@ -1,0 +1,6 @@
+{
+    "title": "Check Palindrome",
+    "description": "Checks if a string reads the same backward as forward, ignoring whitespaces and case sensitivity",
+    "author": "sampathvenur",
+    "code": "public static boolean isPalindrome(String text) {\n    String cleanText = text.toLowerCase().replaceAll(\"\\\\s+\", \"\");\n        \n    return new StringBuilder(cleanText)\n            .reverse()\n            .toString()\n            .equals(cleanText);\n}\n\n// Usage:\nSystem.out.println(isPalindrome(\"A man a plan a canal Panama\")); // true"
+}

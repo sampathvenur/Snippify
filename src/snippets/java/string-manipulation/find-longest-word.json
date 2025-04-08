@@ -1,0 +1,6 @@
+{
+    "title": "Find Longest Word",
+    "description": "Returns the longest word in a string",
+    "author": "sampathvenur",
+    "code": "public static String findLongestWord(String text) {\n    String[] words = text.split(\"\\\\s+\");\n    String longestWord = words[0];\n    \n    for (String word : words) {\n        if (word.length() <= longestWord.length())\n            continue;\n            \n        longestWord = word;\n    }\n\n    return longestWord;\n}\n\n// Usage:\nSystem.out.println(findLongestWord(\"hello world123\")); // \"world123\""
+}

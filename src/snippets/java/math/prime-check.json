@@ -1,0 +1,6 @@
+{
+    "title": "Prime Check",
+    "description": "Checks if a number is a prime",
+    "author": "sampathvenur",
+    "code": "public static boolean isPrime(int number) {\n    if (number <= 1) \n        return false;\n\n    if (number <= 3) \n        return true;\n\n    boolean prime = true;\n    for (int divisor = 3; divisor < number; divisor++) {\n        if (number % divisor != 0)\n            continue;\n\n        prime = false;\n        break;\n    }\n\n    return prime;\n}\n\n// Usage:\nint number = 31;\nSystem.out.println(isPrime(number)); // true"
+}

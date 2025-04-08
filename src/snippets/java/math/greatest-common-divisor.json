@@ -1,0 +1,6 @@
+{
+    "title": "Greatest Common Divisor",
+    "description": "Calculates the greatest common divisor (gcd) of two numbers",
+    "author": "sampathvenur",
+    "code": "public static int gcd(int number1, int number2) {\n    while (number2 != 0) {\n        int remainder = number2;\n        number2 = number1 % number2;\n        number1 = remainder;\n    }\n\n    return number1;\n}\n\n// Usage:\nint a = 16;\nint b = 12;\nSystem.out.println(gcd(a, b)); // 4"
+}

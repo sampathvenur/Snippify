@@ -1,0 +1,6 @@
+{
+    "title": "Bit Counting",
+    "description": "Counts the set bits in the binary representation of an integer",
+    "author": "sampathvenur",
+    "code": "public static int countBits(int number) {\n    int bits = 0;\n        \n    while (number > 0) {\n        bits += number & 1;\n        number >>= 1;\n    }\n\n    return bits;\n}\n\n// Usage:\nint number = 5;\nSystem.out.println(countBits(5)); // 2 (101)"
+}

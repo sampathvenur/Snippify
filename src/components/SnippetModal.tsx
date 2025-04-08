@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { toast } from 'sonner';
 import Prism from 'prismjs';
+import 'prismjs/components/prism-regex';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
@@ -83,9 +84,10 @@ export default function SnippetModal({ snippet, isOpen, onClose }: SnippetModalP
       jsx: 'language-jsx',
       tsx: 'language-tsx',
       markdown: 'language-markdown',
-      c: 'language-c', // Ensure C language is mapped correctly
-      cpp: 'language-cpp', // Ensure C++ language is mapped correctly
-      haskell: 'language-haskell', // Ensure Haskell language is mapped correctly
+      c: 'language-c',
+      cpp: 'language-cpp',
+      haskell: 'language-haskell',
+      regex: 'language-regex', // Add this mapping for regex
     };
     
     return languageMap[language.toLowerCase()] || 'language-markup';

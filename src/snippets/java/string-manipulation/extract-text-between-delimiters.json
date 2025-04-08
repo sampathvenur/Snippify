@@ -1,0 +1,6 @@
+{
+    "title": "Extract Text Between Delimiters",
+    "description": "Extracts a text between two given delimiters from a string",
+    "author": "sampathvenur",
+    "code": "public static String extractBetweenDelimiters(String text, String start, String end) {\n    int startIndex = text.indexOf(start);\n    int endIndex = text.indexOf(end, startIndex + start.length());\n    \n    if (startIndex == -1 || endIndex == -1)\n        return \"\";\n    \n    return text.substring(startIndex + start.length(), endIndex);\n}\n\n// Usage:\nSystem.out.println(extractBetweenDelimiters(\"hello, world!\", \",\", \"!\")); // \" world\""
+}

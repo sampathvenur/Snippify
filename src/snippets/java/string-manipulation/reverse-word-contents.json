@@ -1,0 +1,6 @@
+{
+    "title": "Reverse Word Contents",
+    "description": "Reverses the characters of each word in a string while preserving word order",
+    "author": "sampathvenur",
+    "code": "public static String reverseWords(String text) {\n    String[] words = text.split(\"\\\\s+\"); \n    StringBuilder reversedText = new StringBuilder();\n\n    for (String word : words) {\n        StringBuilder reversedWord = new StringBuilder(word).reverse();\n        reversedText.append(reversedWord).append(\" \");\n    }\n\n    return reversedText.toString().trim();\n}\n\n// Usage:\nSystem.out.println(reverseWordContents(\"hello world\")); // \"olleh dlrow\""
+}

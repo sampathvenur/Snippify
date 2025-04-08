@@ -1,0 +1,6 @@
+{
+    "title": "snake_case to camelCase",
+    "description": "Converts a snake_case string into camelCase",
+    "author": "sampathvenur",
+    "code": "import java.util.regex.Pattern;\n\npublic static String snakeToCamel(String snakeCase) {\n    return Pattern.compile(\"(_)([a-z])\")\n        .matcher(snakeCase)\n        .replaceAll(match -> match.group(2).toUpperCase());\n}\n\n// Usage:\nSystem.out.println(snakeToCamel(\"hello_world\")); // \"helloWorld\""
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Count Character Occurrences",
+    "description": "Counts the occurrences of the specified characters in a given string",
+    "author": "sampathvenur",
+    "code": "import java.util.List;\n\npublic static int countCharacterOccurrences(String text, List<Character> characters) {\n    int count = 0;\n    \n    for (char character : text.toCharArray()) {\n        if (characters.indexOf(character) == -1)\n            continue;\n                \n        count++;\n    }\n    \n    return count;\n}\n\n// Usage:\nSystem.out.println(countCharacterOccurrences(\"hello world\", List.of('l', 'o'))); // 5"
+}

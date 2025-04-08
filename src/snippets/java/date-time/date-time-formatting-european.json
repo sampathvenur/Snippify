@@ -1,0 +1,6 @@
+{
+    "title": "Date Time Formatting European",
+    "description": "Formats a timestamp to a human-readable date-time string in the format \"dd.MM.yyyy HH:mm:ss\"",
+    "author": "sampathvenur",
+    "code": "import java.time.Instant;\nimport java.time.ZoneId;\nimport java.time.format.DateTimeFormatter;\nimport java.util.concurrent.TimeUnit;\n\n// using the system default time zone\npublic static String formatDateTimeEuropean(long time, TimeUnit timeUnit) {\n    return formatDateTimeEuropean(time, timeUnit, ZoneId.systemDefault());\n}\n\npublic static String formatDateTimeEuropean(long time, TimeUnit timeUnit, ZoneId timeZone) {\n    return DateTimeFormatter.ofPattern(\"dd.MM.yyyy HH:mm:ss\")\n            .withZone(\n                timeZone != null ? timeZone : ZoneId.systemDefault()\n            )\n            .format(Instant.ofEpochSecond(\n                    timeUnit.toSeconds(time)\n            ));\n}\n\n// Usage:\nSystem.out.println(formatDateTimeEuropean(1735689599, TimeUnit.SECONDS)); // \"31.12.2024 | 23:59:59\" for GMT+0000\nSystem.out.println(formatDateTimeEuropean(1735689599, TimeUnit.SECONDS, ZoneId.of(\"GMT+0000\"))); // \"31.12.2024 | 23:59:59\""
+}

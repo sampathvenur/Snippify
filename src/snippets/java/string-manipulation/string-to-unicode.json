@@ -1,0 +1,6 @@
+{
+    "title": "String To Unicode",
+    "description": "Converts characters of a string into their unicode representation",
+    "author": "sampathvenur",
+    "code": "public static String stringToUnicode(String text) {\n    StringBuilder unicodeText = new StringBuilder();\n\n    for (char character : text.toCharArray()) {\n        unicodeText.append(String.format(\"\\\\u%04x\", (int) character));\n    }\n\n    return unicodeText.toString();\n}\n\n// Usage:\nSystem.out.println(stringToUnicode(\"hello world\")); // \\u0068\\u0065\\u006C\\u006C\\u006F\\u0020\\u0077\\u006F\\u0072\\u006C\\u0064"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Factorial",
+    "description": "Computes the factorial of a given number",
+    "author": "sampathvenur",
+    "code": "import java.math.BigInteger;\n\npublic static BigInteger factorial(int number) {\n    BigInteger result = BigInteger.ONE;\n\n    for (int currentNumber = 1; currentNumber <= number; currentNumber++) {\n        result = result.multiply(BigInteger.valueOf(currentNumber));\n    }\n\n    return result;\n}\n\n// Usage:\nint number = 6;\nSystem.out.println(factorial(number)); // 720 = 6*5*4*3*2"
+}

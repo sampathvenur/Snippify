@@ -1,0 +1,6 @@
+{
+    "title": "Unintentional Duplication",
+    "description": "Matches duplicated word in a text.",
+    "author": "sampathvenur",
+    "code": "\\b(\\w+)\\s+\\1\\b"
+}

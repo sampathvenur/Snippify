@@ -1,0 +1,6 @@
+{
+    "title": "Tabs To Spaces",
+    "description": "Converts tabs into spaces",
+    "author": "sampathvenur",
+    "code": "public static String convertTabToSpace(String text, int spacesPerTab) {\n    return text.replaceAll(\"\\t\", \" \".repeat(spacesPerTab));\n}\n\n// Usage:\nSystem.out.println(convertTabToSpace(\"hello\\tworld\", 2)); // \"hello  world\""
+}

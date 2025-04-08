@@ -1,0 +1,6 @@
+{
+    "title": "Remove duplicates",
+    "description": "Removes duplicate elements from a list",
+    "author": "sampathvenur",
+    "code": "import java.util.List;\nimport java.util.stream.Collectors;\n\npublic static <T> List<T> removeDuplicates(List<T> list) {\n    return list.stream()\n        .distinct()\n        .collect(Collectors.toList());\n}\n\n// Usage:\nList<Integer> list = List.of(1, 2, 3, 4, 5, 1, 2, 3, 4, 5);\nList<Integer> result = removeDuplicates(list);\nSystem.out.println(\"List with duplicates removed: \" + result); // [1, 2, 3, 4, 5]"
+}

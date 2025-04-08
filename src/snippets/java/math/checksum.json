@@ -1,0 +1,6 @@
+{
+    "title": "Checksum",
+    "description": "Calculates the checksum of an int",
+    "author": "sampathvenur",
+    "code": "public static int checksum(int number) {\n    number = Math.abs(number);\n    int sum = 0;\n\n    while (number != 0) {\n        sum += number % 10;\n        number /= 10;\n    }\n\n    return sum;\n}\n\n// Usage:\nint number = 12345;\nSystem.out.println(checksum(number)); // 15 = 1+2+3+4+5"
+}

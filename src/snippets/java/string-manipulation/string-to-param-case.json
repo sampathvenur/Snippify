@@ -1,0 +1,6 @@
+{
+    "title": "String To param-case",
+    "description": "Converts a string into param-case",
+    "author": "sampathvenur",
+    "code": "public static String stringToParamCase(String text) {\n    return text.toLowerCase().replaceAll(\"\\\\s+\", \"-\");\n}\n\n// Usage:\nSystem.out.println(stringToParamCase(\"Hello World 123\")); // \"hello-world-123\""
+}

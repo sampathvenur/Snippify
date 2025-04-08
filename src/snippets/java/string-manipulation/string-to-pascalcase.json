@@ -1,0 +1,6 @@
+{
+    "title": "String To PascalCase",
+    "description": "Converts a string into PascalCase",
+    "author": "sampathvenur",
+    "code": "public static String stringToPascalCase(String text) {\n    String[] words = text.split(\"\\\\s+\");\n    StringBuilder pascalCase = new StringBuilder();\n\n    for (String word : words) {\n        pascalCase.append(word.substring(0, 1).toUpperCase());\n        pascalCase.append(word.substring(1).toLowerCase());\n    }\n\n    return pascalCase.toString();\n}\n\n// Usage:\nSystem.out.println(stringToPascalCase(\"hello world\")); // \"HelloWorld\""
+}

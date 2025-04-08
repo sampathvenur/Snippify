@@ -1,0 +1,6 @@
+{
+    "title": "String To snake_case",
+    "description": "Converts a string into snake_case",
+    "author": "sampathvenur",
+    "code": "public static String stringToSnakeCase(String text) {\n    return text.toLowerCase().replaceAll(\"\\\\s+\", \"_\");\n}\n\n// Usage:\nSystem.out.println(stringToSnakeCase(\"Hello World 123\")); // \"hello_world_123\""
+}

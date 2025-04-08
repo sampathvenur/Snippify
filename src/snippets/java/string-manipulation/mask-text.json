@@ -1,0 +1,6 @@
+{
+    "title": "Mask Text",
+    "description": "Masks portions of a string, leaving specific parts at the beginning and end visible while replacing the rest with a specified character",
+    "author": "sampathvenur",
+    "code": "public static String partialMask(String text, int maskLengthStart, int maskLengthEnd, char mask) {\n    if (text == null)\n        return null;\n    \n    StringBuilder maskedText = new StringBuilder();\n    maskedText.append(text, 0, maskLengthStart);\n    \n    for (int currentChar = maskLengthStart; currentChar < text.length() - maskLengthEnd; currentChar++) {\n        maskedText.append(mask);\n    }\n    maskedText.append(text, text.length() - maskLengthEnd, text.length());\n    return maskedText.toString();\n}\n\n// Usage:\nSystem.out.println(partialMask(\"1234567890\", 4, 2, '*')); // \"1234****90\""
+}

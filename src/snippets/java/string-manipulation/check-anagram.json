@@ -1,0 +1,6 @@
+{
+    "title": "Check Anagram",
+    "description": "Checks if two strings are anagrams, meaning they contain the same characters ignoring order, spaces and case sensitivity",
+    "author": "sampathvenur",
+    "code": "import java.util.Arrays;\n\npublic static boolean isAnagram(String text1, String text2) {\n    String text1Normalized = text1.replaceAll(\"\\\\s+\", \"\");\n    String text2Normalized = text2.replaceAll(\"\\\\s+\", \"\");\n\n    if (text1Normalized.length() != text2Normalized.length())\n        return false;\n        \n    char[] text1Array = text1Normalized.toCharArray();\n    char[] text2Array = text2Normalized.toCharArray();\n    Arrays.sort(text1Array);\n    Arrays.sort(text2Array);\n    return Arrays.equals(text1Array, text2Array);\n}\n\n// Usage:\nSystem.out.println(isAnagram(\"listen\", \"silent\")); // true\nSystem.out.println(isAnagram(\"hello\", \"world\"));   // false"
+}

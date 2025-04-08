@@ -1,0 +1,6 @@
+{
+    "title": "Ascii To String",
+    "description": "Converts a list of ascii numbers into a string",
+    "author": "sampathvenur",
+    "code": "import java.util.List;\n\npublic static String asciiToString(List<Integer> asciiCodes) {\n    StringBuilder text = new StringBuilder();\n\n    for (int asciiCode : asciiCodes) {\n        text.append((char) asciiCode);\n    }\n\n    return text.toString();\n}\n\n// Usage:\nSystem.out.println(asciiToString(List.of(104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100))); // \"hello world\""
+}

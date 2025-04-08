@@ -1,0 +1,6 @@
+{
+    "title": "Remove Punctuation",
+    "description": "Removes punctuation (, . !) from a string",
+    "author": "sampathvenur",
+    "code": "public static String removePunctuation(String text) {\n    return text.replaceAll(\"[,!.?;:]\", \"\");\n}\n\n// Usage:\nSystem.out.println(removePunctuation(\"hello, world!\")); // \"hello world\""
+}
