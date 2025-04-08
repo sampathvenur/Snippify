@@ -1,0 +1,6 @@
+{
+    "title": "Text Overflow Ellipsis",
+    "description": "Ensures long text is truncated with an ellipsis.",
+    "author": "sampathvenur",
+    "code": "@mixin text-ellipsis {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}"
+}

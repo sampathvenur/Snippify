@@ -18,6 +18,7 @@ import javaIcon from '../snippets/java/icon.svg';
 import regexIcon from '../snippets/regex/icon.svg';
 import rubyIcon from '../snippets/ruby/icon.svg';
 import rustIcon from '../snippets/rust/icon.svg';
+import scssIcon from '../snippets/scss/icon.svg';
 // Import other language icons similarly...
 
 // Type for Lucide icon components
@@ -69,7 +70,8 @@ export default function Sidebar({
     java: javaIcon,
     regex: regexIcon,
     ruby: rubyIcon,
-    rust: rustIcon
+    rust: rustIcon,
+    scss: scssIcon,
     // Add other languages and their icons here...
   };
 

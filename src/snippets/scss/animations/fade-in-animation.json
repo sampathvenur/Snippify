@@ -1,0 +1,6 @@
+{
+    "title": "Fade In Animation",
+    "description": "Animates the fade-in effect.",
+    "author": "sampathvenur",
+    "code": "@keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n\n@mixin fade-in($duration: 1s, $easing: ease-in-out) {\n  animation: fade-in $duration $easing;\n}"
+}

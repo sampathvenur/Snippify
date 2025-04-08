@@ -1,0 +1,6 @@
+{
+    "title": "Slide In From Left",
+    "description": "Animates content sliding in from the left.",
+    "author": "sampathvenur",
+    "code": "@keyframes slide-in-left {\n  from {\n    transform: translateX(-100%);\n  }\n  to {\n    transform: translateX(0);\n  }\n}\n\n@mixin slide-in-left($duration: 0.5s, $easing: ease-out) {\n  animation: slide-in-left $duration $easing;\n}"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Flex Center",
+    "description": "A mixin to center content using flexbox.",
+    "author": "sampathvenur",
+    "code": "@mixin flex-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}"
+}

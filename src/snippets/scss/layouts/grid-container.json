@@ -1,0 +1,6 @@
+{
+    "title": "Grid Container",
+    "description": "Creates a responsive grid container with customizable column counts.",
+    "author": "sampathvenur",
+    "code": "@mixin grid-container($columns: 12, $gap: 1rem) {\n  display: grid;\n  grid-template-columns: repeat($columns, 1fr);\n  gap: $gap;\n}"
+}

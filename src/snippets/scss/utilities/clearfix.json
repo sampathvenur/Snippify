@@ -1,0 +1,6 @@
+{
+    "title": "Clearfix",
+    "description": "Provides a clearfix utility for floating elements.",
+    "author": "sampathvenur",
+    "code": "@mixin clearfix {\n  &::after {\n    content: '';\n    display: block;\n    clear: both;\n  }\n}"
+}

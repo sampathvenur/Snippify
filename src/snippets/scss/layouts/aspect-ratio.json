@@ -1,0 +1,6 @@
+{
+    "title": "Aspect Ratio",
+    "description": "Ensures that elements maintain a specific aspect ratio.",
+    "author": "sampathvenur",
+    "code": "@mixin aspect-ratio($width, $height) {\n  position: relative;\n  width: 100%;\n  padding-top: ($height / $width) * 100%;\n  > * {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n  }\n}"
+}

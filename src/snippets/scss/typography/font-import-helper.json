@@ -1,0 +1,6 @@
+{
+    "title": "Font Import Helper",
+    "description": "Simplifies importing custom fonts in Sass.",
+    "author": "sampathvenur",
+    "code": "@mixin import-font($family, $weight: 400, $style: normal) {\n  @font-face {\n    font-family: #{$family};\n    font-weight: #{$weight};\n    font-style: #{$style};\n    src: url('/fonts/#{$family}-#{$weight}.woff2') format('woff2'),\n         url('/fonts/#{$family}-#{$weight}.woff') format('woff');\n  }\n}"
+}

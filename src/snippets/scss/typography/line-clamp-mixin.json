@@ -1,0 +1,6 @@
+{
+    "title": "Line Clamp Mixin",
+    "description": "A Sass mixin to clamp text to a specific number of lines.",
+    "author": "sampathvenur",
+    "code": "@mixin line-clamp($number) {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: $number;\n  overflow: hidden;\n}"
+}

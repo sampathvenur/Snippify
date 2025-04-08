@@ -1,0 +1,6 @@
+{
+    "title": "Responsive Breakpoints",
+    "description": "Generates media queries for responsive design.",
+    "author": "sampathvenur",
+    "code": "@mixin breakpoint($breakpoint) {\n  @if $breakpoint == sm {\n    @media (max-width: 576px) { @content; }\n  } @else if $breakpoint == md {\n    @media (max-width: 768px) { @content; }\n  } @else if $breakpoint == lg {\n    @media (max-width: 992px) { @content; }\n  } @else if $breakpoint == xl {\n    @media (max-width: 1200px) { @content; }\n  }\n}"
+}

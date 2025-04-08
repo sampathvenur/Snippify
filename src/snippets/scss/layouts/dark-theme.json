@@ -1,0 +1,6 @@
+{
+    "title": "Dark Theme",
+    "description": "SCSS mixin to change styles for dark themes.",
+    "author": "sampathvenur",
+    "code": "@mixin isDark($type: 'module') {\n  $root: &;\n\n  @if $type == 'module' {\n    :global {\n      @at-root body[theme='dark'] #{$root} {\n        @content;\n      }\n    }\n  } @else {\n    &[theme='dark'] {\n      @content;\n    }\n  }\n}\n\n// Usage:\n.container{\n\tbackground: #f0f0f0;\n\t@include isDark {\n\t\tbackground: #222;\n\t}\n}"
+}

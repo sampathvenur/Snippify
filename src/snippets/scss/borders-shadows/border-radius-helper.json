@@ -1,0 +1,6 @@
+{
+    "title": "Border Radius Helper",
+    "description": "Applies a customizable border-radius.",
+    "author": "sampathvenur",
+    "code": "@mixin border-radius($radius: 4px) {\n  border-radius: $radius;\n}"
+}

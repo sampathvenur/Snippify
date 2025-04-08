@@ -1,0 +1,6 @@
+{
+    "title": "PX to REM Helper",
+    "description": "This function will convert px values to rem values.",
+    "author": "sampathvenur",
+    "code": "@function px-to-rem($px, $base: 16px) {\n  @return ($px / $base) * 1rem;\n}\n\n// Usage:\ndiv {\n  font-size: px-to-rem(12px); // Output: 0.75rem\n  padding: px-to-rem(16px);   // Output: 1rem\n  margin: px-to-rem(32px) // Output 2rem\n}"
+}

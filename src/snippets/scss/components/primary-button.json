@@ -1,0 +1,6 @@
+{
+    "title": "Primary Button",
+    "description": "Generates a styled primary button.",
+    "author": "sampathvenur",
+    "code": "@mixin primary-button($bg: #007bff, $color: #fff) {\n  background-color: $bg;\n  color: $color;\n  padding: 0.5rem 1rem;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: darken($bg, 10%);\n  }\n}"
+}
