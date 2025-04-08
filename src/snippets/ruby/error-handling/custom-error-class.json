@@ -1,0 +1,6 @@
+{
+    "title": "Custom Error Class",
+    "description": "Defines and raises a custom error class in Ruby.",
+    "author": "sampathvenur",
+    "code": "class MyCustomError < StandardError; end\n\ndef risky_method(value)\n    raise MyCustomError, \"Value must be positive\" if value <= 0\n    \"Valid value: #{value}\"\nend\n\n# Usage:\nbegin\n    puts risky_method(-1)\nrescue MyCustomError => e\n    puts e.message # Output: \"Value must be positive\"\nend"
+}

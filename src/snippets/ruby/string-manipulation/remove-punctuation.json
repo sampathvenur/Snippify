@@ -1,0 +1,6 @@
+{
+    "title": "Remove Punctuation",
+    "description": "Removes all punctuation from a given string.",
+    "author": "sampathvenur",
+    "code": "def remove_punctuation(str)\n    str.gsub(/[[:punct:]]/, '')\nend\n\n# Usage:\ntext = \"Hello, Ruby! How's it going?\"\nputs remove_punctuation(text) # Output: \"Hello Ruby Hows it going\""
+}

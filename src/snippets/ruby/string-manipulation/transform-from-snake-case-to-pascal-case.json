@@ -1,0 +1,6 @@
+{
+  "title": "Transform from Snake Case to Pascal Case",
+  "description": "Converts a Snake Case string to Pascal Case.",
+  "author": "sampathvenur",
+  "code": "def snake_to_pascal(str)\n    str.split('_').map.with_index { |word, index| \n        word.capitalize \n    }.join\nend\n\n# Usage:\nsnake_case = \"snake_case_to_pascal_case\"\nputs snake_to_pascal(snake_case) # Output: \"SnakeCaseToPascalCase\""
+}

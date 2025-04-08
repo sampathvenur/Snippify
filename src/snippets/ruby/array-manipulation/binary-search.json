@@ -1,0 +1,6 @@
+{
+    "title": "Binary Search",
+    "description": "Searches for an element in a sorted array using binary search.",
+    "author": "sampathvenur",
+    "code": "def binary_search(array, target)\n  low = 0\n  high = array.length - 1\n\n  while low <= high\n    mid = (low + high) / 2\n    guess = array[mid]\n\n    if guess == target\n      return mid\n    elsif guess > target\n      high = mid - 1\n    else\n      low = mid + 1\n    end\n  end\n\n  return nil\nend\n\n# Usage:\narray = [1, 3, 5, 7, 9]\ntarget = 5\nresult = binary_search(array, target)\nputs result # Output: 2"
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Check Prime Number",
+    "description": "Checks if a number is a prime number.",
+    "author": "sampathvenur",
+    "code": "def is_prime?(n)\n    return false if n <= 1\n    (2..Math.sqrt(n)).each do |i|\n        return false if n % i == 0\n    end\n    true\nend\n\n# Usage:\nputs is_prime?(29) # Output: true\nputs is_prime?(30) # Output: false"
+}

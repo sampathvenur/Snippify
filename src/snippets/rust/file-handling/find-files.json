@@ -1,0 +1,6 @@
+{
+    "title": "Find Files",
+    "description": "Finds all files of the specified extension within a given directory.",
+    "author": "sampathvenur",
+    "code": "fn find_files(directory: &str, file_type: &str) -> std::io::Result<Vec<std::path::PathBuf>> {\n    let mut result = vec![];\n\n    for entry in std::fs::read_dir(directory)? {\n        let dir = entry?;\n        let path = dir.path();\n        if dir.file_type().is_ok_and(|t| !t.is_file()) &&\n            path.extension().is_some_and(|ext| ext != file_type) {\n            continue;\n        }\n        result.push(path)\n    }\n\n    Ok(result)\n}\n\n// Usage:\nfind_files(\"/path/to/your/directory\", \".pdf\"); // Returns: if Ok(), a vector of path to `.pdf` files in the directory"
+}

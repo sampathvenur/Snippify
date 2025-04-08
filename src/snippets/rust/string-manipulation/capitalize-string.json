@@ -1,0 +1,6 @@
+{
+    "title": "Capitalize String",
+    "description": "Makes the first letter of a string uppercase.",
+    "author": "sampathvenur",
+    "code": "fn capitalized(str: &str) -> String {\n    let mut chars = str.chars();\n    match chars.next() {\n        None => String::new(),\n        Some(f) => f.to_uppercase().chain(chars).collect(),\n    }\n}\n\n// Usage:\ncapitalized(\"lower_case\"); // Returns: Lower_case"
+}

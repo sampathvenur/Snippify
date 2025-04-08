@@ -1,0 +1,6 @@
+{
+    "title": "Count Word Occurrences in String",
+    "description": "Counts the occurrences of each word in a given string.",
+    "author": "sampathvenur",
+    "code": "def count_word_occurrences(text)\n    words = text.downcase.scan(/\\w+/)\n    occurrences = Hash.new(0)\n    words.each { |word| occurrences[word] += 1 }\n    occurrences\nend\n\n# Usage:\ntext = \"ruby is awesome and Ruby is fun\"\nputs count_word_occurrences(text) # Output: {\"ruby\"=>2, \"is\"=>2, \"awesome\"=>1, \"and\"=>1, \"fun\"=>1}"
+}

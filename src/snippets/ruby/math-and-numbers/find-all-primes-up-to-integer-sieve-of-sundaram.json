@@ -1,0 +1,6 @@
+{
+    "title": "Find all primes up to integer (Sieve of Sundaram)",
+    "description": "Finds all the prime numbers up to a specific integer.",
+    "author": "sampathvenur",
+    "code": "def sieve_of_sundaram(limit)\n    n = (limit - 1) / 2\n    marked = Array.new(n + 1, false)\n\n    (1..n).each do |i|\n        j = i\n        while (i + j + 2 * i * j) <= n\n            marked[i + j + 2 * i * j] = true\n            j += 1\n        end\n    end\n\n    primes = [2]\n    (1..n).each do |i|\n        primes << (2 * i + 1) unless marked[i]\n    end\n\n    primes\nend\n\n# Usage:\nprint sieve_of_sundaram(30) # Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]"
+}

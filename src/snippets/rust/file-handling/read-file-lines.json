@@ -1,0 +1,6 @@
+{
+    "title": "Read File Lines",
+    "description": "Reads all lines from a file and returns them as a vector of strings.",
+    "author": "sampathvenur",
+    "code": "fn read_lines(file_name: &str) -> std::io::Result<Vec<String>> {\n    Ok(\n        std::fs::read_to_string(file_name)?\n            .lines()\n            .map(String::from)\n            .collect()\n    )\n}\n\n// Usage:\nread_lines(\"path/to/file.txt\"); // Returns: If Ok(), a Vec of the lines of the file"
+}

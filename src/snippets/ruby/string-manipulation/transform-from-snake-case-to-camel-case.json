@@ -1,0 +1,6 @@
+{
+    "title": "Transform from Snake Case to Camel Case",
+    "description": "Converts a Snake Case string to Camel Case.",
+    "author": "sampathvenur",
+    "code": "def snake_to_camel(str)\n    str.split('_').map.with_index { |word, index| \n        index == 0 ? word : word.capitalize \n    }.join\nend\n\n# Usage:\nsnake_case = \"snake_case_to_camel_case\"\nputs snake_to_camel(snake_case) # Output: \"snakeCaseToCamelCase\""
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Capitalize Words",
+    "description": "Capitalizes the first letter of each word in a string.",
+    "author": "sampathvenur",
+    "code": "def capitalize_words(str)\n  str.split.map(&:capitalize).join(' ')\nend\n\n# Usage:\nsentence = \"ruby is awesome\"\nputs capitalize_words(sentence) # Output: \"Ruby Is Awesome\""
+}
