@@ -86,10 +86,24 @@ export default function Sidebar({
   };
 
   const toggleLanguage = (language: string) => {
-    setExpandedLanguages(prev => ({
-      ...prev,
-      [language]: !prev[language]
-    }));
+    setExpandedLanguages(prev => {
+      if (prev[language]) {
+        return {
+          ...prev,
+          [language]: false
+        };
+      }
+      
+      const allClosed = Object.keys(prev).reduce((acc, lang) => {
+        acc[lang] = false;
+        return acc;
+      }, {} as Record<string, boolean>);
+      
+      return {
+        ...allClosed,
+        [language]: true
+      };
+    });
   };
 
   if (isLoading) {
@@ -130,29 +144,33 @@ export default function Sidebar({
                     <span>{formatName(section.language)}</span>
                   </div>
                   {expandedLanguages[section.language] ? (
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-4 w-4 transition-transform duration-200" />
                   ) : (
-                    <ChevronRight className="h-4 w-4" />
+                    <ChevronRight className="h-4 w-4 transition-transform duration-200" />
                   )}
                 </button>
                 
-                {expandedLanguages[section.language] && (
-                  <div className="ml-4 pl-4 border-l space-y-1">
-                    {section.categories.map((category) => (
-                      <button
-                        key={`${section.language}-${category.name}`}
-                        className={`w-full flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded-md ${
-                          currentLanguage === section.language && 
-                          currentCategory === category.name ? 
-                          'bg-accent text-accent-foreground' : ''
-                        }`}
-                        onClick={() => onSelectCategory(section.language, category.name)}
-                      >
-                        {formatName(category.name)}
-                      </button>
-                    ))}
-                  </div>
-                )}
+                <div 
+                  className={`ml-4 pl-4 border-l space-y-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                    expandedLanguages[section.language] 
+                      ? 'max-h-[500px] opacity-100' 
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  {section.categories.map((category) => (
+                    <button
+                      key={`${section.language}-${category.name}`}
+                      className={`w-full flex items-center px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded-md ${
+                        currentLanguage === section.language && 
+                        currentCategory === category.name ? 
+                        'bg-accent text-accent-foreground' : ''
+                      }`}
+                      onClick={() => onSelectCategory(section.language, category.name)}
+                    >
+                      {formatName(category.name)}
+                    </button>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
