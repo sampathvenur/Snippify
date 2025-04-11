@@ -1,0 +1,6 @@
+{
+    "title": "Omit Keys of Type",
+    "description": "Removes keys of a specified type from an object type.",
+    "author": "sampathvenur",
+    "code": "type OmitKeysOfType<T, U> = {\n    [K in keyof T as T[K] extends U ? never : K]: T[K];\n};\n\n\n// Usage:\ntype A = {\n    id: string;\n    isActive: boolean;\n    data: number[];\n};\n\ntype WithoutBoolean = OmitKeysOfType<A, boolean>; // { id: string; data: number[] }"
+}

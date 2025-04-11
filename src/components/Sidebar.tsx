@@ -19,6 +19,7 @@ import regexIcon from '../snippets/regex/icon.svg';
 import rubyIcon from '../snippets/ruby/icon.svg';
 import rustIcon from '../snippets/rust/icon.svg';
 import scssIcon from '../snippets/scss/icon.svg';
+import typescriptIcon from '../snippets/typescript/icon.svg';
 // Import other language icons similarly...
 
 // Type for Lucide icon components
@@ -72,6 +73,7 @@ export default function Sidebar({
     ruby: rubyIcon,
     rust: rustIcon,
     scss: scssIcon,
+    typescript: typescriptIcon,
     // Add other languages and their icons here...
   };
 

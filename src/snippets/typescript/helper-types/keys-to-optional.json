@@ -1,0 +1,6 @@
+{
+    "title": "Keys to Optional",
+    "description": "Makes only the specified keys of an object type optional.",
+    "author": "sampathvenur",
+    "code": "type OptionalKeys<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;\n\n\n// Usage:\ntype A = {\n    id: string;\n    name: string;\n    age: number;\n};\n\ntype WithOptionalName = OptionalKeys<A, \"name\">;\n// { id: string; age: number; name?: string }\n\ntype WithOptionalNameAndAge = OptionalKeys<A, \"name\" | \"age\">;\n// Result: { id: string; name?: string; age?: number }"
+}

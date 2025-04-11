@@ -1,0 +1,6 @@
+{
+    "title": "Required Keys",
+    "description": "Extracts required keys from an object.",
+    "author": "sampathvenur",
+    "code": "type RequiredKeys<T> = {\n    [K in keyof T]-?: {} extends Pick<T, K> ? never : K;\n}[keyof T];\n\n\n// Usage:\ntype A = {\n    id: string;\n    name?: string;\n    isActive: boolean;\n};\n\ntype ReqKeys = RequiredKeys<A>; // \"id\" | \"isActive\""
+}

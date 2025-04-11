@@ -1,0 +1,6 @@
+{
+    "title": "Deep Readonly Type",
+    "description": "Converts all properties of a type, including nested objects, into readonly.",
+    "author": "sampathvenur",
+    "code": "type DeepReadonly<T> = {\n    readonly [K in keyof T]: T[K] extends object ? DeepReadonly<T[K]> : T[K];\n};\n\n\n// Usage:\ntype A = {\n    name: string;\n    details: {\n        age: number;\n        address: { city: string; zip: string };\n    };\n};\n\ntype ReadonlyA = DeepReadonly<A>;\n/*\nType ReadonlyA:\n{\n  readonly name: string;\n  readonly details: {\n    readonly age: number;\n    readonly address: { readonly city: string; readonly zip: string };\n  };\n}\n*/"
+}

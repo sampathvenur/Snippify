@@ -1,0 +1,6 @@
+{
+    "title": "Deep Required Type",
+    "description": "Converts all properties of a type, including nested objects, into required.",
+    "author": "sampathvenur",
+    "code": "type DeepRequired<T> = T extends object\n    ? { [K in keyof T]-?: DeepRequired<T[K]> }\n    : T;\n\n\n// Usage:\ntype A = {\n    id?: string;\n    name?: string;\n    details?: {\n        age?: number;\n        address?: { city?: string; zip?: string };\n    };\n};\n\ntype RequiredA = DeepRequired<A>;\n// Result: { id: string; name: string; details: { age: number; address: { city: string; zip: string }; }; }"
+}

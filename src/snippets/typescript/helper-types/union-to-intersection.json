@@ -1,0 +1,6 @@
+{
+    "title": "Union to Intersection",
+    "description": "Converts a union type into an intersection type.",
+    "author": "sampathvenur",
+    "code": "type UnionToIntersection<U> = (U extends any ? (arg: U) => void : never) extends (arg: infer I) => void\n    ? I\n    : never;\n\n\n// Usage:\ntype A = { id: string };\ntype B = { name: string };\ntype C = { age: number };\n\ntype Intersected = UnionToIntersection<A | B | C>;\n// { id: string } & { name: string } & { age: number }"
+}

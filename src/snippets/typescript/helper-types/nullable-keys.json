@@ -1,0 +1,6 @@
+{
+    "title": "Nullable Keys",
+    "description": "Extracts keys from an object type that allow null or undefined values.",
+    "author": "sampathvenur",
+    "code": "type NullableKeys<T> = {\n    [K in keyof T]: null extends T[K] ? K : undefined extends T[K] ? K : never;\n}[keyof T];\n\n\n// Usage:\ntype A = {\n    id: string;\n    name?: string;\n    description: string | null;\n};\n\ntype Nullable = NullableKeys<A>; // \"name\" | \"description\""
+}

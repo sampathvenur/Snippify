@@ -1,0 +1,6 @@
+{
+    "title": "At Least One Key",
+    "description": "Ensures that at least one property of an object is required.",
+    "author": "sampathvenur",
+    "code": "type AtLeastOne<T> = {\n    [K in keyof T]: Pick<T, K> & Partial<Omit<T, K>>;\n}[keyof T];\n\n\n// Usage:\ntype A = {\n    id?: string;\n    name?: string;\n    isActive?: boolean;\n};\n\ntype AtLeastOneA = AtLeastOne<A>;\n// Requires at least one of 'id', 'name', or 'isActive' to be defined"
+}
