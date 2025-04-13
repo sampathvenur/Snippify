@@ -1,6 +1,11 @@
+Sure! Here's a copy-paste ready README file content for your refined `CONTRIBUTING.md` in Snippify:
+
+---
+
+```markdown
 # Contributing to Snippify
 
-Hey there! 👋 First off, thanks for taking the time to contribute! ❤️
+Hey there! 👋 First off, thanks for taking the time to contribute to Snippify! ❤️
 
 You can contribute in two main ways:
 
@@ -25,52 +30,44 @@ Please do not create a PR for a new feature without first discussing it with the
 
 ## Snippets Guidelines
 
-### Snippet Tags
-
-- Tags must describe the snippet with simple word.
-
-Here's an example:
-
-```md
----
-title: Convert Number to Currency
-description: Converts a number to a currency format with a specific locale.
-author: Sampy
-tags: number,currency
----
-```
-
-**Do not use generic keywords or the language itself as a tag `utility` or `javascript`!**
-
 ### Snippet Format
 
-**All** snippets should follow the following structure:
+All snippets should follow the following structure:
 
-- A `code` segment, containing a function with the actual snippet functionnality
-- An `example` segement, containing one or more examples of use
+- A JSON file with the following fields:
+  - `title`: A descriptive name for the snippet
+  - `description`: A brief explanation of what the snippet does
+  - `author`: Your GitHub username
+  - `code`: The actual code snippet, with proper formatting
 
-Example in javascript:
+Example:
 
-```js
-function example(x) {
-  return x * 2;
+```json
+{
+  "title": "Convert Number to Currency",
+  "description": "Converts a number to a currency format with a specific locale.",
+  "author": "sampathvenur",
+  "code": "function formatCurrency(amount, locale = 'en-US', currency = 'USD') {\n  return new Intl.NumberFormat(locale, {\n    style: 'currency',\n    currency: currency\n  }).format(amount);\n}\n\n// Usage:\nconsole.log(formatCurrency(1234.56)); // Output: $1,234.56"
 }
-
-// Usage:
-example(5); // Returns: 10
 ```
 
-If your function doesn't return anything just show how to use it. If the result of your function is too complicated to be expressed in a single comment, your snippet is probably too complex to begin with.
+### Code Style Guidelines
+
+1. **Keep it simple and focused**
+2. **Include usage examples**
+3. **Use proper formatting** (`\n` for newlines)
+4. **Avoid dependencies**
+5. **Add comments for clarity**
 
 ### Snippet boundaries
 
-To ensure your snippet isn’t refused, consider these questions:
+Before submitting, ask:
 
-- **Does the standard library of my language provide an easy way of doing this ?**
-- **Does that snippet not have a real, and practical use case ?**
-- **Could it be split into separate parts to be better understood ?**
+- Is this already easily available in the standard library?
+- Is this snippet practically useful?
+- Can it be simplified or modularized?
 
-If any answer is yes, then your snippet will most likely get rejected.
+If “yes” to #1 or “no” to #2 — likely to be rejected.
 
 ---
 
@@ -78,202 +75,115 @@ If any answer is yes, then your snippet will most likely get rejected.
 
 ### Adding a New Snippet
 
-1. **Ensure your snippet match [guidelines](#snippets-guidelines)**
+1. **Go to `/src/snippets`**
+2. **Choose a language folder** (e.g., `javascript`)
+3. **Pick a category** or create one (see below)
+4. **Create a `.json` file** in kebab-case (e.g., `format-date.json`)
+5. **Structure your snippet like this**:
 
-2. **Navigate to the relevant folder:**
-
-   - Go to the `/snippets` folder in the root directory.
-   - Locate the folder for the programming language of your snippet, such as `javascript` or `python`.
-
-3. **Choose the correct category:**
-
-   - Within the language folder, find the relevant category folder for your snippet.
-   - If no suitable category exists, refer to [Adding a New Category](#adding-a-new-category).
-
-4. **Create a markdown file:**
-
-   - Create a new file with a `.md` extension.
-   - Name the file appropriately, keeping it descriptive and concise.
-
-5. **Add your snippet:**
-
-   - Use the following format to structure your snippet:
-
-````md
----
-title: Name of the snippet
-description: A short explanation of what the snippet does
-tags: tag1, tag2, tag3
-author: your-github-username
----
-
-```lang
-// Your code here
-```
-````
-
-Here’s an example for JavaScript:
-
-````md
----
-title: Format Date
-description: Formats a date in 'YYYY-MM-DD' format.
-author: sampathvenur
-tags: date,format
----
-
-```js
-const formatDate = (date) => date.toISOString().split("T")[0];
-
-// Usage:
-console.log(formatDate(new Date())); // Output: '2024-12-10'
-```
-````
-
-6. **Use syntax highlighting:**
-
-   - Enclose your code with triple backticks (```).
-   - Specify the language after the first set of backticks for syntax highlighting.
-
-7. **Test your snippet:**
-
-   - Ensure your code runs as expected. \
-      To test that your snippets are formatted correctly use the `snippets:check` script:
-
-     ```
-     $ npm run snippets:check
-     ```
-
-     It will return nothing if they are well formatted, otherwise it will tell you what the error is.
-
-     ***
-
-     To preview the snippets, start the vite server using:
-
-     ```
-     $ npm run dev
-     ```
-
-     It will use HMR to update the snippets in the `/public` folder, making them available to the frontend.
-
-Expected file structure:
-
-```md
-/snippets
-|- language
-|- category-name
-|- your-snippet-here.md
+```json
+{
+  "title": "Format Date",
+  "description": "Formats a date in 'YYYY-MM-DD' format.",
+  "author": "sampathvenur",
+  "code": "const formatDate = (date) => date.toISOString().split(\"T\")[0];\n\n// Usage:\nconsole.log(formatDate(new Date())); // Output: '2024-12-10'"
+}
 ```
 
-> Please do **NOT** add or edit anything in `/public` folder. It will be used for consolidating snippets.
+6. **Test the snippet** by running:
 
-### Editing a Existing Snippet
-
-If you’d like to refine or improve an existing snippet:
-
-1. **Add a `contributors` field:**
-
-   - Include your GitHub username under the `contributors` field in the metadata section.
-
-````md
----
-title: Name of the snippet
-description: A short explanation of what the snippet does
-tags: tag1, tag2, tag3
-author: original-author
-contributors: your-github-username
----
-
-```
-Updated code here
-```
-````
-
-2. **Credit all contributors:**
-
-   - If contributors already exist, add your username separated by a comma
-
-```md
-contributors: contributor1, contributor2, your-github-username
+```bash
+npm run dev
 ```
 
-3. **Document changes:**
+Expected structure:
 
-   - Clearly indicate what you updated and why in your pull request description.
+```
+/src/snippets
+|- javascript
+   |- date-time
+      |- format-date.json
+```
 
-> We want to make sure that original author and contributor(s) are credited for their work.
+### Editing an Existing Snippet
+
+1. Find the `.json` file
+2. Modify it
+3. Mention your changes in the PR description
 
 ### Adding a New Category
 
-If your snippet doesn’t fit into any existing category, you can create a new one! Just make sure it’s unique and doesn’t overlap with others (e.g., don’t create separate categories for “Date” and “Time” when “Date and Time” works).
+1. Inside a language folder, add a new folder (e.g., `file-handling`)
+2. Add snippets like normal inside that folder
 
-1. **Create a new category folder:**
+Example:
 
-   - In the relevant language directory, add a new folder.
-   - Use a lowercase name with hyphens for separation (e.g., `file-handling`).
-
-2. **Add snippets:**
-
-   - Follow the [Adding a New Snippet](#adding-a-new-snippet) instructions.
-
-Example structure:
-
-```md
-/snippets
+```
+/src/snippets
 |- python
-|- file-handling
-|- list-manipulation
-|- ....
+   |- file-handling
+   |- list-manipulation
 ```
 
 ### Adding a New Language
 
-If you want to introduce a new programming language, here's how to do it:
+1. **Create a folder** under `/src/snippets` (e.g., `go`)
+2. **Add `icon.svg`** (50x50px)
+3. **Update sidebar iconMap in `sidebar.tsx`**:
 
-1. **Create a language folder:**
+```ts
+const iconMap: Record<string, string> = {
+  // existing
+  yourLanguage: yourLanguageIcon,
+};
+```
 
-   - Add a new folder under the `snippets` directory.
-   - Name it after the language in lowercase (e.g., `go`, `ruby`).
+4. **Update syntax highlighting in `SnippetModal.tsx`**:
 
-2. **Add categories and snippets:**
+```ts
+const languageMap: Record<string, string> = {
+  yourLanguage: 'language-yourLanguage',
+};
+```
 
-   - Follow the [Adding a New Snippet](#adding-a-new-snippet) and [Adding a New Category](#adding-a-new-category) guidelines.
+5. **Create at least one category and snippet**
 
-3. **Include an icon:**
+Example:
 
-   - Add an `icon.svg` file (50x50px) in the same language folder.
-   - Use tools like [Resize SVG](https://www.iloveimg.com/resize-image/resize-svg) to ensure the correct size.
-
-4. **Double-check your work:**
-
-   - Verify that everything is structured correctly and displays as intended.
+```
+/src/snippets
+|- go
+   |- icon.svg
+   |- basics
+      |- hello-world.json
+```
 
 ---
 
-## Testing Snippets
+## Testing Your Contributions
 
-To test that your snippets are formatted correctly use the following script:
+1. Run the dev server:
 
+```bash
+npm run dev
 ```
-$ npm run snippets:check
-```
 
-It will return nothing if they are well formatted, otherwise it will tell you what the error is.
+2. Check:
+   - Snippet appears under the correct category
+   - Syntax highlighting works
+   - Copy button functions
 
 ---
-
-To preview the snippets, you need to consolidate them, use the following script:
-
-```
-$ npm run snippets:consolidate
-```
-
-It will update the snippets in the `/public` folder, making them available to the frontend.
 
 ## Final Notes
 
-Whether you’re fixing a tiny typo, writing a new snippet, or dreaming up big features, every bit counts! 🛠️
+Whether you're fixing a typo, writing a new snippet, or cooking up the next big feature — thank you! 🛠️
 
-If you have any questions or need help, feel free to open a new [GitHub discussion](https://github.com/technoph1le/quicksnip/discussions).
+Questions? Start a [GitHub discussion](https://github.com/sampathvenur/Snippify/discussions).
 
 Happy coding! 💻✨
+```
+
+--- 
+
+You're good to go. Let me know if you want this saved as a file or formatted differently.
