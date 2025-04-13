@@ -60,11 +60,14 @@ export default function WelcomeScreen() {
 function FeatureCard({ title, description, icon }: { title: string; description: string; icon: React.ReactNode }) {
     return (
         <div className="bg-card border rounded-lg p-6 transition-all hover:shadow-md hover:border-primary">
-            <div className="p-2 rounded-md bg-primary/10 w-fit mb-4">
-                {icon}
+            {/* Updated icon container with responsive centering */}
+            <div className="flex justify-center md:justify-start mb-4">
+                <div className="p-2 rounded-md bg-primary/10 w-fit">
+                    {icon}
+                </div>
             </div>
-            <h3 className="text-lg font-medium mb-2">{title}</h3>
-            <p className="text-muted-foreground text-sm">{description}</p>
+            <h3 className="text-lg font-medium mb-2 text-center md:text-left">{title}</h3>
+            <p className="text-muted-foreground text-sm text-center md:text-left">{description}</p>
         </div>
     );
 }
