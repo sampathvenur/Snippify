@@ -7,6 +7,7 @@ import SnippetModal from '@/components/SnippetModal';
 import { Snippet } from '@/lib/types';
 import { useSnippets, useSnippetsByCategory, useSearchSnippets } from '@/hooks/useSnippets';
 import WelcomeScreen from '@/components/WelcomeScreen';
+import Footer from '@/components/Footer';
 
 export default function Index() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -104,6 +105,8 @@ export default function Index() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+      
+      <Footer />
     </div>
   );
 }
