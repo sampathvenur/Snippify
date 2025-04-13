@@ -1,23 +1,17 @@
 {
-    "hosting": {
-        "public": "dist",
-        "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**"
-        ],
-        "rewrites": [
-            {
-                "source": "**",
-                "destination": "/index.html"
-            }
-        ],
-        "redirects": [
-            {
-                "source": "/snippify.firebaseapp.com",
-                "destination": "https://snippify-e04f8.firebaseapp.com/",
-                "type": 301
-            }
-        ]
-    }
+  "hosting": {
+    "site": "snippify-web",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }
