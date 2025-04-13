@@ -6,7 +6,7 @@ export default function WelcomeScreen() {
     return (
         <div className="flex flex-col items-center justify-center min-h-[80vh] p-6 animate-fade-in">
             <div className="max-w-3xl mx-auto text-center">
-                {/* Logo/Icon */}
+
                 <div className="relative mx-auto w-24 h-24 mb-8">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-500 to-blue-500 rounded-full opacity-20 animate-pulse"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -14,12 +14,10 @@ export default function WelcomeScreen() {
                     </div>
                 </div>
 
-                {/* Welcome Text - Using padding instead of margin */}
                 <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent pb-16">
                     Welcome to Snippify
                 </h1>
 
-                {/* Paragraph with explicit spacing */}
                 <div className="mb-16">
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                         Your personal collection of code snippets for faster, more efficient development.
@@ -27,7 +25,6 @@ export default function WelcomeScreen() {
                     </p>
                 </div>
 
-                {/* Features */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                     <FeatureCard
                         title="Browse Languages"
@@ -46,7 +43,6 @@ export default function WelcomeScreen() {
                     />
                 </div>
 
-                {/* Call to action */}
                 <div className="mt-12">
                     <p className="text-muted-foreground mb-4">
                         Get started by selecting a language from the sidebar
