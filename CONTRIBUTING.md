@@ -1,8 +1,3 @@
-Sure! Here's a copy-paste ready README file content for your refined `CONTRIBUTING.md` in Snippify:
-
----
-
-```markdown
 # Contributing to Snippify
 
 Hey there! 👋 First off, thanks for taking the time to contribute to Snippify! ❤️
@@ -61,13 +56,13 @@ Example:
 
 ### Snippet boundaries
 
-Before submitting, ask:
+To ensure your snippet isn’t refused, consider these questions:
 
-- Is this already easily available in the standard library?
-- Is this snippet practically useful?
-- Can it be simplified or modularized?
+- **Does the standard library of my language provide an easy way of doing this ?**
+- **Does that snippet not have a real, and practical use case ?**
+- **Could it be split into separate parts to be better understood ?**
 
-If “yes” to #1 or “no” to #2 — likely to be rejected.
+If any answer is yes, then your snippet will most likely get rejected.
 
 ---
 
@@ -182,8 +177,4 @@ Whether you're fixing a typo, writing a new snippet, or cooking up the next big 
 Questions? Start a [GitHub discussion](https://github.com/sampathvenur/Snippify/discussions).
 
 Happy coding! 💻✨
-```
-
---- 
-
-You're good to go. Let me know if you want this saved as a file or formatted differently.
+---
