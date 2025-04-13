@@ -167,7 +167,7 @@ export default function Sidebar({
                       }`}
                       onClick={() => onSelectCategory(section.language, category.name)}
                     >
-                      {formatName(category.name)}
+                      <span className="truncate">{formatName(category.name)}</span>
                     </button>
                   ))}
                 </div>
