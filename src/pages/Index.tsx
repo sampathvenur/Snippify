@@ -6,6 +6,7 @@ import SnippetGrid from '@/components/SnippetGrid';
 import SnippetModal from '@/components/SnippetModal';
 import { Snippet } from '@/lib/types';
 import { useSnippets, useSnippetsByCategory, useSearchSnippets } from '@/hooks/useSnippets';
+import WelcomeScreen from '@/components/WelcomeScreen';
 
 export default function Index() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -31,6 +32,7 @@ export default function Index() {
   // Determine which snippets to display
   let displayedSnippets: Snippet[] = [];
   let pageTitle = 'All Snippets';
+  let showWelcomeScreen = false;
   
   if (searchQuery) {
     displayedSnippets = searchResults;
@@ -39,7 +41,9 @@ export default function Index() {
     displayedSnippets = snippetsByCategory;
     pageTitle = `${formatName(currentLanguage)} - ${formatName(currentCategory)}`;
   } else if (data?.snippets) {
-    displayedSnippets = data.snippets;
+    // Instead of showing all snippets, show welcome screen
+    showWelcomeScreen = true;
+    displayedSnippets = [];
   }
 
   const handleSelectCategory = (language: string, category: string) => {
@@ -82,12 +86,16 @@ export default function Index() {
         />
         
         <main className={`flex-1 overflow-y-auto ${isSidebarOpen ? 'hidden md:block' : 'block'}`}>
-          <SnippetGrid
-            snippets={displayedSnippets}
-            onSelectSnippet={handleSelectSnippet}
-            title={pageTitle}
-            isLoading={isLoading}
-          />
+          {showWelcomeScreen ? (
+            <WelcomeScreen />
+          ) : (
+            <SnippetGrid
+              snippets={displayedSnippets}
+              onSelectSnippet={handleSelectSnippet}
+              title={pageTitle}
+              isLoading={isLoading}
+            />
+          )}
         </main>
       </div>
       
