@@ -2,6 +2,8 @@
 
 Snippify is an open-source tool designed for developers who want to organize, search, and share code snippets across various programming languages. It provides a centralized platform for managing handy snippets.
 
+check out live at : ![Website url](https://snippify-e04f8.firebaseapp.com/)
+
 ![Website preview](/public/preview.png)
 
 ## Features
