@@ -1,5 +1,5 @@
 {
-    "title": "Quick Sort",
+    "title": "Quick sort",
     "description": "Sorts a vector of integers using the quick sort algorithm. It selects a pivot element and partitions the array into two halves around the pivot, recursively sorting the partitions.",
     "author": "sampathvenur",
     "code": "#include <vector>\n#include <algorithm>\n\nint partition(std::vector<int>& arr, int low, int high) {\n    int pivot = arr[high];\n    int i = low - 1;\n    for (int j = low; j < high; ++j) {\n        if (arr[j] < pivot) {\n            ++i;\n            std::swap(arr[i], arr[j]);\n        }\n    }\n    std::swap(arr[i + 1], arr[high]);\n    return i + 1;\n}\n\nvoid quick_sort_helper(std::vector<int>& arr, int low, int high) {\n    if (low < high) {\n        int pi = partition(arr, low, high);\n        quick_sort_helper(arr, low, pi - 1);\n        quick_sort_helper(arr, pi + 1, high);\n    }\n}\n\nvoid quick_sort(std::vector<int>& arr) {\n    if (!arr.empty())\n        quick_sort_helper(arr, 0, arr.size() - 1);\n}"
