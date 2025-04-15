@@ -1,0 +1,6 @@
+{
+    "title": "Bubble Sort",
+    "description": "Sorts a vector of integers using the bubble sort algorithm. It repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.",
+    "author": "sampathvenur",
+    "code": "#include <vector>\n#include <algorithm>\n\nvoid bubble_sort(std::vector<int>& arr) {\n    bool swapped;\n    for (size_t i = 0; i < arr.size() - 1; ++i) {\n        swapped = false;\n        for (size_t j = 0; j < arr.size() - i - 1; ++j) {\n            if (arr[j] > arr[j + 1]) {\n                std::swap(arr[j], arr[j + 1]);\n                swapped = true;\n            }\n        }\n        if (!swapped)\n            break;\n    }\n}"
+}
