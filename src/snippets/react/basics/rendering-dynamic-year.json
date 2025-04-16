@@ -1,0 +1,6 @@
+{
+    "title": "React Component Rendering Dynamic Year",
+    "description": "Demonstrates how to dynamically render the current year in a React component using JavaScript's Date object.",
+    "author": "sampathvenur",
+    "code": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\n\nconst name = \"Angela\";\nconst currentDate = new Date();\nconst year = currentDate.getFullYear();\n\nReactDOM.render(\n\t<div>\n\t\t<p>Created by {name}</p>\n\t\t<p>Copyright {year}</p>\n\t</div>,\n\tdocument.getElementById(\"root\")\n);"
+}

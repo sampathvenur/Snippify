@@ -42,7 +42,6 @@ export default function Index() {
     displayedSnippets = snippetsByCategory;
     pageTitle = `${formatName(currentLanguage)} - ${formatName(currentCategory)}`;
   } else if (data?.snippets) {
-    // Instead of showing all snippets, show welcome screen
     showWelcomeScreen = true;
     displayedSnippets = [];
   }
@@ -51,7 +50,7 @@ export default function Index() {
     setCurrentLanguage(language);
     setCurrentCategory(category);
     setSearchQuery('');
-    setIsSidebarOpen(false); // Close the sidebar after selecting a category
+    setIsSidebarOpen(false);
   };
 
   const handleSearch = (query: string) => {
@@ -88,7 +87,7 @@ export default function Index() {
         
         <main className={`flex-1 overflow-y-auto ${isSidebarOpen ? 'hidden md:block' : 'block'}`}>
           {showWelcomeScreen ? (
-            <WelcomeScreen />
+            <WelcomeScreen onToggleSidebar={toggleSidebar} />
           ) : (
             <SnippetGrid
               snippets={displayedSnippets}

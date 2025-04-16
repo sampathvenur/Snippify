@@ -1,0 +1,6 @@
+{
+    "title": "React Component with an Unordered List",
+    "description": "Renders a React component displaying a list of favorite foods.",
+    "author": "sampathvenur",
+    "code": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\n\nReactDOM.render(\n\t<div>\n\t\t<h1>My Favourite Foods</h1>\n\t\t<ul>\n\t\t\t<li>Bacon</li>\n\t\t\t<li>Noodles</li>\n\t\t\t<li>Jamon</li>\n\t\t</ul>\n\t</div>,\n\tdocument.getElementById(\"root\")\n);"
+}

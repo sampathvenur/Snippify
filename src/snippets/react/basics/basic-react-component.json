@@ -1,0 +1,6 @@
+{
+    "title": "Basic React Component",
+    "description": "Renders a simple React component with a heading and a paragraph.",
+    "author": "sampathvenur",
+    "code": "import React from \"react\";\nimport ReactDom from \"react-dom\";\n\nReactDom.render(\n\t<div>\n\t\t<h1>Hello World!</h1>\n\t\t<p>This is a paragraph.</p>\n\t</div>,\n\tdocument.getElementById(\"root\")\n);"
+}

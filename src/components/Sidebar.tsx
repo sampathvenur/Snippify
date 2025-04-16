@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight, Loader2, X } from 'lucide-react'; // Added X to the imports
+import { ChevronDown, ChevronRight, Loader2, X } from 'lucide-react';
 import { LanguageSection } from '@/lib/types';
 import * as Icons from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -133,7 +133,7 @@ export default function Sidebar({
         <div className="space-y-4 py-4 px-3">
           <div className="py-2">
             <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
-              Languages
+            Dev Tools
             </h2>
             <div className="space-y-1">
               {languageSections.map((section) => (

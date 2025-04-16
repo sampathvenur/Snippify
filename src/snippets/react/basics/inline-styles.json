@@ -1,0 +1,6 @@
+{
+    "title": "React Component with Inline Styles",
+    "description": "Demonstrates how to apply inline styles to a React element using a JavaScript object.",
+    "author": "sampathvenur",
+    "code": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\n\nconst customStyle = {\n\tcolor: \"red\",\n\tfontSize: \"20px\",\n\tborder: \"1px solid black\",\n};\n\ncustomStyle.color = \"blue\";\n\nReactDOM.render(\n\t<h1 style={customStyle}>Hello World!</h1>,\n\tdocument.getElementById(\"root\")\n);"
+}

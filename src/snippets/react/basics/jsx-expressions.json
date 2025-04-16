@@ -1,0 +1,6 @@
+{
+    "title": "React Component with JSX Expressions",
+    "description": "Demonstrates embedding JavaScript expressions within JSX to render dynamic content.",
+    "author": "sampathvenur",
+    "code": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\n\nconst fName = \"Angela\";\nconst lName = \"Yu\";\nconst num = 7;\n\nReactDOM.render(\n\t<div>\n\t\t<h1>Hello {fName + \" \" + lName}!</h1>\n\t\t<p>Your lucky number is {num}</p>\n\t</div>,\n\tdocument.getElementById(\"root\")\n);"
+}

@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, Code, Sparkles } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
-export default function WelcomeScreen() {
+interface WelcomeScreenProps {
+    onToggleSidebar?: () => void;
+}
+
+export default function WelcomeScreen({ onToggleSidebar }: WelcomeScreenProps) {
     return (
         <div className="flex flex-col items-center justify-center min-h-[80vh] p-6 animate-fade-in">
             <div className="max-w-3xl mx-auto text-center">
@@ -43,14 +47,17 @@ export default function WelcomeScreen() {
                     />
                 </div>
 
-                <div className="mt-12">
+                <div className="mt-12 w-full text-center">
                     <p className="text-muted-foreground mb-4">
                         Get started by selecting a language from the sidebar
                     </p>
-                    <div className="flex items-center justify-center space-x-2 text-muted-foreground">
+                    <button
+                        onClick={onToggleSidebar}
+                        className="mx-auto flex items-center justify-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"
+                    >
                         <ChevronRight className="h-5 w-5 animate-bounce-horizontal" />
                         <span>Browse categories</span>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -60,7 +67,6 @@ export default function WelcomeScreen() {
 function FeatureCard({ title, description, icon }: { title: string; description: string; icon: React.ReactNode }) {
     return (
         <div className="bg-card border rounded-lg p-6 transition-all hover:shadow-md hover:border-primary">
-            {/* Updated icon container with responsive centering */}
             <div className="flex justify-center md:justify-start mb-4">
                 <div className="p-2 rounded-md bg-primary/10 w-fit">
                     {icon}

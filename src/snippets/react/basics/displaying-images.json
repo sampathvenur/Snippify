@@ -1,0 +1,6 @@
+{
+    "title": "React Component Displaying Images",
+    "description": "Demonstrates rendering images in a React component, including dynamic and static image sources and using the className attribute.",
+    "author": "sampathvenur",
+    "code": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\n\nconst img = \"https://picsum.photos/200\";\n\nReactDOM.render(\n\t<div>\n\t\t<h1 className=\"heading\">My Favourite Foods</h1>\n\t\t<img alt=\"random\" src={img + \"?grayscale\"} />\n\n\t\t<img\n\t\t\tclassName=\"food-img\"\n\t\t\talt=\"bacon\"\n\t\t\tsrc=\"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190621-air-fryer-bacon-0035-landscape-pf-1567632709.jpg?crop=0.645xw:0.967xh;0.170xw,0.0204xh&resize=480:*\"\n\t\t/>\n\t\t<img\n\t\t\tclassName=\"food-img\"\n\t\t\talt=\"jamon\"\n\t\t\tsrc=\"https://images-na.ssl-images-amazon.com/images/I/71lNrnbMXsL._SL1200_.jpg\"\n\t\t/>\n\t\t<img\n\t\t\tclassName=\"food-img\"\n\t\t\talt=\"noodles\"\n\t\t\tsrc=\"https://www.errenskitchen.com/wp-content/uploads/2014/04/quick-and-easy-chinese-noodle-soup3-1.jpg\"\n\t\t/>\n\t</div>,\n\tdocument.getElementById(\"root\")\n);"
+}
