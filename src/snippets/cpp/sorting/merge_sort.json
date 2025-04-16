@@ -1,6 +1,6 @@
 {
     "title": "Merge Sort",
     "description": "Sorts a vector of integers using the merge sort algorithm. It divides the array into halves, recursively sorts them, and merges the sorted halves.",
-    "author": "sampathvenur",
+    "author": "Shrijith",
     "code": "#include <vector>\n\nvoid merge(std::vector<int>& arr, int left, int mid, int right) {\n    int n1 = mid - left + 1;\n    int n2 = right - mid;\n\n    std::vector<int> L(n1), R(n2);\n    for (int i = 0; i < n1; ++i)\n        L[i] = arr[left + i];\n    for (int j = 0; j < n2; ++j)\n        R[j] = arr[mid + 1 + j];\n\n    int i = 0, j = 0, k = left;\n    while (i < n1 && j < n2) {\n        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];\n    }\n    while (i < n1) arr[k++] = L[i++];\n    while (j < n2) arr[k++] = R[j++];\n}\n\nvoid merge_sort_helper(std::vector<int>& arr, int left, int right) {\n    if (left < right) {\n        int mid = left + (right - left) / 2;\n        merge_sort_helper(arr, left, mid);\n        merge_sort_helper(arr, mid + 1, right);\n        merge(arr, left, mid, right);\n    }\n}\n\nvoid merge_sort(std::vector<int>& arr) {\n    merge_sort_helper(arr, 0, arr.size() - 1);\n}"
 }

@@ -1,6 +1,6 @@
 {
     "title": "Selection Sort",
     "description": "Sorts a vector of integers using selection sort. It repeatedly finds the minimum element from the unsorted part and puts it at the beginning.",
-    "author": "sampathvenur",
+    "author": "Shrijith",
     "code": "#include <vector>\n#include <algorithm>\n\nvoid selection_sort(std::vector<int>& arr) {\n    for (size_t i = 0; i < arr.size() - 1; ++i) {\n        size_t min_idx = i;\n        for (size_t j = i + 1; j < arr.size(); ++j) {\n            if (arr[j] < arr[min_idx]) {\n                min_idx = j;\n            }\n        }\n        std::swap(arr[i], arr[min_idx]);\n    }\n}"
 }
