@@ -1,6 +1,0 @@
-{
-    "title": "Interpolation Search",
-    "description": "Performs interpolation search on a sorted vector of integers. It's an improved variant of binary search suitable for uniformly distributed data.",
-    "author": "Shrijith",
-    "code": "#include <vector>\n\nint interpolation_search(const std::vector<int>& arr, int target) {\n    int low = 0, high = static_cast<int>(arr.size()) - 1;\n\n    while (low <= high && target >= arr[low] && target <= arr[high]) {\n        if (low == high) {\n            return arr[low] == target ? low : -1;\n        }\n\n        int pos = low + ((double)(high - low) / (arr[high] - arr[low])) * (target - arr[low]);\n\n        if (arr[pos] == target)\n            return pos;\n        if (arr[pos] < target)\n            low = pos + 1;\n        else\n            high = pos - 1;\n    }\n    return -1;\n}"
-}

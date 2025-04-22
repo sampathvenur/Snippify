@@ -1,6 +1,0 @@
-{
-    "title": "Exponential Search",
-    "description": "First finds a range where the target may exist, then performs binary search within that range. Useful for unbounded or infinite-size arrays.",
-    "author": "Shrijith",
-    "code": "#include <vector>\n\nint binary_search_range(const std::vector<int>& arr, int left, int right, int target) {\n    while (left <= right) {\n        int mid = left + (right - left) / 2;\n        if (arr[mid] == target)\n            return mid;\n        else if (arr[mid] < target)\n            left = mid + 1;\n        else\n            right = mid - 1;\n    }\n    return -1;\n}\n\nint exponential_search(const std::vector<int>& arr, int target) {\n    if (arr.empty()) return -1;\n    if (arr[0] == target) return 0;\n\n    int i = 1;\n    while (i < arr.size() && arr[i] <= target)\n        i *= 2;\n\n    return binary_search_range(arr, i / 2, std::min(i, static_cast<int>(arr.size() - 1)), target);\n}"
-}

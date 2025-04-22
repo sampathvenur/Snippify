@@ -1,6 +1,0 @@
-{
-    "title": "Linear Search",
-    "description": "Searches for a target value in a vector of integers using the linear search algorithm. It checks each element sequentially until the target is found or the end is reached.",
-    "author": "Shrijith",
-    "code": "#include <vector>\n\nint linear_search(const std::vector<int>& arr, int target) {\n    for (size_t i = 0; i < arr.size(); ++i) {\n        if (arr[i] == target) {\n            return static_cast<int>(i); // Return the index if found\n        }\n    }\n    return -1; // Return -1 if not found\n}"
-}
